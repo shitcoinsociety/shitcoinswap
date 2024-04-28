@@ -1,0 +1,3 @@
+[submodule "vendor/inertia"]
+	path = vendor/inertia
+	url = git@github.com:buhrmi/inertia.git
