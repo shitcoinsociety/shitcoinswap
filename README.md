@@ -4,7 +4,7 @@
 
 Here we go again.
 
-Welcome to Shitcoin Swap, the open source crypto community where you can launch, promote, and trade your own currencies.
+This is the Shitcoin Swap Launchpad, the perfect place to launch, promote, and trade your own ~shitcoins~ revolutionary decentralized currencies.
 
 ## Contributing
 
