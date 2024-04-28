@@ -1,5 +1,7 @@
 # Shitcoin Swap
 
+[![CircleCI](https://circleci.com/gh/shitcoinswap/launchpad.svg?style=shield)](https://circleci.com/gh/shitcoinswap/launchpad)
+
 Here we go again.
 
 Welcome to Shitcoin Swap, the open source crypto community where you can launch, promote, and trade your own currencies.

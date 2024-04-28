@@ -143,6 +143,8 @@ GEM
     matrix (0.4.2)
     mini_mime (1.1.5)
     minitest (5.22.3)
+    minitest-ci (3.4.0)
+      minitest (>= 5.0.6)
     msgpack (1.7.2)
     multi_xml (0.6.0)
     mutex_m (0.2.0)
@@ -300,6 +302,10 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
+    webdrivers (5.2.0)
+      nokogiri (~> 1.6)
+      rubyzip (>= 1.3.0)
+      selenium-webdriver (~> 4.0)
     webrick (1.8.1)
     websocket (1.2.10)
     websocket-driver (0.7.6)
@@ -325,6 +331,7 @@ DEPENDENCIES
   debug
   inertia_rails!
   jbuilder
+  minitest-ci
   omniauth
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
@@ -339,6 +346,7 @@ DEPENDENCIES
   tzinfo-data
   vite_rails (~> 3.0)
   web-console
+  webdrivers
 
 RUBY VERSION
    ruby 3.3.0p0
