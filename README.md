@@ -6,21 +6,27 @@ Welcome to Shitcoin Swap (oh boy, here we go again)! The perfect place to launch
 
 ## Why Open Source?
 
-Shitcoin Swap is supposed to be a centralized but open website that can easily integrate with any type of decentralized platform. I was searching for some kind of standardized protocol or API that would allow websites like this to easily communicate with such platforms. However, I could not find any. That's why I decided to develop this website in the open, hoping that it will make it easier to accrue help from platform developers.
+Shitcoin Swap is supposed to be a centralized but open website that can easily integrate with any type of decentralized platform. I was searching for some kind of standardized protocol or API that would allow websites like this to easily communicate with such platforms. However, I could not find any. That's why I decided to develop this website in the open, hoping that it will make it easier to accrue help from platform developers in the future.
 
 ## Contributing
 
-This is a pretty straight-forward Ruby on Rails app built with Inertia and Svelte. To contribute and develop new features, you'll have to set up your local development enviroment.
+This is a pretty straight-forward Ruby on Rails app built with [Inertia](https://inertiajs.com) and [Svelte](https://svelte.dev).
 
-To do this, first clone the repo, initialize and build submodules, install dependencies, and then start the app.
+To set up your local environment, first clone the repo, initialize and build submodules, install dependencies, and then start the app.
 
-### Clone the repo
+### Inside a dev container
+
+Coming soon
+
+### Without dev containers
+
+#### Clone the repo
 
 ```
 git clone git@github.com:shitcoinswap/launchpad.git
 ```
 
-### Initialize and build submodules
+#### Initialize and build submodules
 
 We're using our [own fork of Inertia](https://github.com/buhrmi/inertia) because it adds some important features that makes development easier.
 
@@ -32,14 +38,14 @@ npm i
 npm run build --workspace=packages --if-present
 ```
 
-### Install dependencies
+#### Install dependencies
 
 ```
 npm i
 bundle
 ```
 
-### Start the app
+#### Start the app
 
 The easiest way to run all the processes in development is to use `foreman`. Install it with `bundle install foreman` if you didn't already.
 
