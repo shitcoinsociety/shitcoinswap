@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/shitcoinswap/launchpad.svg?style=shield)](https://circleci.com/gh/shitcoinswap/launchpad)
 
-Welcome to Shitcoin Swap (oh boy, here we go again)! The perfect place to launch, promote, and trade your own ~shitcoins~ revolutionary decentralized currencies.
+Shitcoin Swap is your humble poop-branded trading platform.
 
 ## Why Open Source?
 
