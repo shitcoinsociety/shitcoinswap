@@ -6,7 +6,7 @@ Welcome to Shitcoin Swap (oh boy, here we go again)! The perfect place to launch
 
 ## Why Open Source?
 
-Shitcoin Swap is supposed to be a centralized but open platform that can easily integrate with any type of decentralized network. I was searching for some kind of standardized protocol or API that would allow platforms like this to easily communicate with these networks. However, I could not find any. That's why I decided to developing this website in the open, hoping that it will make it easier to accrue help from network developers.
+Shitcoin Swap is supposed to be a centralized but open platform that can easily integrate with any type of decentralized network. I was searching for some kind of standardized protocol or API that would allow platforms like this to easily communicate with these networks. However, I could not find any. That's why I decided to develop this website in the open, hoping that it will make it easier to accrue help from network developers.
 
 ## Contributing
 
