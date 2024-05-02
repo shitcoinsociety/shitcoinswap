@@ -1,5 +1,5 @@
-const pages = import.meta.glob('../**/*.svelte')
-
+const pages = import.meta.glob('$/pages/**/*.svelte')
+console.log(pages)
 export default async name => {
   let layoutPath, componentPath
   // if (name.startsWith('dashboard/')) {
@@ -7,9 +7,10 @@ export default async name => {
   //   layoutPath = "./dashboard/_layout.svelte"
   // }
   // else {
-    componentPath = `./pages/${name}.svelte`
-    layoutPath = `./pages/_layout.svelte`      
+    componentPath = `/pages/${name}.svelte`
+    layoutPath = `/pages/_layout.svelte`      
   // }
+  
   if (!pages[componentPath]) throw new Error(`Unknown page ${componentPath}`)
   if (!pages[layoutPath]) throw new Error(`Unknown layout ${layoutPath}`)
   const page = await pages[componentPath]()

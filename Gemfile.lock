@@ -85,8 +85,6 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
-    ancestry (4.3.3)
-      activerecord (>= 5.2.6)
     base64 (0.2.0)
     bcrypt (3.1.20)
     bigdecimal (3.1.7)
@@ -117,11 +115,18 @@ GEM
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
       net-http
+    ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashie (5.0.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
+    image_processing (1.12.2)
+      mini_magick (>= 4.9.5, < 5)
+      ruby-vips (>= 2.0.17, < 3)
     io-console (0.7.2)
     irb (1.12.0)
       rdoc
@@ -141,6 +146,7 @@ GEM
       net-smtp
     marcel (1.0.4)
     matrix (0.4.2)
+    mini_magick (4.12.0)
     mini_mime (1.1.5)
     minitest (5.22.3)
     minitest-ci (3.4.0)
@@ -261,7 +267,8 @@ GEM
     reline (0.5.3)
       io-console (~> 0.5)
     rexml (3.2.6)
-    ruby-oembed (0.17.0)
+    ruby-vips (2.2.1)
+      ffi (~> 1.12)
     rubyzip (2.3.2)
     selenium-webdriver (4.20.1)
       base64 (~> 0.2)
@@ -324,11 +331,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  ancestry (~> 4.3)
   bcrypt (~> 3.1.7)
   bootsnap
   capybara
   debug
+  httparty (~> 0.21.0)
+  image_processing (~> 1.2)
   inertia_rails!
   jbuilder
   minitest-ci
@@ -338,7 +346,6 @@ DEPENDENCIES
   omniauth-twitter
   puma (>= 5.0)
   rails (~> 7.1.3, >= 7.1.3.2)
-  ruby-oembed (~> 0.17.0)
   selenium-webdriver
   sentry-rails
   sentry-ruby
