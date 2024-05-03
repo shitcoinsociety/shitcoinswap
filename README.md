@@ -1,6 +1,6 @@
 # Shitcoin Swap
 
-[![CircleCI](https://circleci.com/gh/shitcoinswap/launchpad.svg?style=shield)](https://circleci.com/gh/shitcoinswap/launchpad)
+[![CircleCI](https://circleci.com/gh/buhrmi/shitcoinswap.svg?style=shield)](https://circleci.com/gh/buhrmi/shitcoinswap)
 
 Shitcoin Swap is your humble poop-branded trading platform.
 
@@ -23,7 +23,7 @@ Coming soon
 #### Clone the repo
 
 ```
-git clone git@github.com:shitcoinswap/launchpad.git
+git clone git@github.com:buhrmi/shitcoinswap.git
 ```
 
 #### Initialize and build submodules
