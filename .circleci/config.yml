@@ -1,17 +1,17 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.4.0
+  browser-tools: circleci/browser-tools@1.4.8
 jobs:
   build:
-    working_directory: ~/launchpad
+    working_directory: ~/shitcoinswap
     docker:
-      - image: cimg/ruby:3.1.2-browsers
+      - image: cimg/ruby:3.3.0-browsers
         environment:
           RAILS_ENV: test
 
     steps:
       - checkout:
-          path: ~/launchpad
+          path: ~/shitcoinswap
 
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
@@ -34,7 +34,7 @@ jobs:
 
       - run: npm install
 
-      # Install launchpad dependencies
+      # Install shitcoinswap dependencies
       - run: (cd ../package && npm install)
 
         # Cache Dependencies
