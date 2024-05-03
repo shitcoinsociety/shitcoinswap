@@ -3,15 +3,15 @@ orbs:
   browser-tools: circleci/browser-tools@1.4.8
 jobs:
   build:
-    working_directory: ~/shitcoinswap
     docker:
       - image: cimg/ruby:3.3.0-browsers
         environment:
           RAILS_ENV: test
 
     steps:
-      - checkout:
-          path: ~/shitcoinswap
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
 
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
