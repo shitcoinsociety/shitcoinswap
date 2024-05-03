@@ -68,6 +68,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_29_133232) do
     t.string "email"
     t.string "password_digest"
     t.datetime "email_verified_at"
+    t.datetime "last_login_at"
+    t.string "last_login_ip"
+    t.string "last_login_user_agent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email"

@@ -13,8 +13,8 @@ class OnboardingTest < ApplicationSystemTestCase
     click_on 'Log out'
     # assert_text 'You have been logged out.'
 
-    click_on 'Log in'
-    click_on 'click here'
+    # click_on 'Log in'
+    # click_on 'click here'
 
     # CHANGE PASSWORD
     click_on 'Forgot your password?'
@@ -36,7 +36,7 @@ class OnboardingTest < ApplicationSystemTestCase
 
     # TRY WRONG PASSWORD
     click_on 'Log in'
-    click_on 'click here'
+    # click_on 'click here'
 
     fill_in 'email', with: 'derp@derp.com'
     fill_in 'password', with: 'wrongpass'

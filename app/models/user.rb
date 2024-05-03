@@ -13,11 +13,11 @@ class User < ApplicationRecord
   has_one_attached :profile_image
 
   validates :nickname, uniqueness: true, presence: true, format: { with: /\A[a-zA-Z0-9_]+\z/ }
-  validates :name, presence: true
+
   validates :email, uniqueness: true, presence: true
 
   before_validation do
-    self.nickname = nickname&.downcase
+    self.nickname = nickname.try(:downcase) || "user#{id}"
     self.email = email&.downcase
   end
 
@@ -25,5 +25,10 @@ class User < ApplicationRecord
     if profile_image.attached?
       Rails.application.routes.url_helpers.rails_blob_url(profile_image)
     end
+  end
+
+  def send_password_reset
+    UserMailer.with(user: self).password_reset.deliver_now
+    puts 'delivered'
   end
 end

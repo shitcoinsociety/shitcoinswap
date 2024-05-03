@@ -46,7 +46,7 @@
   <button class="btn" name="login">Log in</button><br>
 </form>
 <p class="text-right">
-  Here for the first time? <a href="/users/new?flow=organizer">Create a new account</a>.
+  Here for the first time? <a href="/users/new">Create a new account</a>.
 </p>
 
 <style>

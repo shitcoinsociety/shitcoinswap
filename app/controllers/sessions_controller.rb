@@ -1,11 +1,8 @@
 class SessionsController < ApplicationController
   def new
-    if params[:provider]
-      # Just render the ERB template that automatically makes a POST request to /auth/:provider
-      render layout: false
-    elsif current_user
-      return redirect_to "/"
-    end
+    # Just render the ERB template that automatically makes a POST request to /auth/:provider
+    return render layout: false if params[:provider]
+    return redirect_to currencies_path if current_user
   end
 
   def create
@@ -21,7 +18,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       flash[:success] = "You have been logged in. Welcome back!"
-      redirect_to "/dashboard"
+      redirect_to currencies_path
     else
       flash[:error] = "Invalid email or password."
       redirect_back fallback_location: root_url

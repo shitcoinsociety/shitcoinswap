@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     user.save!
 
     session[:user_id] = user.id
-    redirect_to whitepapers_path
+    redirect_to currencies_path
   end
 
   private
