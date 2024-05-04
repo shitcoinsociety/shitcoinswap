@@ -1,5 +1,6 @@
 const pages = import.meta.glob('$/pages/**/*.svelte')
-console.log(pages)
+const layouts = import.meta.glob('$/layouts/**/*.svelte')
+
 export default async name => {
   let layoutPath, componentPath
   // if (name.startsWith('dashboard/')) {
@@ -8,13 +9,13 @@ export default async name => {
   // }
   // else {
     componentPath = `/pages/${name}.svelte`
-    layoutPath = `/pages/_layout.svelte`      
+    layoutPath = `/layouts/default.svelte`      
   // }
   
   if (!pages[componentPath]) throw new Error(`Unknown page ${componentPath}`)
-  if (!pages[layoutPath]) throw new Error(`Unknown layout ${layoutPath}`)
+  if (!layouts[layoutPath]) throw new Error(`Unknown layout ${layoutPath}`)
   const page = await pages[componentPath]()
-  const layout = await pages[layoutPath]()
+  const layout = await layouts[layoutPath]()
   return Object.assign({
     layout: layout.default
   }, page)

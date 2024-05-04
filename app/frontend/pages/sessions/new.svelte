@@ -1,5 +1,6 @@
 <script context="module">
-  export const layout = []
+  import Onboarding from '$/layouts/onboarding.svelte'
+  export const layout = [Onboarding]
 </script>
 
 <script>
@@ -24,29 +25,36 @@
   <title>Log in to Shitcoin Swap</title>
 </svelte:head>
 
-<button on:click={() => loginWith('twitter')} class="twitter btn">
-  <div class="i-pajamas:twitter w-1.5em h-1.5em align-middle"></div>
-  Log in with Twitter
-</button>
-
-<button on:click={() => loginWith('google_oauth2')} class="google">
-  Log in with Google
-</button>
-
-<form on:submit|preventDefault={() => $form.post(`/session`)} class="well flex-1">
-  <input class="w-full mb-2" name="email" type="email" placeholder="Email address" bind:value={$form.email}>
-  <input class="w-full mb-2" name="password" type="password" placeholder="Password" bind:value={$form.password}>
-  <a class="float-right" href="/password_resets/new">Forgot your password?</a><br>
-  {#if flash.error}
+<main>
+  
+  <form on:submit|preventDefault={() => $form.post(`/session`)} class="well flex-1">
+    <input class="w-full mb-2" name="email" type="email" placeholder="Email address" bind:value={$form.email}>
+    <input class="w-full mb-2" name="password" type="password" placeholder="Password" bind:value={$form.password}>
+    <a class="float-right" href="/password_resets/new">Forgot your password?</a><br>
+    {#if flash.error}
     <p class="text-red-500 italic mb-2" transition:slide>
       {flash.error}
     </p>
-  {/if}
-  <button class="btn" name="login">Log in</button><br>
-</form>
-<p class="text-right">
-  Here for the first time? <a href="/users/new">Create a new account</a>.
-</p>
+    {/if}
+    <button class="btn" name="login">Log in</button><br>
+  </form>
+
+  <p class="text-right">
+    Here for the first time? <a href="/users/new">Create a new account</a>.
+  </p>
+  
+  <div class="flex flex-col gap-4">
+    <button on:click={() => loginWith('twitter')} class="twitter btn">
+      <div class="i-pajamas:twitter w-1.5em h-1.5em align-middle"></div>
+      Log in with Twitter
+    </button>
+    
+    <button on:click={() => loginWith('google_oauth2')} class="google">
+      Log in with Google
+    </button>
+  </div>
+</main>
+
 
 <style>
   .btn.twitter {
