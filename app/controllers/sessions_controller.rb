@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
       redirect_to currencies_path
     else
       flash[:error] = "Invalid email or password."
-      redirect_back fallback_location: root_url
+      redirect_to new_session_path
     end
   end
 

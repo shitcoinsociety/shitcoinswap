@@ -1,3 +1,9 @@
+<script context="module">
+  import Onboarding from '$/layouts/onboarding.svelte'
+  export const layout = [Onboarding]
+</script>
+
+
 <script>
   import { useForm } from '@inertiajs/svelte';
   export let flash

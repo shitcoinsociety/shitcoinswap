@@ -1,9 +1,11 @@
 <script context="module">
-  export const layout = []
+  import Onboarding from '$/layouts/onboarding.svelte'
+  export const layout = [Onboarding]
 </script>
 
+
 <script>
-  import { useForm } from '@inertiajs/svelte'
+  import { Frame, useForm } from '@inertiajs/svelte'
   import { onMount } from 'svelte'
 
   export let flash

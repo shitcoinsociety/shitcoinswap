@@ -39,11 +39,8 @@
     <button class="btn" name="login">Log in</button><br>
   </form>
 
-  <p class="text-right">
-    Here for the first time? <a href="/users/new">Create a new account</a>.
-  </p>
   
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-4 mt-8">
     <button on:click={() => loginWith('twitter')} class="twitter btn">
       <div class="i-pajamas:twitter w-1.5em h-1.5em align-middle"></div>
       Log in with Twitter
@@ -53,6 +50,10 @@
       Log in with Google
     </button>
   </div>
+
+  <p class="text-center mt-8">
+    Don't have an account? <a href="/users/new">Sign up</a>.
+  </p>
 </main>
 
 

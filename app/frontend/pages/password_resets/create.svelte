@@ -1,6 +1,8 @@
-<script>
-
+<script context="module">
+  import Onboarding from '$/layouts/onboarding.svelte'
+  export const layout = [Onboarding]
 </script>
+
 
 <main class="container py-24 flex justify-center">
   <div class="well">

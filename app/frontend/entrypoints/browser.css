@@ -1,0 +1,5 @@
+img {
+  width: var(--size);
+  height: auto;
+  object-fit: cover;
+}
