@@ -2,3 +2,21 @@
   export let currencies
 </script>
 
+<div class="flex items-center justify-center h-100dvh">
+  <div class="text-center mt-4">
+    <img src="$assets/logo.png?h=54" alt="Logo" class="inline-block" /><br>
+    <img src="$assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" /><br>
+    <p class="mt-4">
+      Welcome to the humble poop-branded social trading platform.
+    </p>
+
+    <p class="mt-8">
+    We're currently preparing the launch of our first whitepaper.<br>
+    Feel free to follow our socials while you wait:<br>
+    <a href="https://tiktok.com/@shittyinvestments">TikTok</a>
+    <a href="https://instagram.com/shitcoinswap">Instagram</a>
+    <a href="https://twitter.com/shitcoinswap">Twitter</a>
+    <a href="https://youtube.com/@shittyinvestments">YouTube</a>
+  </p>
+  </div>
+</div>

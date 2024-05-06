@@ -1,5 +1,33 @@
+:root {
+  --primary: #3498db;
+  --primary-link: #2980b9;
+}
+
 img {
   width: var(--size);
   height: auto;
   object-fit: cover;
 }
+
+a {
+  color: var(--primary-link);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  &.primary {
+    background-color: var(--primary);
+    color: white;
+
+  }
+}
+

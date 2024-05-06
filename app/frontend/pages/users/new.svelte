@@ -21,7 +21,7 @@
     document.body.appendChild(script);
     window.onloadTurnstileCallback = function() {
       turnstile.render('#turnstile_container', {
-        theme: 'dark',
+        theme: 'light',
         sitekey: '0x4AAAAAAASmMtQEqEQGtDRq',
         callback: function(token) {
           $form.turnstile_token = token
