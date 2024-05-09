@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   wrap_parameters :user, include: User.attribute_names + [:password, :password_confirmation]
 
   def new
-
+    return redirect_to currencies_path if current_user
   end
 
   def create

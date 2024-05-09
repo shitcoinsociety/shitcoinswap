@@ -3,20 +3,23 @@
 </script>
 
 <div class="panels">
-  <div class="top relative">
+  <div class="top relative p-4">
     <div class="relative text-center">
 
       <div class="text-center">
-        <img src="$assets/logo.png?h=32" alt="Logo" class="inline-block" /><br>
+        <img src="$assets/logo.png?h=54" alt="Logo" class="inline-block" />
         <img src="$assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" />
       </div>
       <div class="text-white">
-        The humble poop-branded social trading platform
+        Your humble poop-branded social trading platform
       </div>
     </div>
   </div>
   
   <div class="main">
+    <div class="fixed top-4 right-4">
+      <a href="/"><i class="i-pajamas:close w-6 h-6"></i></a>
+    </div>
     <slot />
   </div>
 </div>
@@ -35,6 +38,7 @@
   }
   .top {
     grid-area: top;
+    background-color: rgb(42, 40, 39);
     background-color: rgb(42, 40, 39);
   }
   .main {

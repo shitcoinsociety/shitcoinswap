@@ -4,8 +4,6 @@
   import { router, Frame } from '@inertiajs/svelte'
 </script>
 
-
-
 <section>
   <div class="md:p-4">
     <nav>
@@ -17,17 +15,24 @@
       <!-- <a href="/currencies">Explore</a> -->
         <button class="btn" on:click={() => router.delete('/session')}>Log out</button>
       {:else}
-        <p class="">
-          Already have an account?<br>
-          <a href="/session/new">Log in</a>
-        </p>
+        <div class="flex gap-3 items-center">
+          <div class="profile_image">
+            <div class="i-pajamas:profile w-2em h-2em"></div>
+          </div>
+          <p class="">
+            Already have an account? 
+            <a href="/session/new">Log in</a>.
+          </p>
+        </div>
         <div class="flex-1"></div>
         <a href="/users/new" class="btn primary">Sign up</a>
         <!-- <div class="flex-1"></div> -->
       {/if}
     </nav>
   </div>
-  <slot />
+  <div class="p-4 pb-20 md:pb-4">
+    <slot />
+  </div>
 
 </section>
 
@@ -41,17 +46,24 @@
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .65);
     padding: 0.7rem;
     display: flex;
+    gap: 0.6rem;
     align-items: center;
     background: #ddd;
     border-radius: 0.3rem;
   }
   section {
     min-height: 100dvh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   @media (min-width: 768px) {
     section {
       display: grid;
+      align-items: normal;
       grid-template-columns: 250px 1fr;
     }
     nav {

@@ -11,6 +11,6 @@
       If your email address exists in our database, you will receive a password recovery link shortly.
     </p>
 
-    <a href="/session/new">Back to log in</a>
+    <a href="/session/new" class="btn mt-2">Back to log in</a>
   </div>
 </main>
