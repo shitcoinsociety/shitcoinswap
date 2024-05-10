@@ -4,11 +4,11 @@
 
 <div class="flex items-center justify-center h-full">
   <div class="text-center mt-4">
-    <img src="$assets/logo.png?h=54" alt="Logo" class="inline-block" /><br>
-    <img src="$assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" /><br>
-    <p class="mt-4">
-      Welcome to the humble poop-branded social trading platform.
-    </p>
+    <img src="$assets/logo.png?h=64" alt="Logo" class="inline-block" /><br>
+    <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br>
+    <h1 class="mt-4">
+      The humble poop-branded trading platform.
+    </h1>
 
     <p class="mt-8">
     We're currently preparing the launch of our first whitepaper.<br>
