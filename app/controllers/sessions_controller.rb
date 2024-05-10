@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    @title = "Log in to Shitcoin Swap"
     # Just render the ERB template that automatically makes a POST request to /auth/:provider
     return render layout: false if params[:provider]
     return redirect_to currencies_path if current_user

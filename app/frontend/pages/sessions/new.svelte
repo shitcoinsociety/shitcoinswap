@@ -21,10 +21,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>Log in to Shitcoin Swap</title>
-</svelte:head>
-
 <main>
   
   <form on:submit|preventDefault={() => $form.post(`/session`)} class="">

@@ -1,6 +1,12 @@
 <script>
-
+  export let title
 </script>
+
+
+<svelte:head>
+  <title>{title || 'Shitcoin Swap'}</title>
+</svelte:head>
+
 
 <div class="panels">
   <div class="top relative p-4 md:m-4">

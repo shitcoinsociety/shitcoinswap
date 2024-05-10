@@ -1,10 +1,19 @@
 <script>
-  export let current_user
   import { router } from '@inertiajs/svelte'
-    import { fade } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
 
-  let menuOpen = true
+  export let current_user
+  export let controller
+  export let title
+
+  router.on('navigate', () => menuOpen = false)
+
+  let menuOpen = false
 </script>
+
+<svelte:head>
+  <title>{title || 'Shitcoin Swap'}</title>
+</svelte:head>
 
 <section>
     {#if menuOpen}
@@ -33,12 +42,12 @@
       </a>
       {/if}
 
-      <a class="navlink" href="/currencies">
+      <a class="navlink" href="/currencies" class:active={controller === 'currencies'}>
         <div class="i-material-symbols-light:currency-exchange w-1.3em h-1.3em"></div>
         Buy and sell
       </a>
       
-      <a class="navlink" href="/portfolio">
+      <a class="navlink" href="/portfolio" class:active={controller === 'portfolios'}>
         <div class="i-game-icons:chart w-1.3em h-1.3em"></div>
         My Portfolio
       </a>
@@ -103,11 +112,14 @@
       flex-direction: column;
       align-items: center;
       width: calc(100% + 2rem);
-        padding: 1rem;
-        height: auto;
-        flex-direction: row;
-        gap: 1rem;
-        font-size: 1.3rem;
+      padding: 1rem;
+      height: auto;
+      flex-direction: row;
+      gap: 1rem;
+      font-size: 1.3rem;
+      &.active {
+        color: white;
+      }
     }
   }
   nav.menuOpen {
@@ -150,11 +162,12 @@
 
   @media (min-width: 768px) {
     section {
-      grid-template-columns: 340px 1fr;
+      grid-template-columns: auto 1fr;
     }
     nav {
       margin: 1rem;
       position: sticky;
+      max-width: 320px;
       transform: translateX(0);
       top: 1rem;
       gap: 0;

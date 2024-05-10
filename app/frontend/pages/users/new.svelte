@@ -46,10 +46,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>Sign up for Shitcoin Swap</title>
-</svelte:head>
-
 <main class="w-1/2 min-w-80">
   <form on:submit|preventDefault={() => $form.post(`/users`)} class="">
     <h2 class="text-center mb-2">Sign up</h2>

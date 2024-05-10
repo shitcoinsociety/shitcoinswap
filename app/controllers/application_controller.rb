@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   use_inertia_instance_props
 
   before_action :set_current_url_options
+  before_action :set_default_meta
 
   rescue_from ActiveRecord::RecordInvalid do |exception|
     raise exception unless request.inertia?
@@ -31,8 +32,14 @@ class ApplicationController < ActionController::Base
     }
   end
 
+  def set_default_meta
+    @title ||= 'Shitcoin Swap'
+  end
+
   def require_user!
-    raise ActionController::BadRequest.new('You must be logged in to access this page') unless current_user
+    return if current_user
+    redirect_to new_session_path
+    # raise ActionController::BadRequest.new('You must be logged in to access this page') unless current_user
   end
 
 
