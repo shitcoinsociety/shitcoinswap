@@ -91,6 +91,10 @@
     </button>
   </div>
 
+  <p class="text-center mt-8">
+    Already have an account? <a href="/session/new">Log in</a>.
+  </p>
+
 </main>
 
 

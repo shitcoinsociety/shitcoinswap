@@ -3,7 +3,7 @@
 </script>
 
 <div class="panels">
-  <div class="top relative p-4">
+  <div class="top relative p-4 md:m-4">
     <div class="relative text-center">
 
       <div class="text-center">
@@ -18,7 +18,7 @@
   
   <div class="main">
     <div class="fixed top-4 right-4">
-      <a href="/"><i class="i-pajamas:close w-6 h-6"></i></a>
+      <a href="/"><i class="i-pajamas:close w-8 h-8"></i></a>
     </div>
     <slot />
   </div>
@@ -38,8 +38,8 @@
   }
   .top {
     grid-area: top;
-    background-color: rgb(42, 40, 39);
-    background-color: rgb(42, 40, 39);
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .65);
+    background: linear-gradient(180deg, rgba(93, 78, 70, 1) 0%, rgb(42, 40, 39) 100%);
   }
   .main {
     padding: 1rem;
@@ -49,8 +49,12 @@
     grid-area: bottom;
   }
   @media (min-width: 768px) {
+    .top {
+      
+      border-radius: 0.5rem;
+    }
     .panels {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 3fr;
       grid-template-areas:
         "top main";
     }

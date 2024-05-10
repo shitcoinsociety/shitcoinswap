@@ -48,8 +48,13 @@
     display: flex;
     gap: 0.6rem;
     align-items: center;
-    background: #ddd;
-    border-radius: 0.3rem;
+    background: linear-gradient(180deg, rgba(93, 78, 70, 1) 0%, rgb(42, 40, 39) 100%);
+
+    color: white;
+    border-radius: 0.5rem;
+    a {
+      /* color: rgb(143, 182, 255); */
+    }
   }
   section {
     min-height: 100dvh;
@@ -64,7 +69,7 @@
     section {
       display: grid;
       align-items: normal;
-      grid-template-columns: 250px 1fr;
+      grid-template-columns: 300px 1fr;
     }
     nav {
       position: sticky;
