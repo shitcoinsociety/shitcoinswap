@@ -65,10 +65,15 @@
     </nav>
   
   <main>
-    <header>
-      <button class="md:hidden" on:click={() => menuOpen = true}>
-        <div class="i-pepicons-print:menu w-2em h-2em"></div>
-      </button>
+    <header class="container mx-auto flex gap-3 items-center">
+      <div class="flex-1">
+        <button class="md:hidden" on:click={() => menuOpen = true}>
+          <div class="i-pepicons-print:menu w-2em h-2em"></div>
+        </button>
+      </div>
+      <img src="$assets/logo.png?h=40" alt="Logo" class="inline-block" />
+      <img src="$assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" />
+      <div class="flex-1"></div>
     </header>
     <div class="p-4">
       <slot />
@@ -156,6 +161,7 @@
   }
   header {
     padding: 1rem;
+    padding-bottom: 0rem;
     display: flex;
     align-items: center;
   }
