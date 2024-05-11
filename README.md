@@ -6,9 +6,9 @@ Shitcoin Swap is your humble poop-branded trading platform.
 
 ## Why Open Source?
 
-Shitcoin Swap is supposed to be a centralized but open website that can easily integrate with any type of decentralized platform. I was searching for some kind of standardized protocol or API that would allow websites like this to easily communicate with such platforms. However, I could not find any. That's why I decided to develop this website in the open, hoping that it will make it easier to accrue help from platform developers in the future.
+The reason is rather egoistic: I'm hoping that by developing this app in the open it will be easier to accrue help from more developers when it's time to integrate the next cool blockchain.
 
-## Contributing
+## Run locally
 
 This is a pretty straight-forward Ruby on Rails app built with [Inertia](https://inertiajs.com) and [Svelte](https://svelte.dev).
 
@@ -28,7 +28,7 @@ git clone git@github.com:buhrmi/shitcoinswap.git
 
 #### Initialize and build submodules
 
-We're using our [own fork of Inertia](https://github.com/buhrmi/inertia) because it adds some important features that makes development easier.
+This is required because I'm using my own [Inertia fork](https://github.com/buhrmi/inertia). This fork isn't yet available as npm package.
 
 ```
 git submodule init
