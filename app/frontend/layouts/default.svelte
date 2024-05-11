@@ -55,7 +55,7 @@
       
         <div class="flex-1"></div>
       <!-- <a href="/currencies">Explore</a> -->
-        <button class="btn" on:click={() => router.delete('/session')}>Log out</button>
+        <button class="btn" id="logout" on:click={() => router.delete('/session')}>Log out</button>
       {:else}
         
         <div class="flex-1"></div>

@@ -52,7 +52,7 @@ class OnboardingTest < ApplicationSystemTestCase
     fill_in 'password', with: 'newpass'
     click_on 'login'
 
-    click_on 'log out'
+    click_on 'logout'
 
   end
 end
