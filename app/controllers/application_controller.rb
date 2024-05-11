@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   use_inertia_instance_props
 
+  before_action :redirect_when_logged_in
   before_action :set_current_url_options
   before_action :set_default_meta
 
@@ -37,9 +38,20 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user!
+
     return if current_user
+    if request.method == "GET"
+      cookies[:redirect_when_logged_in] = request.fullpath
+    end
+
     redirect_to new_session_path
     # raise ActionController::BadRequest.new('You must be logged in to access this page') unless current_user
+  end
+
+  def redirect_when_logged_in
+    if current_user && cookies[:redirect_when_logged_in]
+      redirect_to cookies.delete(:redirect_when_logged_in)
+    end
   end
 
 

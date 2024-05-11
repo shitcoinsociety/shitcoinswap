@@ -13,7 +13,7 @@ class OnboardingTest < ApplicationSystemTestCase
     click_on 'Log out'
     # assert_text 'You have been logged out.'
 
-    # click_on 'Log in'
+    click_on 'Log in'
     # click_on 'click here'
 
     # CHANGE PASSWORD
@@ -52,7 +52,7 @@ class OnboardingTest < ApplicationSystemTestCase
     fill_in 'password', with: 'newpass'
     click_on 'login'
 
-    assert_text 'Log out'
+    click_on 'log out'
 
   end
 end

@@ -32,7 +32,7 @@
 
     }
     if (window.RAILS_ENV !== 'production') {
-      // captchaCompleted = true
+      captchaCompleted = true
     }
   })
 

@@ -31,13 +31,13 @@
       {#if current_user}
       
       {:else}
-      <a href="/session/new" class="flex my-4 text-white gap-3 items-center w-full">
+      <a href="/session/new" class="login">
         <div class="profile_image">
           <div class="i-pajamas:profile w-2em h-2em"></div>
         </div>
         <p class="leading-none">
           <span class="text-lg">Have an account?</span><br>
-          <span class="text-primary-link">Log in</span>.
+          <span class="text-primary-link">Log in</span>
         </p>
       </a>
       {/if}
@@ -111,19 +111,36 @@
       /* background-color: red; */
       flex-direction: column;
       align-items: center;
-      width: calc(100% + 2rem);
-      padding: 1rem;
+      width: calc(100% + 3rem);
+      padding: 1rem 1.5rem;
       height: auto;
       flex-direction: row;
       gap: 1rem;
       font-size: 1.3rem;
+      transition: background-color .2s;
       &.active {
         color: white;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, .05);
       }
     }
   }
   nav.menuOpen {
     transform: translateX(0);
+  }
+  a.login {
+    /* flex my-4 text-white gap-3 items-center w-full */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: calc(100% + 3rem);
+    padding: 1.5rem;
+    color: white;
+    margin-block: 1rem;
+    background-color: rgba(255, 255, 255, .05);
   }
   main {
 
