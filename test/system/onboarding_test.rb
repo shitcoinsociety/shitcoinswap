@@ -27,8 +27,8 @@ class OnboardingTest < ApplicationSystemTestCase
     url = mail.body.match(/(\/password_resets\/.*)/)[1]
     visit url
 
-    fill_in 'password', with: 'newpass'
-    fill_in 'password_confirmation', with: 'newpass'
+    fill_in 'password', with: 'newpass123'
+    fill_in 'password_confirmation', with: 'newpass123'
 
     click_on 'Set new password'
 
@@ -49,7 +49,7 @@ class OnboardingTest < ApplicationSystemTestCase
 
     # TRY CORRECT PASSWORD
     fill_in 'email', with: 'derp@derp.com'
-    fill_in 'password', with: 'newpass'
+    fill_in 'password', with: 'newpass123'
     click_on 'login'
 
     click_on 'logout'
