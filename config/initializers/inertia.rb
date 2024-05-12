@@ -11,5 +11,7 @@ InertiaRails.configure do |config|
 
   # ssr specific options
   config.ssr_enabled = true
-  config.ssr_url = 'http://localhost:13714'
+
+
+  config.ssr_url =  Rails.env.production? ? 'http://ssr:13714' : 'http://localhost:13714'
 end
