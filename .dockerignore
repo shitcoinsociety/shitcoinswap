@@ -38,7 +38,5 @@
 !/app/assets/builds/.keep
 /public/assets
 
-# Ignore Vite builds except production and ssr
+# Ignore Vite builds as the Dockerfile will create new ones.
 /public/vite*
-!/public/vite-ssr/
-!/public/vite
