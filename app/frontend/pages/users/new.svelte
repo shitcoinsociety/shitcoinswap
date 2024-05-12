@@ -22,16 +22,15 @@
     window.onloadTurnstileCallback = function() {
       turnstile.render('#turnstile_container', {
         theme: 'light',
-        sitekey: '0x4AAAAAAASmMtQEqEQGtDRq',
+        sitekey: '0x4AAAAAAAQHOuUYuYeDDJQ7',
         callback: function(token) {
           $form.turnstile_token = token
           captchaCompleted = true
         },
-
       });
 
     }
-    if (window.RAILS_ENV !== 'production') {
+    if (window.RAILS_ENV == 'test') {
       captchaCompleted = true
     }
   })

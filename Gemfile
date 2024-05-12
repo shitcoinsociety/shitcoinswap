@@ -32,6 +32,11 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
+group :production, :testing do
+  # Use PostgreSQL as the database for Active Record
+  gem "pg"
+end
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
@@ -61,9 +66,11 @@ gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 
 
-gem "inertia_rails", github: "PedroAugustoRamalhoDuarte/inertia-rails", branch: "fix-data-sharing"
+gem "inertia_rails" #, github: "PedroAugustoRamalhoDuarte/inertia-rails", branch: "fix-data-sharing"
 gem "vite_rails", "~> 3.0"
 
 gem "httparty", "~> 0.21.0"
 gem "sentry-ruby"
 gem "sentry-rails"
+
+gem "foreman", "~> 0.88.1"

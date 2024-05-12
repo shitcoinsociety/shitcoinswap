@@ -21,5 +21,17 @@ test:
   database: storage/test.sqlite3
 
 production:
-  <<: *default
-  database: storage/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV["DB_HOST"] %>
+  database: shitcoinswap_production
+  username: shitcoinswap
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
+
+testing:
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV["DB_HOST"] %>
+  database: shitcoinswap_testing
+  username: shitcoinswap
+  password: <%= ENV["POSTGRES_PASSWORD"] %>

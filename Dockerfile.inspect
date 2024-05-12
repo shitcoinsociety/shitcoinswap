@@ -1,0 +1,12 @@
+FROM debian
+RUN apt-get update -y
+RUN apt-get install -y tree ncdu
+COPY . /context
+
+# old-school disk usage inspection
+# CMD echo "\033[1;33mReal size      $(du -sh /context)";\
+#     echo "Apparent size  $(du -sh --apparent-size /context)\033[0m\n";\
+#     echo "Tree view (apparent size only)";\
+#     tree --du -shaC /context | grep M]
+
+CMD ncdu /context

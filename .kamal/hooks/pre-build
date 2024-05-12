@@ -1,0 +1,4 @@
+rm -rf public/.vite
+rm -rf public/.vite-ssr
+RAILS_ENV=production bin/vite build
+RAILS_ENV=production bin/vite build --ssr
