@@ -5,7 +5,7 @@
 
 
 <script>
-  import { useForm } from '@inertiajs/svelte';
+  import { useForm } from 'inertiax-svelte';
   let form = useForm('reset', {
     // initialize email with the value from the query string
     email: ''//new URLSearchParams(document.location.search).get('email') || '',

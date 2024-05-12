@@ -5,7 +5,7 @@
 
 
 <script>
-  import { useForm } from '@inertiajs/svelte';
+  import { useForm } from 'inertiax-svelte';
   export let flash
   import { slide } from 'svelte/transition'
   let form = useForm('reset', {password: '', password_confirmation: ''})

@@ -6,7 +6,7 @@ import '../lib/browser.css'
 import "toastify-js/src/toastify.css"
 
 import { hydrate, mount } from 'svelte'
-import { createInertiaApp, router } from '@inertiajs/svelte'
+import { createInertiaApp, router } from 'inertiax-svelte'
 
 import resolve from '../lib/resolve'
 

@@ -1,8 +1,6 @@
 {
   "devDependencies": {
     "@iconify/json": "^2.2.206",
-    "@inertiajs/core": "file:./vendor/inertia/packages/core",
-    "@inertiajs/svelte": "file:./vendor/inertia/packages/svelte",
     "@sveltejs/vite-plugin-svelte": "^3.1.0",
     "@unocss/extractor-svelte": "^0.59.4",
     "@unocss/svelte-scoped": "^0.59.4",
@@ -13,7 +11,9 @@
     "unocss": "^0.59.4",
     "vite": "^5.2.11",
     "vite-imagetools": "^7.0.2",
-    "vite-plugin-ruby": "^5.0.0"
+    "vite-plugin-ruby": "^5.0.0",
+    "inertiax-svelte": "^1.0.16",
+    "inertiax-core": "^1.0.16"
   },
   "type": "module"
 }

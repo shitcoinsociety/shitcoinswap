@@ -26,18 +26,6 @@ Coming soon
 git clone git@github.com:buhrmi/shitcoinswap.git
 ```
 
-#### Initialize and build submodules
-
-This is required because I'm using my own [Inertia fork](https://github.com/buhrmi/inertia). This fork isn't yet available as npm package.
-
-```
-git submodule init
-git submodule update
-cd vendor/inertia
-npm i
-npm run build --workspace=packages --if-present
-```
-
 #### Install dependencies
 
 ```

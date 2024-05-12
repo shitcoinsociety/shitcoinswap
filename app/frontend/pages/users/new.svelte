@@ -5,7 +5,7 @@
 
 
 <script>
-  import { Frame, useForm } from '@inertiajs/svelte'
+  import { Frame, useForm } from 'inertiax-svelte'
   import { onMount } from 'svelte'
 
   export let flash

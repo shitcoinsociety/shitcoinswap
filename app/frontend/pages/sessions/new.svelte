@@ -4,7 +4,7 @@
 </script>
 
 <script>
-  import { useForm, page } from '@inertiajs/svelte'
+  import { useForm, page } from 'inertiax-svelte'
   import { slide } from 'svelte/transition'
 
   export let flash
