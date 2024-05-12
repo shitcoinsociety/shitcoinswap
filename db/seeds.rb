@@ -3,4 +3,4 @@ mnt = Currency.find_or_create_by!(symbol: "MNT") do |c|
   c.stage = "pre-allocating"
 end
 
-mnt.whitepaper.attach(io: File.open("db/seed/whitepapers/momentum.pdf"), filename: "momentum-whitepaper.pdf")
+# mnt.whitepaper.attach(io: File.open("db/seed/whitepapers/momentum.pdf"), filename: "momentum-whitepaper.pdf")
