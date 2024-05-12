@@ -5,7 +5,7 @@ import './browser.css'
 
 import "toastify-js/src/toastify.css"
 
-import { mount } from 'svelte'
+import { hydrate } from 'svelte'
 import { createInertiaApp, router } from '@inertiajs/svelte'
 
 import resolve from './lib/resolve'
@@ -14,7 +14,7 @@ import resolve from './lib/resolve'
 createInertiaApp({ 
   resolve,
   setup({ el, App, props }) {
-    mount(App, { target: el, hydrate: true, props })
+    hydrate(App, { target: el, props })
   },
 })
 
