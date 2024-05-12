@@ -15,7 +15,9 @@ export default defineConfig({
       '$assets': __dirname + '/app/frontend/assets',
     }
   },
-  
+  build: {
+    cssCodeSplit: false
+  },
   plugins: [
     Unocss({
       extractors: [

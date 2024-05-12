@@ -1,14 +1,14 @@
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
 import 'virtual:unocss-devtools'
-import './browser.css'
+import '../lib/browser.css'
 
 import "toastify-js/src/toastify.css"
 
 import { hydrate, mount } from 'svelte'
 import { createInertiaApp, router } from '@inertiajs/svelte'
 
-import resolve from './lib/resolve'
+import resolve from '../lib/resolve'
 
 
 createInertiaApp({ 
