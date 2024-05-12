@@ -39,10 +39,6 @@ jobs:
             - ~/.cache/npm
           key: npm-{{ checksum "package-lock.json" }}
 
-      # Build custom Inertia fork
-      - run: (cd vendor/inertia && npm install)
-      - run: (cd vendor/inertia/packages/core && npm run build)
-
       # Setup the database
       - run: bundle exec rake db:setup
 
