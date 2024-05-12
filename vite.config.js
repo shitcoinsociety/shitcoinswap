@@ -17,14 +17,6 @@ export default defineConfig({
   },
   
   plugins: [
-    RubyPlugin(),
-    imagetools({}),
-    svelte({
-      preprocess: [
-        importAssets()
-      ]
-    }),
-
     Unocss({
       extractors: [
         extractorSvelte(),
@@ -38,6 +30,14 @@ export default defineConfig({
           }
         })
       ]
-     })
+    }),
+    RubyPlugin(),
+    imagetools({}),
+    svelte({
+      preprocess: [
+        importAssets()
+      ]
+    }),
+
   ]
 })

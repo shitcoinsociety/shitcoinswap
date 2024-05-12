@@ -1,5 +1,6 @@
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
+import 'virtual:unocss-devtools'
 import './browser.css'
 
 import "toastify-js/src/toastify.css"
