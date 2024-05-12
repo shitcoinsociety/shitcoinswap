@@ -5,8 +5,9 @@
 
 
 <script>
-  import { Frame, useForm } from 'inertiax-svelte'
+  import { useForm } from 'inertiax-svelte'
   import { onMount } from 'svelte'
+  import { slide } from 'svelte/transition'
 
   export let flash
 
@@ -49,19 +50,27 @@
   <form on:submit|preventDefault={() => $form.post(`/users`)} class="">
     <h2 class="text-center mb-2">Sign up</h2>
     <!-- <label for="email" class:error={$form.errors.email}>Email address {$form.errors.email  || ''}</label><br> -->
-    <input class="w-full mb-2" name="email" type="email" placeholder="Email address" bind:value={$form.email}>
-
+    <input class:error={$form.errors.email} class="w-full mb-2" name="email" type="email" placeholder="Email address" bind:value={$form.email}>
+    {#if $form.errors.email}
+      <div class="error -mt-2 mb-2 text-right" transition:slide>{$form.errors.email}</div>
+    {/if}
     <!-- <label for="password" class:error={$form.errors.password}>Password {$form.errors.password  || ''}</label><br> -->
-    <input class="w-full mb-2" name="password" type="password" placeholder="Password" bind:value={$form.password}>
-   
-    <!-- <label for="password_confirmation" class:error={$form.errors.password_confirmation}>Password confirmation {$form.errors.password_confirmation  || ''}</label><br> -->
-    <input class="w-full mb-2" name="password_confirmation" type="password" placeholder="Confirm password" bind:value={$form.password_confirmation}>
+    <input class:error={$form.errors.password} class="w-full mb-2" name="password" type="password" placeholder="Password" bind:value={$form.password}>
+    {#if $form.errors.password}
+      <div class="error -mt-2 mb-2 text-right" transition:slide>{$form.errors.password}</div>
+    {/if}
 
+    <!-- <label for="password_confirmation" class:error={$form.errors.password_confirmation}>Password confirmation {$form.errors.password_confirmation  || ''}</label><br> -->
+    <input class:error={$form.errors.password_confirmation} class="w-full mb-2" name="password_confirmation" type="password" placeholder="Confirm password" bind:value={$form.password_confirmation}>
+    {#if $form.errors.password_confirmation}
+      <div class="error -mt-2 mb-2 text-right" transition:slide>{$form.errors.password_confirmation}</div>
+    {/if}
     <!-- Checking you're not a robot... -->
     <div id="turnstile_container"></div>
     {#if flash.turnstile_error}
       <div class="error">{flash.turnstile_error}</div>
     {/if}
+    
     <button class="btn !mt-4" name="signup" disabled={!captchaCompleted}>Sign up</button><br>
   </form>
 
@@ -96,6 +105,9 @@
 <style>
   .error {
     color: red;
+  }
+  input.error {
+    border-color: red;
   }
   :global(#turnstile_container iframe) {
     width: 100% !important;

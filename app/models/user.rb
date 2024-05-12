@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   has_one_attached :profile_image
 
+  validates :password, length: { minimum: 8 }, if: -> { new_record? || !password.nil? }
+
   validates :nickname, uniqueness: true, presence: true, format: { with: /\A[a-zA-Z0-9_]+\z/ }
 
   validates :email, uniqueness: true, presence: true
