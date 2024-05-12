@@ -38,7 +38,7 @@ COPY --link . .
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
-RUN bin/vite build && bin/vite build --ssr
+RUN npx vite build && npx vite build --ssr
 
 # Final stage for app image
 FROM base
