@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get "/auth/:provider/callback" => "sessions#create"
 
+  inertia "/privacy" => "static/privacy"
+
   # Defines the root path route ("/")
   root "currencies#index"
 end
