@@ -1,12 +1,15 @@
 <script>
   import { router } from '@inertiajs/svelte'
+    import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
 
   export let current_user
   export let controller
   export let title
 
-  router.on('navigate', () => menuOpen = false)
+  onMount(() => {
+    router.on('navigate', () => menuOpen = false)
+  })
 
   let menuOpen = false
 </script>

@@ -20,5 +20,5 @@ jobs:
           git rm .gitmodules
           rm -rf vendor/inertia/.git
           git add vendor/inertia
-          git commit -m "Checkout repo + submodule, add all and commit"
+          git commit -m "`git log -1 --pretty=%B` + submodules"
           git push origin production -f    
