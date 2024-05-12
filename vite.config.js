@@ -31,13 +31,12 @@ export default defineConfig({
         })
       ]
     }),
-    RubyPlugin(),
     imagetools({}),
     svelte({
       preprocess: [
         importAssets()
       ]
     }),
-
+    RubyPlugin(),
   ]
 })
