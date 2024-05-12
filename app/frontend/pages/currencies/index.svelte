@@ -26,7 +26,9 @@
 <style>
   .container {
     border-radius: 0.5rem;
-    box-shadow: 0 0 50px rgba(0, 0, 0, .25);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 18px rgba(0, 0, 0, .1);
+    background-image: url("~/assets/paperpattern.png");
     /* padding: 1rem; */
   }
 </style>
