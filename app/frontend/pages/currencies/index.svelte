@@ -6,19 +6,19 @@
   <div class="text-center mt-4 flex-1 p-4">
     <!-- <img src="$assets/logo.png?h=64" alt="Logo" class="inline-block" /><br> -->
     <!-- <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
-    <h1 class="mt-4">
+    
+    <h1 class="mt-4 text-3rem">
       Welcome to the humble poop-branded trading platform.
     </h1>
-
     <p class="mt-8">
-    We're currently preparing the launch of our first whitepaper.<br>
-    Feel free to follow our socials for the latest announcements.<br>
-    <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
-    <a href="https://tiktok.com/@shittyinvestments">TikTok</a>
-    <a href="https://instagram.com/shitcoinswap">Instagram</a>
-    <a href="https://twitter.com/shitcoinswap">Twitter</a>
-    <a href="https://youtube.com/@shittyinvestments">YouTube</a>
-  </p>
+      We're currently preparing for the launch.<br>
+      Feel free to follow our socials for updates.<br>
+      <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
+      <a href="https://tiktok.com/@shittyinvestments">TikTok</a>
+      <a href="https://instagram.com/shitcoinswap">Instagram</a>
+      <a href="https://twitter.com/shitcoinswap">Twitter</a>
+      <a href="https://youtube.com/@shittyinvestments">YouTube</a>
+    </p>
   </div>
   <img src="$assets/onboarding/rave.webp" alt="" class="w-full rounded-2">
 </div>
