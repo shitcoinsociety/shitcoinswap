@@ -45,3 +45,7 @@ jobs:
 
       - store_test_results:
           path: test/reports
+
+      # Save screenshots
+      - store_artifacts:
+          path: tmp/screenshots
