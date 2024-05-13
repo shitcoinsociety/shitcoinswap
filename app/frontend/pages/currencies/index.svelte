@@ -7,7 +7,7 @@
     <!-- <img src="$assets/logo.png?h=64" alt="Logo" class="inline-block" /><br> -->
     <!-- <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
-    <h1 class="mt-4 text-3rem">
+    <h1 class="mt-4 md:text-2.5rem">
       Welcome to the humble poop-branded trading platform.
     </h1>
     <p class="mt-8">
