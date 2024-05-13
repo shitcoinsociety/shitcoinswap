@@ -11,7 +11,7 @@
       Welcome to the humble poop-branded trading platform.
     </h1>
     <p class="mt-8">
-      This website is currently <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">in development</a>.<br>
+      This app is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a> under constant development.<br>
       <br>
       Feel free to follow our socials for updates.<br>
       <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
