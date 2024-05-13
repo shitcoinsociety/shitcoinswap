@@ -76,3 +76,5 @@ gem "sentry-rails"
 gem "foreman", "~> 0.88.1"
 
 gem "rack-host-redirect", "~> 1.3"
+
+gem "rack-attack", "~> 6.7"
