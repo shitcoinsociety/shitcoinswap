@@ -62,6 +62,7 @@
       {:else}
         
         <div class="flex-1"></div>
+        <a href="/privacy" class="mb-2">Privacy Policy</a>
         <a href="/users/new" class="btn primary">Sign up</a>
         <!-- <div class="flex-1"></div> -->
       {/if}

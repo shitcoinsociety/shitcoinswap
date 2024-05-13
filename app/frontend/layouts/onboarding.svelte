@@ -28,6 +28,7 @@
       <a href="/"><i class="i-pajamas:close w-8 h-8"></i></a>
     </div>
     <slot />
+    <a href="/privacy">Privacy Policy</a>
   </div>
 </div>
 

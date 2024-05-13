@@ -84,9 +84,7 @@
         <div class="i-pajamas:twitter w-1.5em h-1.5em align-middle"></div>
         <span class="flex-1">
           Twitter
-
         </span>
-
       </div>
     </button>
     
