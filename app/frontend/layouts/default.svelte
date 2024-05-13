@@ -157,10 +157,12 @@
   }
   footer {
     padding: 1rem;
+    position: sticky;
+    bottom: 0;
     /* height: 70px; */
-    box-shadow: 0 0 3px rgba(0, 0, 0, .04), 0 7px 12px rgba(0, 0, 0, .65);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .04), 0 0 12px rgba(169, 169, 169, 0.65);
     /* background: rgba(255,255,255,0.4); */
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+    background-image: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(156, 156, 156) 100%);
   }
   header {
     padding: 1rem;
@@ -197,8 +199,7 @@
       transform: translateX(0);
       top: 1rem;
       gap: 0;
-
-      height: calc(100% - 2rem);
+      height: calc(100vh - 2rem);
     }
   }
 </style>
