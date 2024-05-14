@@ -164,9 +164,9 @@
     position: sticky;
     bottom: 0;
     /* height: 70px; */
-    box-shadow: 0 0 3px rgba(0, 0, 0, .04), 0 0 12px rgba(169, 169, 169, 0.65);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .44);
     /* background: rgba(255,255,255,0.4); */
-    background-image: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(156, 156, 156) 100%);
+    background-image: url("~/assets/denim.png");
   }
   header {
     padding: 1rem;

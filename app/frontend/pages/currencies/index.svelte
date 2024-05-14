@@ -8,18 +8,20 @@
     <!-- <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
     <h1 class="mt-4 md:text-2.5rem">
-      The humble poop-branded<br>trading platform.
+      We integrate all your shit.
     </h1>
     <p class="mt-4 mb-20">
-      Shitcoin Swap is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a> under constant development.<br>
-      Its goal is to integrate with highly experimental (and as such high-risk) crypto projects.<br>
+      Shitcoin Swap is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a> under constant development. 
+      It integrates with highly experimental (and as such high-risk) crypto projects
+      and offers them for trade.
+      <br>
       <br>
       Follow 
       <a href="https://youtube.com/@shittyinvestments" target="_blank">
         <span class="i-simple-icons:youtube w-1.5em h-1.5em"></span>
         Shitty Investments
       </a>
-      for updates.
+      and stay tuned for the first announcement.
       <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
       <!-- <a href="https://instagram.com/shitcoinswap">Instagram</a>
       <a href="https://twitter.com/shitcoinswap">Twitter</a> -->
