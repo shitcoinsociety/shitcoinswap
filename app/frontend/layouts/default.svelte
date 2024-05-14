@@ -62,7 +62,6 @@
       {:else}
         
         <div class="flex-1"></div>
-        <a href="/privacy" class="mb-2">Privacy Policy</a>
         <a href="/users/new" class="btn primary">Sign up</a>
         <!-- <div class="flex-1"></div> -->
       {/if}
@@ -72,7 +71,7 @@
     <header class="container mx-auto flex gap-3 items-center">
       <div class="flex-1">
         <button class="md:hidden" on:click={() => menuOpen = true}>
-          <div class="i-pepicons-print:menu w-2em h-2em"></div>
+          <div class="i-pepicons-print:menu w-2em h-2em text-white"></div>
         </button>
       </div>
       <img src="$assets/logo.png?h=40" alt="Logo" class="inline-block" />
@@ -81,6 +80,9 @@
     </header>
     <div class="p-4">
       <slot />
+    </div>
+    <div class="text-center pb-4">
+      <a href="/privacy" class="mb-2">Privacy Policy</a>
     </div>
     <footer class="md:hidden">
       <a href="/users/new" class="btn primary">Sign up</a>
@@ -182,6 +184,7 @@
   }
   .overlay {
     position: fixed;
+    z-index: 5;
     top: 0;
     left: 0;
     width: 100%;

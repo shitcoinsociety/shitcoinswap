@@ -46,7 +46,7 @@
   }
 </script>
 
-<main class="w-1/2 min-w-80">
+<main class="max-w-100">
   <form on:submit|preventDefault={() => $form.post(`/users`)} class="">
     <h2 class="text-center mb-2">Sign up</h2>
     <!-- <label for="email" class:error={$form.errors.email}>Email address {$form.errors.email  || ''}</label><br> -->

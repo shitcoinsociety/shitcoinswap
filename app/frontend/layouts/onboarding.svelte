@@ -27,12 +27,17 @@
     <div class="fixed top-4 right-4">
       <a href="/"><i class="i-pajamas:close w-8 h-8"></i></a>
     </div>
-    <slot />
+    <div class="container pattern p-8">
+      <slot />
+    </div>
     <a href="/privacy">Privacy Policy</a>
   </div>
 </div>
 
 <style>
+  .container {
+    width: fit-content;
+  }
   .panels {
     height: 100dvh;
     display: grid;
@@ -51,6 +56,7 @@
     background: linear-gradient(180deg, rgba(93, 78, 70, 1) 0%, rgb(42, 40, 39) 100%);
   }
   .main {
+    grid-template-rows: 1fr auto;
     display: grid;
     padding: 1rem;
     grid-area: main;

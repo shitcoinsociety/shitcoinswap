@@ -2,34 +2,31 @@
   export let currencies
 </script>
 
-<div class="flex flex-col justify-center h-full container bg-white">
+<div class="flex flex-col justify-center h-full container pattern bg-white">
   <div class="text-center mt-4 flex-1 p-4">
     <!-- <img src="$assets/logo.png?h=64" alt="Logo" class="inline-block" /><br> -->
     <!-- <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
     <h1 class="mt-4 md:text-2.5rem">
-      Welcome to the humble poop-branded trading platform.
+      The humble poop-branded<br>trading platform.
     </h1>
-    <p class="mt-8">
-      This app is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a> under constant development.<br>
+    <p class="mt-4 mb-20">
+      An <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a> under constant development.<br>
       <br>
-      Feel free to follow our socials for updates.<br>
+      Follow 
+      <a href="https://youtube.com/@shittyinvestments" target="_blank">
+        <span class="i-simple-icons:youtube w-1.5em h-1.5em"></span>
+        Shitty Investments
+      </a>
+      for updates.
       <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
-      <a href="https://tiktok.com/@shittyinvestments">TikTok</a>
-      <a href="https://instagram.com/shitcoinswap">Instagram</a>
-      <a href="https://twitter.com/shitcoinswap">Twitter</a>
-      <a href="https://youtube.com/@shittyinvestments">YouTube</a>
+      <!-- <a href="https://instagram.com/shitcoinswap">Instagram</a>
+      <a href="https://twitter.com/shitcoinswap">Twitter</a> -->
     </p>
   </div>
   <img src="$assets/onboarding/rave.webp" alt="" class="w-full rounded-2">
 </div>
 
 <style>
-  .container {
-    border-radius: 0.5rem;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 18px rgba(0, 0, 0, .1);
-    background-image: url("~/assets/paperpattern.png");
-    /* padding: 1rem; */
-  }
+
 </style>

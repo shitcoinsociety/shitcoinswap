@@ -12,7 +12,7 @@
   })
 </script>
 
-<main class="flex justify-center my-24">
+<main class="flex justify-center">
   <form class="well" on:submit|preventDefault={() => $form.post(`/password_resets`)}>
     <h2>Reset your password</h2>
     <p class="mb-4">

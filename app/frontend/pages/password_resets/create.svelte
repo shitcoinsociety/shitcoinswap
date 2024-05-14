@@ -4,7 +4,7 @@
 </script>
 
 
-<main class="container py-24 flex justify-center">
+<main class="container flex justify-center">
   <div class="well">
     <h2>Email sent</h2>
     <p>
