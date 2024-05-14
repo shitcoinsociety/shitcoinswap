@@ -107,6 +107,7 @@
     display: flex;
     align-items: center;
     background: linear-gradient(180deg, rgba(93, 78, 70, 1) 0%, rgb(42, 40, 39) 100%);
+    background-image: url("$assets/denim.png");
     color: white;
     border-radius: 0.5rem;
     z-index: 10;
