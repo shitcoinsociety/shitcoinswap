@@ -11,7 +11,8 @@
       The humble poop-branded<br>trading platform.
     </h1>
     <p class="mt-4 mb-20">
-      An <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a> under constant development.<br>
+      Shitcoin Swap is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a> under constant development.<br>
+      Its goal is to integrate with highly experimental (and as such high-risk) crypto projects.<br>
       <br>
       Follow 
       <a href="https://youtube.com/@shittyinvestments" target="_blank">
