@@ -7,21 +7,21 @@
     <!-- <img src="$assets/logo.png?h=64" alt="Logo" class="inline-block" /><br> -->
     <!-- <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
-    <h1 class="mt-4 md:text-2.5rem">
+    <h1 class="mt-4 md:text-2.5em">
       What is money, anyway?
     </h1>
     <p class="mt-4 mb-20">
-      Shitcoin Swap is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a>
+      <strong>Shitcoin Swap</strong> is an <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a>
       under constant development. It serves as a foundation to integrate and trade with highly experimental,
       high-risk crypto assets.
       <br>
       <br>
       Follow 
-      <a href="https://youtube.com/@shittyinvestments" target="_blank">
+      <a  class="font-bold" href="https://youtube.com/@shittyinvestments" target="_blank">
         <span class="i-simple-icons:youtube w-1.5em h-1.5em"></span>
         Shitty Investments
       </a>
-      and stay tuned for the first announcement.
+      and stay tuned for our first announcement.
       <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
       <!-- <a href="https://instagram.com/shitcoinswap">Instagram</a>
       <a href="https://twitter.com/shitcoinswap">Twitter</a> -->

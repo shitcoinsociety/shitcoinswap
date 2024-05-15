@@ -21,7 +21,7 @@
   }
 </script>
 
-<main>
+<main class="max-w-100">
   
   <form on:submit|preventDefault={() => $form.post(`/session`)} class="">
     <h2 class="text-center mb-2">Log in</h2>
@@ -33,7 +33,7 @@
     </p>
     {/if}
     <button class="btn" name="login">Log in</button>
-    <p class="text-right">
+    <p class="text-right mt-2">
       <a href="/password_resets/new">Forgot your password?</a>
     </p>
   </form>

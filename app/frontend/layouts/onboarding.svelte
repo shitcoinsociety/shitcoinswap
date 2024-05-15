@@ -27,10 +27,10 @@
     <div class="fixed top-4 right-4">
       <a href="/"><i class="i-pajamas:close w-8 h-8"></i></a>
     </div>
-    <div class="container pattern p-8">
+    <div class="container pattern p-4 md:p-8">
       <slot />
     </div>
-    <a href="/privacy">Privacy Policy</a>
+    <a href="/privacy" class="mt-2">Privacy Policy</a>
   </div>
 </div>
 
@@ -41,6 +41,7 @@
   .panels {
     height: 100dvh;
     display: grid;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
     "top"
     "main";
@@ -72,6 +73,7 @@
       border-radius: 0.5rem;
     }
     .panels {
+      grid-template-rows: 1fr;
       grid-template-columns: 2fr 3fr;
       grid-template-areas:
         "top main";
