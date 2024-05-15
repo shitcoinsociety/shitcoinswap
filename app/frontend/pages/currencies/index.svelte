@@ -8,12 +8,13 @@
     <!-- <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
     <h1 class="mt-4 md:text-2.5rem">
-      We integrate all your shit.
+      Who needs money, anyway?
     </h1>
     <p class="mt-4 mb-20">
-      Shitcoin Swap is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a> under constant development. 
-      It integrates with highly experimental (and as such high-risk) crypto projects
-      and offers them for trade.
+      Shitcoin Swap is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a>
+      under constant development. 
+      We integrate with highly experimental (and therefore high-risk) crypto projects
+      and offer them for trade.
       <br>
       <br>
       Follow 
