@@ -12,8 +12,8 @@
     </h1>
     <p class="mt-4 mb-20">
       Shitcoin Swap is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a>
-      under constant development. 
-      We integrate with highly experimental (and therefore high-risk) crypto projects
+      under constant development.<br>
+      It aims to provide a robust platform to integrate with highly experimental (and as such high-risk) crypto projects
       and offer them for trade.
       <br>
       <br>
