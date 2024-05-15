@@ -7,20 +7,21 @@
     <!-- <img src="$assets/logo.png?h=64" alt="Logo" class="inline-block" /><br> -->
     <!-- <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
-    <h1 class="mt-4 md:text-2.5em">
+    <h1 class="mt-4 md:text-2.5em text-balance">
       Nothing ventured, nothing gained.
     </h1>
-    <p class="mt-4 mb-20">
-      <strong>Shitcoin Swap</strong> is an <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a>
-      under constant development. It serves as a foundation to integrate and trade with highly experimental,
-      high-risk crypto assets.
-      <br>
-      <br>
-      Follow 
+    <p class=" text-balance mb-14 mt-4">
+      <strong>Shitcoin Swap</strong> is an 
+      <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
+        open source project</a> under constant development. It serves as a foundation to develop,
+        integrate, and trade with highly experimental crypto assets.
+      <br><br>
+      
+      <a class="font-bold" href="/users/new">Sign up</a>, follow 
       <a  class="font-bold" href="https://youtube.com/@shittyinvestments" target="_blank">
         <span class="i-simple-icons:youtube w-1.5em h-1.5em"></span>
         Shitty Investments
-      </a>
+      </a>,
       and stay tuned for our first announcement.
       <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
       <!-- <a href="https://instagram.com/shitcoinswap">Instagram</a>

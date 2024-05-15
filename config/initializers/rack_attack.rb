@@ -25,7 +25,7 @@ class Rack::Attack
   #
   # Key: "rack::attack:#{Time.now.to_i/:period}:req/ip:#{req.ip}"
   throttle('req/ip', limit: 30, period: 1.minutes) do |req|
-    req.ip # unless req.path.start_with?('/assets')
+    req.ip unless req.path.start_with?('/vite')
   end
 
   ### Prevent Brute-Force Login Attacks ###
@@ -40,7 +40,7 @@ class Rack::Attack
   # Throttle POST requests to /login by IP address
   #
   # Key: "rack::attack:#{Time.now.to_i/:period}:logins/ip:#{req.ip}"
-  throttle('logins/ip', limit: 5, period: 20.seconds) do |req|
+  throttle('logins/ip', limit: 5, period: 30.seconds) do |req|
     if req.path == '/session' && req.post?
       req.ip
     end
@@ -54,7 +54,7 @@ class Rack::Attack
   # throttle logins for another user and force their login requests to be
   # denied, but that's not very common and shouldn't happen to you. (Knock
   # on wood!)
-  throttle('logins/email', limit: 5, period: 20.seconds) do |req|
+  throttle('logins/email', limit: 5, period: 30.seconds) do |req|
     if req.path == '/session' && req.post?
       # Normalize the email, using the same logic as your authentication process, to
       # protect against rate limit bypasses. Return the normalized email if present, nil otherwise.

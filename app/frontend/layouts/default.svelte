@@ -27,9 +27,9 @@
     <nav class:menuOpen>
       <!-- <img src="$assets/logo.png?h=32" alt="Logo" class="inline-block" /> -->
       
-      <div class="w-full ">
+      <a href="/" class="w-full ">
         <img src="$assets/textmark.png?h=32" alt="Shitcoin Swap" class="" />
-      </div>
+      </a>
       
       {#if current_user}
       

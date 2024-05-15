@@ -2,11 +2,11 @@
 
 [![CircleCI](https://circleci.com/gh/buhrmi/shitcoinswap.svg?style=shield)](https://circleci.com/gh/buhrmi/shitcoinswap)
 
-Shitcoin Swap is an open source trading platform under constant development. Its goal is to integrate with highly experimental (and as such high-risk) crypto projects.
+Shitcoin Swap is an open source trading platform under constant development. It serves as a foundation to integrate and trade with highly experimental, high-risk crypto assets.
 
 ## Why Open Source?
 
-The reason is rather egoistic: I'm hoping that by developing this app in the open it will be easier to accrue help from platform developers when it comes to integrating new platforms.
+The reason is rather egoistic: I'm hoping that by developing this app in the open it will be easier to accrue help from blockchain developers when it comes to integrating new platforms.
 
 ## Run locally
 

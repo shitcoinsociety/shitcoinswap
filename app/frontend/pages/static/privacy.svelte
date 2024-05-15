@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container pattern p-4 md:p-8">
 <h1>
   Privacy Policy
 </h1>
@@ -26,12 +26,3 @@
 </div>
 
 
-<style>
-  .container {
-    border-radius: 0.5rem;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 18px rgba(0, 0, 0, .1);
-    background-image: url("~/assets/paperpattern.png");
-    padding: 1rem;
-  }
-</style>
