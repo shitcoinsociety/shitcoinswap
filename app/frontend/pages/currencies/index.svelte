@@ -3,18 +3,17 @@
 </script>
 
 <div class="flex flex-col justify-center h-full container pattern bg-white">
-  <div class="text-center mt-4 flex-1 p-4">
+  <div class="text-center mt-4 flex-1 p-4 px-8">
     <!-- <img src="$assets/logo.png?h=64" alt="Logo" class="inline-block" /><br> -->
     <!-- <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
     <h1 class="mt-4 md:text-2.5rem">
-      Who needs money, anyway?
+      What is money, anyway?
     </h1>
     <p class="mt-4 mb-20">
       Shitcoin Swap is an <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a>
       under constant development.<br>
-      It aims to provide a robust platform to integrate with highly experimental (and as such high-risk) crypto projects
-      and offer them for trade.
+      It serves as a foundation to integrate and trade with highly experimental, high-risk crypto projects.
       <br>
       <br>
       Follow 
