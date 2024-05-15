@@ -8,7 +8,7 @@
     <!-- <img src="$assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
     <h1 class="mt-4 md:text-2.5em">
-      What is money, anyway?
+      Nothing ventured, nothing gained.
     </h1>
     <p class="mt-4 mb-20">
       <strong>Shitcoin Swap</strong> is an <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source project</a>
