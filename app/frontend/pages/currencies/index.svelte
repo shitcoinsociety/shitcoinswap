@@ -25,7 +25,7 @@
         </span>
         Investments
       </a>
-      to not miss our first announcement.
+      to not miss the first announcement.
       <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
       <!-- <a href="https://instagram.com/shitcoinswap">Instagram</a>
       <a href="https://twitter.com/shitcoinswap">Twitter</a> -->
