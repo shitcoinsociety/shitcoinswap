@@ -89,7 +89,25 @@ h2 {
   font-weight: bold;
 }
 
+.mark {
+  /* padding: 30px 0 8px; */
+  position: relative;
+  z-index: 1;
+  /* display: inline-block; */
+}
 
+.mark::before {
+  content: "";
+  position: absolute;
+  /* left: 7%; */
+  left: 0%;
+  bottom: 5%;
+  width: 105%;
+  height: 30%;
+  transform: skew(-15deg) rotate(-5deg);
+  background: rgba(195, 227, 34, 0.5);
+  z-index: -1;
+}
 
 .btn.twitter {
   background-color: #1DA1F2;
