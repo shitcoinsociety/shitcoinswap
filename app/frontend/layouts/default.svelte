@@ -62,7 +62,7 @@
       {:else}
         
         <div class="flex-1"></div>
-        <a href="/users/new" class="btn primary">Sign up</a>
+        <a href="/users/new" class="btn primary">Create account</a>
         <!-- <div class="flex-1"></div> -->
       {/if}
     </nav>
@@ -85,7 +85,7 @@
       <a href="/privacy" class="mb-2">Privacy Policy</a>
     </div>
     <footer class="md:hidden">
-      <a href="/users/new" class="btn primary">Sign up</a>
+      <a href="/users/new" class="btn primary">Create account</a>
     </footer>
   </main>
 
