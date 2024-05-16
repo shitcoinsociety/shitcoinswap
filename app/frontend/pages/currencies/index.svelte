@@ -13,11 +13,11 @@
     <p class=" text-balance mb-14 mt-4">
       <strong>Shitcoin Swap</strong> is an 
       <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
-        open source project</a> under constant development. It serves as a hub to
-        integrate, promote, and trade highly experimental crypto assets.
+        open source project</a> under constant development.<br>
+        Think of it as a central hub to launch, promote, and trade new crypto projects.
       <br><br>
       
-      <a class="font-bold" href="/users/new">Sign up</a> and make sure to follow 
+      Feel free to <a class="font-bold" href="/users/new">sign up</a>, and don't forget to follow 
       <a  class="font-bold" href="https://youtube.com/@shittyinvestments" target="_blank">
         <span class="whitespace-nowrap">
           <span class="i-simple-icons:youtube w-1.5em h-1.5em"></span> Shitty 
@@ -25,7 +25,7 @@
         </span>
         Investments
       </a>
-      to not miss the first announcement.
+      for our first announcement.
       <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
       <!-- <a href="https://instagram.com/shitcoinswap">Instagram</a>
       <a href="https://twitter.com/shitcoinswap">Twitter</a> -->
