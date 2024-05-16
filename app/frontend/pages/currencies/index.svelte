@@ -17,7 +17,7 @@
         It serves as a central hub to integrate, launch, and trade high-risk crypto assets.
       <br><br>
       
-      Interested? <a class="font-bold" href="/users/new">Create an account</a>, and make sure to 
+      Interested?<br><a class="font-bold" href="/users/new">Create an account</a>, and make sure to follow
       <a  class="font-bold" href="https://youtube.com/@shittyinvestments" target="_blank">
         <span class="whitespace-nowrap">
           <span class="i-simple-icons:youtube w-1.5em h-1.5em"></span> Shitty 
