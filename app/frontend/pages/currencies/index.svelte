@@ -14,7 +14,7 @@
       <strong>Shitcoin Swap</strong> is an 
       <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
         open source project</a> under constant development.<br>
-        It serves as a central hub to integrate, launch, and trade high-risk crypto assets.
+        It serves as a central hub to integrate, promote, and trade all your favorite crypto assets.
       <br><br>
       
       Interested?<br><a class="font-bold" href="/users/new">Create an account</a>, and make sure to follow
