@@ -48,7 +48,7 @@
 
 <main class="max-w-100">
   <form on:submit|preventDefault={() => $form.post(`/users`)} class="">
-    <h2 class="text-center mb-2">Sign up</h2>
+    <h2 class="text-center mb-2">Create account</h2>
     <!-- <label for="email" class:error={$form.errors.email}>Email address {$form.errors.email  || ''}</label><br> -->
     <input class:error={$form.errors.email} class="w-full mb-2" name="email" type="email" placeholder="Email address" bind:value={$form.email}>
     {#if $form.errors.email}
@@ -71,7 +71,7 @@
       <div class="error">{flash.turnstile_error}</div>
     {/if}
     
-    <button class="btn !mt-4" name="signup" disabled={!captchaCompleted}>Sign up</button><br>
+    <button class="btn !mt-4" name="signup" disabled={!captchaCompleted}>Create account</button><br>
   </form>
 
 
