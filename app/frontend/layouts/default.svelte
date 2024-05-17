@@ -20,9 +20,9 @@
 
 <section>
     {#if menuOpen}
-    <div on:click={() => menuOpen = false } class="md:hidden overlay text-white" transition:fade={{duration: 200}}>
-      <button  class="i-pajamas:close w-8 h-8  fixed top-4 right-4"></button>
-    </div>
+    <button on:click={() => menuOpen = false } class="md:hidden overlay text-white" transition:fade={{duration: 200}}>
+      <div class="i-pajamas:close w-8 h-8  fixed top-4 right-4"></div>
+    </button>
     {/if}
     <nav class:menuOpen>
       <!-- <img src="$assets/logo.png?h=32" alt="Logo" class="inline-block" /> -->
@@ -32,7 +32,7 @@
       </a>
       
       {#if current_user}
-      
+        Welcome
       {:else}
       <a href="/session/new" class="login">
         <div class="profile_image">

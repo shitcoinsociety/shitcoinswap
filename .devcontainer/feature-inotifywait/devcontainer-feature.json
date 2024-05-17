@@ -1,0 +1,6 @@
+{
+    "id": "feature-inotifywait",
+    "version": "0.0.1",
+    "name": "inotifywait",
+    "description": "Installs file watching utility inotifywait"
+}

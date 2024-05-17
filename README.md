@@ -14,9 +14,14 @@ This is a pretty straight-forward Ruby on Rails app built with [Inertia](https:/
 
 To set up your local environment, first clone the repo, initialize and build submodules, install dependencies, and then start the app.
 
-### Inside a dev container
+### Inside a dev container (easiest)
 
-Coming soon
+In VSCode, click on "Clone repo in new dev container", and enter the address of this repository.
+
+Once the container has been started, the app should be available at http://localhost:5000.
+
+If you need to stop the server, press CTRL+C in the terminal. You can restart it with `foreman s -f Procfile.dev`.
+
 
 ### Without dev containers
 
