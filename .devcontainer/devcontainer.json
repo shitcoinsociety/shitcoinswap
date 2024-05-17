@@ -3,6 +3,7 @@
 	"features": {
 	  "ghcr.io/rails/devcontainer/features/activestorage": {},
 	  "ghcr.io/devcontainers/features/node:1": {},
+      "ghcr.io/snebjorn/devcontainer-feature/chromium:latest": {},
 	  "./feature-inotifywait": {}
 	},
 	"onCreateCommand": "bundle install --without production testing && npm install",

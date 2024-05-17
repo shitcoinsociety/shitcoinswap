@@ -8,13 +8,6 @@ import { importAssets } from 'svelte-preprocess-import-assets'
 import { imagetools } from 'vite-imagetools'
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '$': __dirname + '/app/frontend',
-      '$lib': __dirname + '/app/frontend/lib',
-      '$assets': __dirname + '/app/frontend/assets',
-    }
-  },
   build: {
     cssCodeSplit: false
   },

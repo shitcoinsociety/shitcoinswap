@@ -2,7 +2,7 @@ module ApplicationHelper
 
   # TODO: Move this into the Inertia Svelte SSR renderer
   def vite_global_style_tag
-    return stylesheet_link_tag("/vite-dev/style.css", media: 'all') if Rails.env.development?
+    # return stylesheet_link_tag("/vite-dev/style.css", media: 'all') if Rails.env.development?
 
     if Rails.env.test?
       vite_folder = 'vite-test'

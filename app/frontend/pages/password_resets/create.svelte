@@ -1,5 +1,5 @@
 <script context="module">
-  import Onboarding from '$/layouts/onboarding.svelte'
+  import Onboarding from '~/layouts/onboarding.svelte'
   export const layout = [Onboarding]
 </script>
 

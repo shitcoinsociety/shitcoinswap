@@ -13,14 +13,14 @@
     <div class="relative p-4 flex flex-col justify-center flex-1">
 
       <div class="text-center">
-        <img src="$assets/logo.png?h=54" alt="Logo" class="inline-block" />
-        <img src="$assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" />
+        <img src="~/assets/logo.png?h=54" alt="Logo" class="inline-block" />
+        <img src="~/assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" />
       </div>
       <div class="text-white text-center">
         The humble poop-branded trading platform
       </div>
     </div>
-    <img src="$assets/onboarding/rave.webp" alt="" class="w-full rounded-2 hidden md:block">
+    <img src="~/assets/onboarding/rave.webp" alt="" class="w-full rounded-2 hidden md:block">
   </div>
   
   <div class="main">
@@ -56,7 +56,7 @@
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .65);
     /* background: linear-gradient(180deg, rgba(93, 78, 70, 1) 0%, rgb(42, 40, 39) 100%); */
     background-color: rgb(95, 96, 100);
-    background-image: url("$assets/denim.png");
+    background-image: url("~/assets/denim.png");
   }
   .main {
     grid-template-rows: 1fr auto;

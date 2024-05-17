@@ -1,5 +1,5 @@
-const pages = import.meta.glob('$/pages/**/*.svelte')
-const layouts = import.meta.glob('$/layouts/**/*.svelte')
+const pages = import.meta.glob('~/pages/**/*.svelte')
+const layouts = import.meta.glob('~/layouts/**/*.svelte')
 
 export default async name => {
   let layoutPath, componentPath

@@ -25,10 +25,10 @@
     </button>
     {/if}
     <nav class:menuOpen>
-      <!-- <img src="$assets/logo.png?h=32" alt="Logo" class="inline-block" /> -->
+      <!-- <img src="~/assets/logo.png?h=32" alt="Logo" class="inline-block" /> -->
       
       <a href="/" class="w-full ">
-        <img src="$assets/textmark.png?h=32" alt="Shitcoin Swap" class="" />
+        <img src="~/assets/textmark.png?h=32" alt="Shitcoin Swap" class="" />
       </a>
       
       {#if current_user}
@@ -74,8 +74,8 @@
           <div class="i-pepicons-print:menu w-2em h-2em text-white"></div>
         </button>
       </div>
-      <img src="$assets/logo.png?h=40" alt="Logo" class="inline-block" />
-      <img src="$assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" />
+      <img src="~/assets/logo.png?h=40" alt="Logo" class="inline-block" />
+      <img src="~/assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" />
       <div class="flex-1"></div>
     </header>
     <div class="p-4">
@@ -107,7 +107,7 @@
     display: flex;
     align-items: center;
     background: linear-gradient(180deg, rgba(93, 78, 70, 1) 0%, rgb(42, 40, 39) 100%);
-    background-image: url("$assets/denim.png");
+    background-image: url("~/assets/denim.png");
     color: white;
     border-radius: 0.5rem;
     z-index: 10;
