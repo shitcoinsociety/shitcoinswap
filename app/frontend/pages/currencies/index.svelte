@@ -13,8 +13,8 @@
     <p class=" text-balance mb-8 mt-4">
       <strong>Shitcoin Swap</strong> is an 
       <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
-        open source project</a> under constant development.<br>
-        It serves as a launch pad to integrate, promote, and trade experimental crypto assets.
+        open source</a> brokerage platform under constant development.<br>
+        You can use it to launch and trade stocks and crypto assets of all kinds.
     </p>
     <p class="text-balance mb-14">
       
