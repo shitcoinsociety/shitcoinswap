@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     return redirect_to currencies_path if current_user
   end
 
+  def show
+    @user = User.find(params[:id]).as_json(User::JSON_OPTIONS)
+  end
+
   def create
     user = User.new(create_params)
 

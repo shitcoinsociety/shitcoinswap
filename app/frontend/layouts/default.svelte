@@ -32,7 +32,15 @@
       </a>
       
       {#if current_user}
-        Welcome
+        <a class="user" href="/">
+          <div class="profile_image">
+            <div class="i-pajamas:profile w-2em h-2em"></div>
+          </div>
+          <p class="leading-none">
+            <span class="text-lg">Welcome back!</span><br>
+            <span class="text-primary-link">Update profile</span>
+          </p>
+        </a>
       {:else}
       <a href="/session/new" class="login">
         <div class="profile_image">
@@ -145,6 +153,16 @@
   }
   a.login {
     /* flex my-4 text-white gap-3 items-center w-full */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: calc(100% + 3rem);
+    padding: 1.5rem;
+    color: white;
+    margin-block: 1rem;
+    background-color: rgba(255, 255, 255, .05);
+  }
+  .user {
     display: flex;
     align-items: center;
     gap: 1rem;
