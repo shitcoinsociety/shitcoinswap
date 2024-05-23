@@ -32,7 +32,7 @@
       </a>
       
       {#if current_user}
-        <a class="user" href="/">
+        <a class="user" href="/users/{current_user.id}">
           <div class="profile_image">
             <div class="i-pajamas:profile w-2em h-2em"></div>
           </div>

@@ -29,7 +29,7 @@ class User < ApplicationRecord
 
   def profile_image_url
     if profile_image.attached?
-      Rails.application.routes.url_helpers.rails_blob_url(profile_image)
+      Rails.application.routes.url_helpers.rails_blob_url(profile_image, only_path: true)
     else
       'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
     end
