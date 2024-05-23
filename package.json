@@ -1,19 +1,19 @@
 {
   "devDependencies": {
-    "@iconify/json": "^2.2.209",
+    "@iconify/json": "^2.2.213",
     "@sveltejs/vite-plugin-svelte": "^3.1.0",
-    "@unocss/extractor-svelte": "^0.60.2",
-    "@unocss/svelte-scoped": "^0.60.2",
-    "sharp": "^0.33.3",
+    "@unocss/extractor-svelte": "^0.60.3",
+    "@unocss/svelte-scoped": "^0.60.3",
+    "sharp": "^0.33.4",
     "svelte": "^5.0.0-next.123",
     "svelte-preprocess-import-assets": "^1.1.0",
     "toastify-js": "^1.12.0",
-    "unocss": "^0.60.2",
+    "unocss": "^0.60.3",
     "vite": "^5.2.11",
     "vite-imagetools": "^7.0.2",
     "vite-plugin-ruby": "^5.0.0",
-    "inertiax-svelte": "^1.0.16",
-    "inertiax-core": "^1.0.16"
+    "inertiax-svelte": "^1.1.0",
+    "inertiax-core": "^1.1.0"
   },
   "type": "module"
 }

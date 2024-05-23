@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   JSON_OPTIONS = {
-    only: ['id', 'name', 'nickname', 'created_at'],
+    only: ['id', 'name', 'nickname', 'bio', 'created_at'],
     methods: [:profile_image_url]
   }
 

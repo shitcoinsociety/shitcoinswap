@@ -4,11 +4,20 @@
 
 Shitcoin Swap is an open source trading platform under constant development. It serves as a foundation to integrate and trade with highly experimental, high-risk crypto assets.
 
+## Updates
+
+2024-05-24
+
+- Started to work on user profiles
+
+![](https://github.com/buhrmi/shitcoinswap/blob/master/.github/screenshots/2024-05-24-profiles.png?raw=1)
+
 ## Why Open Source?
 
 The reason is rather egoistic: I'm hoping that by developing this app in the open it will be easier to accrue help from blockchain developers when it comes to integrating new platforms.
 
-## Run locally
+
+## Setting up a dev environment
 
 This is a pretty straight-forward Ruby on Rails app built with [Inertia](https://inertiajs.com) and [Svelte](https://svelte.dev).
 

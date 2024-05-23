@@ -10,6 +10,20 @@ class UsersController < ApplicationController
     @user = User.find(params[:id]).as_json(User::JSON_OPTIONS)
   end
 
+  def edit
+    user = User.find(params[:id])
+    raise ActiveRecord::RecordNotFound if current_user != user
+    @user = user.as_json(User::JSON_OPTIONS)
+  end
+
+  def update
+    user = User.find(params[:id])
+    raise ActiveRecord::RecordNotFound if current_user != user
+    user.update(update_params)
+    flash[:success] = "Your profile has been updated."
+    redirect_to user
+  end
+
   def create
     user = User.new(create_params)
 
@@ -34,6 +48,10 @@ class UsersController < ApplicationController
   private
   def create_params
     params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+
+  def update_params
+    params.require(:user).permit(:email, :bio)
   end
 
 

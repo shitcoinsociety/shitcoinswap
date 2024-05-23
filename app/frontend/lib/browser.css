@@ -77,17 +77,24 @@ a {
   background: linear-gradient(to bottom, #2c90d1 0%, #2c90d1 25%, #2c90d1 100%);
 }
 
+.btn.alternative {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+  border-radius: 20em;
+  font-size: 0.8em;
+  padding: 0.6em 1.3em;
+}
 
 form .btn {
   width: 100%;
 }
 
-input {
+input, textarea {
   padding: 0.5em;
   border-radius: 0.25em;
   border: 1px solid var(--primary);
   width: 100%;
-  
 }
 
 h1 {
