@@ -11,7 +11,7 @@
       Prepare for<br><span class="mark">World&nbsp;Domination</span>
       <!-- Nothing <span class="mark">ventured</span>&nbsp;&hyphen; nothing <span class="mark">gained</span>. -->
     </h1>
-    <p class=" text-balance mb-8 mt-4">
+    <p class=" text-balance mb-4 mt-8">
       <strong>Shitcoin Swap</strong> is an 
       <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
         open source</a> trading platform under constant development.
