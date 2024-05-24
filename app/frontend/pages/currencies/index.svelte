@@ -19,14 +19,8 @@
     </p>
     <p class="text-balance mb-14">
       
-      <a class="font-bold" href="/users/new">Create an account</a> and follow
-      <a  class="font-bold whitespace-nowrap" href="https://youtube.com/@shittyinvestments" target="_blank">
-        <span class="">
-          <span class="i-simple-icons:youtube w-1.5em h-1.5em"></span> Shitty 
-        </span>
-        Investments
-      </a>
-      to not miss our first announcement.
+      <a class="font-bold" href="/users/new">Create an account</a>,
+      deposit some funds, and join your favorite investors.
       <!-- <a href="https://tiktok.com/@shittyinvestments">TikTok</a> -->
       <!-- <a href="https://instagram.com/shitcoinswap">Instagram</a>
       <a href="https://twitter.com/shitcoinswap">Twitter</a> -->

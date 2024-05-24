@@ -89,7 +89,7 @@
       </a>
       <div class="flex-1"></div>
     </header>
-    <div class="p-4">
+    <div class="p-4 md:pl-0">
       <slot />
     </div>
     <div class="text-center pb-4">
