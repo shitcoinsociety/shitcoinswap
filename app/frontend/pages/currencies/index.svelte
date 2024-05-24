@@ -8,7 +8,8 @@
     <!-- <img src="~/assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
     <h1 class="mt-4 md:text-2.5em text-balance">
-      Nothing <span class="mark">ventured</span>&nbsp;&hyphen; nothing <span class="mark">gained</span>.
+      Prepare for <span class="mark">World&nbsp;Domination</span>
+      <!-- Nothing <span class="mark">ventured</span>&nbsp;&hyphen; nothing <span class="mark">gained</span>. -->
     </h1>
     <p class=" text-balance mb-8 mt-4">
       <strong>Shitcoin Swap</strong> is an 
