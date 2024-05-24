@@ -15,7 +15,7 @@
       <strong>Shitcoin Swap</strong> is an 
       <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
         open source</a> trading platform under constant development.
-        The perfect place to promote and trade amazing crypto projects and stocks.
+        <!-- The perfect place to promote and trade amazing crypto projects and stocks. -->
     </p>
     <p class="text-balance mb-14">
       
