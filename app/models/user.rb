@@ -28,11 +28,14 @@ class User < ApplicationRecord
   end
 
   def profile_image_url
-    if profile_image.attached?
-      Rails.application.routes.url_helpers.rails_blob_url(profile_image, only_path: true)
-    else
-      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-    end
+    # if profile_image.attached?
+    #   Rails.application.routes.url_helpers.rails_blob_url(profile_image, only_path: true)
+    # else
+
+    gravatar_id = Digest::MD5.hexdigest(email)
+    
+    "https://www.gravatar.com/avatar/#{gravatar_id}?s=200&d=mp"
+    
   end
 
   def send_password_reset

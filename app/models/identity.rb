@@ -13,10 +13,10 @@ class Identity < ApplicationRecord
         new_user.nickname = auth_hash['info']['nickname'] unless User.where(nickname: auth_hash['info']['nickname']).exists?
       end
     end.tap do |identity|
-      if !identity.user.profile_image.attached? && auth_hash['info']['image'].present?
-        image = URI.parse(auth_hash['info']['image']).open
-        identity.user.profile_image.attach(io: image, filename: 'profile.png')
-      end
+      # if !identity.user.profile_image.attached? && auth_hash['info']['image'].present?
+      #   image = URI.parse(auth_hash['info']['image']).open
+      #   identity.user.profile_image.attach(io: image, filename: 'profile.png')
+      # end
       identity.update provider_info: auth_hash['info']
     end
   end

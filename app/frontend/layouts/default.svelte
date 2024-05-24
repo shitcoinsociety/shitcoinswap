@@ -34,10 +34,11 @@
       {#if current_user}
         <a class="user" href="/users/{current_user.id}">
           <div class="profile_image">
-            <div class="i-pajamas:profile w-2em h-2em"></div>
+            
+            <img src="{current_user.profile_image_url}" class="w-2.5em h-2.5em rounded-1" alt="">
           </div>
           <p class="leading-none">
-            <span class="text-lg">Welcome back!</span><br>
+            <span class="text-lg">{current_user.name || 'Welcome back!'}</span><br>
             <span class="text-primary-link">Update profile</span>
           </p>
         </a>
