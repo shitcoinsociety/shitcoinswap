@@ -83,8 +83,10 @@
           <div class="i-pepicons-print:menu w-2em h-2em text-white"></div>
         </button>
       </div>
-      <img src="~/assets/logo.png?h=40" alt="Logo" class="inline-block" />
-      <img src="~/assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" />
+      <a href="/" class="flex items-center gap-2">
+        <img src="~/assets/logo.png?h=40" alt="Logo" class="inline-block" />
+        <img src="~/assets/textmark.png?h=32" alt="Shitcoin Swap" class="inline-block" />
+      </a>
       <div class="flex-1"></div>
     </header>
     <div class="p-4">

@@ -8,14 +8,14 @@
     <!-- <img src="~/assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
     
     <h1 class="mt-4 md:text-2.5em text-balance">
-      Prepare for <span class="mark">World&nbsp;Domination</span>
+      Prepare for<br><span class="mark">World&nbsp;Domination</span>
       <!-- Nothing <span class="mark">ventured</span>&nbsp;&hyphen; nothing <span class="mark">gained</span>. -->
     </h1>
     <p class=" text-balance mb-8 mt-4">
       <strong>Shitcoin Swap</strong> is an 
       <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
         open source</a> trading platform under constant development.
-        It's the perfect place to launch and trade all kinds of crypto assets and stocks.
+        The perfect place to promote and trade amazing crypto projects and stocks.
     </p>
     <p class="text-balance mb-14">
       

@@ -118,11 +118,11 @@ h2 {
   content: "";
   position: absolute;
   /* left: 7%; */
-  left: 0%;
+  left: -3%;
   bottom: 5%;
   width: 105%;
-  height: 30%;
-  transform: skew(-15deg) rotate(-5deg);
+  height: 40%;
+  transform: skew(-15deg) rotate(-2deg);
   background: rgba(195, 227, 34, 0.5);
   z-index: -1;
 }
