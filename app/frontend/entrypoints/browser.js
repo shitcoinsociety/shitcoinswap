@@ -3,7 +3,7 @@ import 'virtual:uno.css'
 import 'virtual:unocss-devtools'
 import '../lib/browser.css'
 
-import "toastify-js/src/toastify.css"
+import 'notyf/notyf.min.css'
 
 import { hydrate, mount } from 'svelte'
 import { createInertiaApp, router } from 'inertiax-svelte'

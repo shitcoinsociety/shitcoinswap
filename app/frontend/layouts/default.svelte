@@ -1,14 +1,24 @@
 <script>
   import { router } from 'inertiax-svelte'
-    import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
+  import { Notyf } from 'notyf';
 
   export let current_user
   export let controller
   export let title
+  export let flash
 
   onMount(() => {
     router.on('navigate', () => menuOpen = false)
+    router.on('finish', function() {
+      if (flash.success) {
+        new Notyf().success(flash.success)
+      }
+      if (flash.error) {
+        new Notyf().error(flash.error)
+      }
+    })
   })
 
   let menuOpen = false
