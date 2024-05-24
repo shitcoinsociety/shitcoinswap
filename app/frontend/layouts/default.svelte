@@ -13,10 +13,10 @@
     router.on('navigate', () => menuOpen = false)
     router.on('finish', function() {
       if (flash.success) {
-        new Notyf().success(flash.success)
+        new Notyf().success(delete flash.success)
       }
       if (flash.error) {
-        new Notyf().error(flash.error)
+        new Notyf().error(delete flash.error) 
       }
     })
   })
