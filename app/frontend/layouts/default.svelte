@@ -208,7 +208,7 @@
     align-items: center;
   }
   section {
-    min-height: 100dvh;
+    min-height: 100vh;
     position: relative;
     flex-direction: column;
     justify-content: center;
