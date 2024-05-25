@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     end
 
     @user = User.find_by!(nickname: params[:nickname]).as_json(User::JSON_OPTIONS)
+    @title = @user[:name] || @user[:nickname]
   end
 
   def edit
