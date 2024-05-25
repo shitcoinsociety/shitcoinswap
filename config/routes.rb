@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   inertia "/privacy" => "static/privacy"
 
-  get "/:nickname" => "users#show"
+  get "/@:nickname" => "users#show"
 
   # Defines the root path route ("/")
   root "currencies#index"

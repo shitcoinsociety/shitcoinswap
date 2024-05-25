@@ -1,15 +1,16 @@
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
 import 'virtual:unocss-devtools'
-import '../lib/browser.css'
-
 import 'notyf/notyf.min.css'
+import '../lib/browser.css'
 
 import { hydrate, mount } from 'svelte'
 import { createInertiaApp, router } from 'inertiax-svelte'
 
 import resolve from '../lib/resolve'
+import { Notyf } from 'notyf';
 
+window.notyf = new Notyf()
 
 createInertiaApp({ 
   resolve,

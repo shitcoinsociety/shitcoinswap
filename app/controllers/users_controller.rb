@@ -7,7 +7,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id]).as_json(User::JSON_OPTIONS)
+    if params[:id].present?
+      user = User.find(params[:id])
+      return redirect_to "/@#{user.nickname}"
+    end
+
+    @user = User.find_by!(nickname: params[:nickname]).as_json(User::JSON_OPTIONS)
   end
 
   def edit
@@ -51,7 +56,7 @@ class UsersController < ApplicationController
   end
 
   def update_params
-    params.require(:user).permit(:email, :bio)
+    params.require(:user).permit(:email, :bio, :name, :nickname)
   end
 
 
