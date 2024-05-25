@@ -118,13 +118,13 @@
   nav {
     position: fixed;
     /* background: rgb(42, 40, 39); */
-    top: 0;
-    left: 0;
+    top: 0.5rem;
+    left: 0.5rem;
     width: 280px;
     max-width: calc(100% - 4rem);
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - 0.5rem));
     flex-direction: column;
-    height: 100%;
+    height: calc(100dvh - 1rem);
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .65);
     padding: 1.5rem;
     display: flex;
@@ -134,7 +134,7 @@
     color: white;
     border-radius: 0.5rem;
     z-index: 10;
-    transition: transform .3s;
+    transition: transform .2s;
     .btn {
       width: 100%;
     }

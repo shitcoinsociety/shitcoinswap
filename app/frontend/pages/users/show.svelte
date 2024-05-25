@@ -24,7 +24,7 @@
       <strong>0</strong>
       Members
       <div class="btn mt-2">
-        Join group
+        Join club
       </div>
     </div>
   </div>
