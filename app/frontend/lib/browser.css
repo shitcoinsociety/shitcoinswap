@@ -24,6 +24,8 @@ body {
 
 .pattern {
   border-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border: 1px solid #ddd;
   box-shadow: 0 0 18px rgba(0, 0, 0, .1);
   background-image: url("~/assets/furley_bg.png");
@@ -98,11 +100,13 @@ input, textarea {
 }
 
 h1 {
+  color: #223;
   font-size: 2em;
   font-weight: bold;
 }
 
 h2 {
+  color: #223;
   font-size: 1.3em;
   font-weight: bold;
 }

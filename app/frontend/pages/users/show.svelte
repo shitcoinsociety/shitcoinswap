@@ -26,7 +26,7 @@
       Members
       <div class="btn mt-2">
         Join club
-        <div use:tippy={`Club members automatically copy ${user.nickname}'s portfolio and make the same trades.`} class="i-material-symbols:info opacity-60 hover:opacity-80 ml-1 w-1.2em h-1.2em"></div>
+        <div use:tippy={`As a club member you automatically copy ${user.nickname}'s portfolio and make the same trades.`} class="i-material-symbols:info opacity-60 hover:opacity-80 ml-1 w-1.2em h-1.2em"></div>
       </div>
     </div>
   </div>

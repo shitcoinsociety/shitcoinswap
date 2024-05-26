@@ -1,4 +1,9 @@
-<h1>My Portfolio</h1>
+<div class="bg-white rounded-2 container">
+
+  <div class="p-4 pattern flex">
+    <h1>My Portfolio</h1>
+    <a href="/deposits/new" class="btn ml-auto">Deposit</a>
+  </div>
 
 <div class="value">
   <div class="box">
@@ -19,9 +24,11 @@
   </div>
 </div>
 
-<h2>Your portfolio is empty</h2>
+<div class="p-4 border-t">
+  <h2>Your portfolio is empty</h2>
+</div>
 
-
+</div>
 <style>
   .value {
     display: grid;

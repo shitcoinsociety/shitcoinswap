@@ -71,7 +71,7 @@
         Buy and sell
       </a>
       
-      <a class="navlink" href="/portfolio" class:active={controller === 'portfolios'}>
+      <a class="navlink" href="/portfolios" class:active={controller === 'portfolios'}>
         <div class="i-game-icons:chart w-1.3em h-1.3em"></div>
         My Portfolio
       </a>
@@ -79,7 +79,9 @@
       
         <div class="flex-1"></div>
       <!-- <a href="/currencies">Explore</a> -->
-        <button class="btn" id="logout" on:click={() => router.delete('/session')}>Log out</button>
+        <button id="logout" class="text-left w-full mb-2" on:click={() => router.delete('/session')}>Log out</button>
+        <a class="btn" id="new_deposit" href="/deposits/new">Deposit funds</a>
+      
       {:else}
         
         <div class="flex-1"></div>
@@ -108,7 +110,11 @@
       <a href="/privacy" class="mb-2">Privacy Policy</a>
     </div>
     <footer class="md:hidden">
-      <a href="/users/new" class="btn primary">Create account</a>
+      {#if current_user}
+        <a href="/deposits/new" class="btn primary">Deposit funds</a>
+      {:else}
+        <a href="/users/new" class="btn primary">Create account</a>
+      {/if}
     </footer>
   </main>
 
