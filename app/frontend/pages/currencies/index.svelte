@@ -12,15 +12,16 @@
       <!-- Nothing <span class="mark">ventured</span>&nbsp;&hyphen; nothing <span class="mark">gained</span>. -->
     </h1>
     <p class=" text-balance mb-4 mt-8">
+      Welcome to the ultimate
+      <strong class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
+        open source trading platform</strong>.
+        It's the perfect place to launch and promote amazing crypto projects.
+
+    </p>
+    <p class="text-balance mb-14">
      <a class="font-bold" href="/users/new">Create an account</a>,
       deposit some funds, and join your favorite investors.
      
-    </p>
-    <p class="text-balance mb-14">
-      <strong>Shitcoin Swap</strong> is an
-      <a class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
-        open source trading platform</a>.
-        It's the perfect place to launch and promote amazing crypto projects.
      
     </p>
   </div>
