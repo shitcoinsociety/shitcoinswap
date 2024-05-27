@@ -15,7 +15,7 @@
       Welcome to the ultimate
       <strong class="font-bold" href="https://github.com/buhrmi/shitcoinswap" target="_blank">
         open source trading platform</strong>.
-        It's the perfect place to launch and promote amazing crypto projects.
+        The perfect place to launch, promote, and invest in amazing crypto projects.
 
     </p>
     <p class="text-balance mb-14">
