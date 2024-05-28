@@ -56,7 +56,7 @@
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 4px rgba(0, 0, 0, .65);
     /* background: linear-gradient(180deg, rgba(93, 78, 70, 1) 0%, rgb(42, 40, 39) 100%); */
     background-color: rgb(95, 96, 100);
-    background-image: url("~/assets/denim.png");
+    background-image: url("~/assets/patterns/denim.png");
   }
   .main {
     grid-template-rows: 1fr auto;

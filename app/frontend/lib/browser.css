@@ -17,7 +17,7 @@
 
 body {
   background-color: #ccd0d5;
-  background-image: url('~/assets/wood_1.png');
+  background-image: url('~/assets/patterns/wood_1.png');
   font-size: 17px;
   font-family: Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -28,7 +28,7 @@ body {
   border-bottom-right-radius: 0;
   border: 1px solid #ddd;
   box-shadow: 0 0 18px rgba(0, 0, 0, .1);
-  background-image: url("~/assets/furley_bg.png");
+  background-image: url("~/assets/patterns/furley_bg.png");
   /* padding: 1rem; */
 }
 
@@ -166,10 +166,10 @@ h2 {
 
 .btn.google:active {
   outline: none;
-      box-shadow: 
-      0 -1px 0 rgba(0, 0, 0, .04),
-      0 2px 4px rgba(0, 0, 0, .25),
-      0 0 0 3px #c8dafc;
+  box-shadow: 
+  0 -1px 0 rgba(0, 0, 0, .04),
+  0 2px 4px rgba(0, 0, 0, .25),
+  0 0 0 3px #c8dafc;
 }
 
 .btn.google:disabled {
@@ -182,4 +182,8 @@ h2 {
 .container {
   margin-inline: auto;
   max-width: 720px;
+}
+
+table th {
+  text-align: left;
 }

@@ -136,7 +136,7 @@
     display: flex;
     align-items: center;
     background: linear-gradient(180deg, rgba(93, 78, 70, 1) 0%, rgb(42, 40, 39) 100%);
-    background-image: url("~/assets/denim.png");
+    background-image: url("~/assets/patterns/denim.png");
     color: white;
     border-radius: 0.5rem;
     z-index: 10;
@@ -205,7 +205,7 @@
     /* height: 70px; */
     box-shadow: 0 0 8px rgba(0, 0, 0, .44);
     /* background: rgba(255,255,255,0.4); */
-    background-image: url("~/assets/denim.png");
+    background-image: url("~/assets/patterns/denim.png");
   }
   header {
     padding: 1rem;
