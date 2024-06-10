@@ -14,8 +14,8 @@
     <p class=" text-balance mb-4 mt-8">
       Welcome to Shitcoin Swap, the
       <strong>
-      ultimate open source trading platform</strong>.
-      The perfect place to launch, promote, and invest in experimental crypto projects.
+      ultimate <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source</a> trading platform</strong>
+      for experimental crypto projects.
     </p>
     <p class="text-balance mb-14">
      <a class="font-bold" href="/users/new">Create an account</a>,
