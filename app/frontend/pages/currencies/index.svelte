@@ -11,13 +11,13 @@
       Prepare for<br><span class="mark">World&nbsp;Domination</span>
       <!-- Nothing <span class="mark">ventured</span>&nbsp;&hyphen; nothing <span class="mark">gained</span>. -->
     </h1>
-    <p class=" text-balance mb-4 mt-8">
+    <p class="mb-4 mt-8">
       Welcome to Shitcoin Swap, the
       <strong>
       ultimate <a href="https://github.com/buhrmi/shitcoinswap" target="_blank">open source</a> trading platform</strong>
       for experimental crypto projects.
     </p>
-    <p class="text-balance mb-14">
+    <p class="mb-14">
      <a class="font-bold" href="/users/new">Create an account</a>,
       deposit some funds, and join your favorite investors.
      
