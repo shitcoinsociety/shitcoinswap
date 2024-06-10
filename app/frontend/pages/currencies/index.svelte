@@ -15,7 +15,7 @@
       Welcome to Shitcoin Swap, the
       <strong>
       ultimate open source trading platform</strong>.
-      The perfect place to launch, promote, and invest in amazing crypto projects.
+      The perfect place to launch, promote, and invest in experimental crypto projects.
     </p>
     <p class="text-balance mb-14">
      <a class="font-bold" href="/users/new">Create an account</a>,
