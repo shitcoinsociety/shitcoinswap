@@ -1,4 +1,4 @@
-class Currency < ApplicationRecord
+class Project < ApplicationRecord
   #belongs_to :network
   has_one_attached :whitepaper
   has_one_attached :logo

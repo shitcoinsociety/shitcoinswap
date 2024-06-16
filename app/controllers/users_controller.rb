@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def new
     @title = "Sign up for Shitcoin Swap"
-    return redirect_to currencies_path if current_user
+    return redirect_to projects_path if current_user
   end
 
   def show
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
     user.save!
 
     session[:user_id] = user.id
-    redirect_to currencies_path
+    redirect_to projects_path
   end
 
   private

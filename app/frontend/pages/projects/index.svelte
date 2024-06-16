@@ -1,5 +1,5 @@
 <script>
-  export let currencies
+  export let projects
 </script>
 
 <div class="flex flex-col justify-center h-full container pattern bg-white">

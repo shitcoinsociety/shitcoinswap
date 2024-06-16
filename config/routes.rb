@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resource :session
-  resources :currencies
+  resources :projects
   resources :password_resets
   resources :users
   resources :deposits
@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   get "/@:nickname" => "users#show"
 
   # Defines the root path route ("/")
-  root "currencies#index"
+  root "projects#index"
 end

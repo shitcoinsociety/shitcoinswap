@@ -66,7 +66,7 @@
       </a>
       {/if}
 
-      <a class="navlink" href="/currencies" class:active={controller === 'currencies'}>
+      <a class="navlink" href="/projects" class:active={controller === 'projects'}>
         <div class="i-material-symbols-light:currency-exchange w-1.3em h-1.3em"></div>
         Buy and sell
       </a>
@@ -78,7 +78,7 @@
       {#if current_user}
       
         <div class="flex-1"></div>
-      <!-- <a href="/currencies">Explore</a> -->
+      <!-- <a href="/projects">Explore</a> -->
         <button id="logout" class="text-left w-full mb-2" on:click={() => router.delete('/session')}>Log out</button>
         <a class="btn" id="new_deposit" href="/deposits/new">Deposit funds</a>
       

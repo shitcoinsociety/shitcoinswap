@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     @title = "Log in to Shitcoin Swap"
     # Just render the ERB template that automatically makes a POST request to /auth/:provider
     return render layout: false if params[:provider]
-    return redirect_to currencies_path if current_user
+    return redirect_to projects_path if current_user
   end
 
   def create
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       flash[:success] = "You have been logged in. Welcome back!"
-      redirect_to currencies_path
+      redirect_to projects_path
     else
       flash[:error] = "Invalid email or password."
       redirect_to new_session_path
