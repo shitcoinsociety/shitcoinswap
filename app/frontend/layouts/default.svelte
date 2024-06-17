@@ -106,8 +106,10 @@
     <div class="p-4 md:pl-0">
       <slot />
     </div>
-    <div class="text-center pb-4">
+    <div class="text-center pb-4 flex gap-3 justify-end container">
       <a href="/privacy" class="mb-2">Privacy Policy</a>
+      
+      <a href="/impressum" class="">Impressum</a>
     </div>
     <footer class="md:hidden">
       {#if current_user}

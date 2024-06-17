@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback" => "sessions#create"
 
   inertia "/privacy" => "static/privacy"
+  inertia "/impressum" => "static/impressum"
 
   get "/@:nickname" => "users#show"
   get "/$:symbol" => "projects#show"

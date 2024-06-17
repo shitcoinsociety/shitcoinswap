@@ -13,9 +13,9 @@ while true; do
   vite ssr &
   PID=$!
   if [ "$(uname)" = "Linux" ]; then
-    inotifywait -e modify -e move -e create -e delete -e attrib -r app/frontend/pages
+    inotifywait -e modify -e move -e create -e delete -e attrib -r app/frontend
   elif [ "$(uname)" = "Darwin" ]; then
-    fswatch -1 -r app/frontend/pages
+    fswatch -1 -r app/frontend
   fi
   kill $PID
 done
