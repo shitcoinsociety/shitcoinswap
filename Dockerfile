@@ -1,6 +1,6 @@
 # syntax = docker/dockerfile:1
 
-FROM buhrmi/ruby-node:3.3-slim as base
+FROM timbru31/ruby-node:3.3-slim as base
 
 # Rails app lives here
 WORKDIR /rails

@@ -42,4 +42,8 @@ class User < ApplicationRecord
     UserMailer.with(user: self).password_reset.deliver_now
     puts 'delivered'
   end
+
+  def balances
+    return Hash.new(0)
+  end
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
 
   resource :session
   resources :projects
@@ -16,7 +17,8 @@ Rails.application.routes.draw do
   inertia "/privacy" => "static/privacy"
 
   get "/@:nickname" => "users#show"
-
+  get "/$:symbol" => "projects#show"
+  
   # Defines the root path route ("/")
   root "projects#index"
 end
