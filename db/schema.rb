@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_23_200758) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_16_230605) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,18 +39,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_23_200758) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "projects", force: :cascade do |t|
-    t.string "name"
-    t.string "symbol"
-    t.string "stage"
-    t.integer "followers_count", default: 0
-    t.integer "network_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["network_id"], name: "index_projects_on_network_id"
-    t.index ["symbol"], name: "index_projects_on_symbol"
-  end
-
   create_table "identities", force: :cascade do |t|
     t.string "provider"
     t.string "provider_id"
@@ -60,6 +48,27 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_23_200758) do
     t.datetime "updated_at", null: false
     t.index ["provider"], name: "index_identities_on_provider"
     t.index ["provider_id"], name: "index_identities_on_provider_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "have_symbol"
+    t.decimal "have_amount"
+    t.string "want_symbol"
+    t.decimal "want_amount"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.string "symbol"
+    t.string "stage"
+    t.string "repository_url"
+    t.integer "followers_count", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["symbol"], name: "index_projects_on_symbol"
   end
 
   create_table "users", force: :cascade do |t|
