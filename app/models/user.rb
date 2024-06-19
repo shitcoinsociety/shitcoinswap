@@ -33,9 +33,9 @@ class User < ApplicationRecord
     # else
 
     gravatar_id = Digest::MD5.hexdigest(email)
-    
+
     "https://www.gravatar.com/avatar/#{gravatar_id}?s=200&d=mp"
-    
+
   end
 
   def send_password_reset
@@ -47,12 +47,12 @@ class User < ApplicationRecord
     return Hash.new(0)
   end
 
-  def locked
+  def locked_funds
     orders.group(:have_symbol).sum(:have_amount)
   end
 
   def available_balace(symbol)
     # balance minus whatever is locked in orders
-    balances[symbol] - orders.where(have_symbol: symbol).sum(:have_amount)
+    balances[symbol] - locked_funds[symbol]
   end
 end
