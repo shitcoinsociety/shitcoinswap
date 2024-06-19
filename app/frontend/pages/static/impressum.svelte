@@ -21,7 +21,7 @@
   VAT-Identification Number:<br> DE 337477941
 </p>
 <p class="mt-4 mb-8">
-  Platform for online dispute resolution by the EU-Commission:<br> <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>
+  Online platform for dispute resolution by the EU-Commission:<br> <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>
 </p>
 
 </div>

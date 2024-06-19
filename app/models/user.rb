@@ -46,4 +46,13 @@ class User < ApplicationRecord
   def balances
     return Hash.new(0)
   end
+
+  def locked
+    orders.group(:have_symbol).sum(:have_amount)
+  end
+
+  def available_balace(symbol)
+    # balance minus whatever is locked in orders
+    balances[symbol] - orders.where(have_symbol: symbol).sum(:have_amount)
+  end
 end
