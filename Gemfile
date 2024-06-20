@@ -7,8 +7,28 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
+gem "rack", "~> 2.2"
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
+
+gem "inertia_rails" #, github: "PedroAugustoRamalhoDuarte/inertia-rails", branch: "fix-data-sharing"
+gem "vite_rails", "~> 3.0"
+
+gem "httparty", "~> 0.21.0"
+
+gem "sentry-ruby"
+gem "sentry-rails"
+
+gem "rack-host-redirect", "~> 1.3"
+gem "rack-attack", "~> 6.7"
+
+gem "omniauth"
+gem "omniauth-twitter"
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+
+gem "foreman"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
@@ -58,22 +78,3 @@ group :test do
   gem "selenium-webdriver"
   gem 'minitest-ci'
 end
-
-gem "omniauth"
-gem "omniauth-twitter"
-gem 'omniauth-google-oauth2'
-gem "omniauth-rails_csrf_protection"
-
-
-gem "inertia_rails" #, github: "PedroAugustoRamalhoDuarte/inertia-rails", branch: "fix-data-sharing"
-gem "vite_rails", "~> 3.0"
-
-gem "httparty", "~> 0.21.0"
-gem "sentry-ruby"
-gem "sentry-rails"
-
-gem "foreman"
-
-gem "rack-host-redirect", "~> 1.3"
-
-gem "rack-attack", "~> 6.7"

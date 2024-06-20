@@ -9,8 +9,8 @@ sigint_handler()
 trap sigint_handler SIGINT
 
 while true; do
-  vite build --ssr > /dev/null
-  vite ssr &
+  bin/vite build --ssr > /dev/null
+  bin/vite ssr &
   PID=$!
   if [ "$(uname)" = "Linux" ]; then
     inotifywait -e modify -e move -e create -e delete -e attrib -r app/frontend
