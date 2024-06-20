@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_16_230605) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -37,6 +37,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_16_230605) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "deposits", force: :cascade do |t|
+    t.string "symbol"
+    t.integer "user_id"
+    t.decimal "amount"
+    t.string "gateway"
+    t.string "gateway_id"
+    t.integer "confirmations"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gateway_id"], name: "index_deposits_on_gateway_id"
+    t.index ["symbol"], name: "index_deposits_on_symbol"
+    t.index ["user_id"], name: "index_deposits_on_user_id"
   end
 
   create_table "identities", force: :cascade do |t|
