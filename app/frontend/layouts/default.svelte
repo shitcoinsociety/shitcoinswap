@@ -51,7 +51,7 @@
           </div>
           <p class="leading-none">
             <span class="text-lg">{current_user.name || 'Welcome back!'}</span><br>
-            <span class="text-primary-link">Update profile</span>
+            <span class="text-primary-link">View profile</span>
           </p>
         </a>
       {:else}
@@ -105,11 +105,10 @@
     </header>
     <div class="p-4 md:pl-0">
       <slot />
-    </div>
-    <div class="text-center pb-4 flex gap-3 justify-end container">
-      <a href="/privacy" class="mb-2">Privacy Policy</a>
-      
-      <a href="/impressum" class="">Impressum</a>
+      <div class="text-center flex gap-3 justify-end container mt-2">
+        <a href="/privacy" class="mb-2">Privacy Policy</a>
+        <a href="/impressum" class="">Impressum</a>
+      </div>
     </div>
     <footer class="md:hidden">
       {#if current_user}

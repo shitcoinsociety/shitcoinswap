@@ -1,7 +1,7 @@
 <script>
   import SEPA from './gateways/sepa.svelte'
   import PayPal from './gateways/paypal.svelte'
-  
+
   export let current_user
   
   let chosenDepositMethod = ''
@@ -11,7 +11,7 @@
 <div class="bg-white rounded-2 container">
 
   <div class="p-4 pattern flex">
-    <h1>Deposit Funds</h1>
+    <h2>Deposit Funds</h2>
     <!-- <a href="/deposits/new" class="btn ml-auto">Deposit</a> -->
   </div>
   <div class="p-4">

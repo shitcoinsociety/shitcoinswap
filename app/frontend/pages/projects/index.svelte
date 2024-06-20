@@ -1,8 +1,27 @@
 <script>
   export let projects
+  export let current_user
 </script>
 
-<div class="flex flex-col justify-center h-full container pattern bg-white">
+{#if current_user}
+<div class="container rounded-2 bg-white p-4 flex items-center mb-2">
+  Thanks for signing up. We'll notify you when the first sale goes live.
+</div>
+<div class="container rounded-2 gap-2 bg-white p-4 flex flex-col md:flex-row md:items-center mb-2">
+  <div class="flex-1">
+    <h2>
+      0.00 EUR
+      <span class="gains text-green">
+        <div class="i-ph:trend-up-bold w-1em h-1em"></div>
+        0.0%
+      </span>
+    </h2>
+    Portfolio value
+  </div>
+  <a href="/portfolios" class="btn">Manage Portfolio</a>
+</div>
+{/if}
+<div class="flex flex-col justify-center container pattern bg-white">
   <div class="text-center mt-4 flex-1 p-4 px-8">
     <!-- <img src="~/assets/logo.png?h=64" alt="Logo" class="inline-block" /><br> -->
     <!-- <img src="~/assets/textmark.png?h=42" alt="Shitcoin Swap" class="inline-block" /><br> -->
@@ -15,9 +34,11 @@
       Join our community of <strong>world-class investors</strong>
       and discover new experimental crypto assets.
     </p>
+    {#if !current_user}
     <p class="mb-14 mt-8">
      <a href="/users/new" class="btn !inline !px-12 !py-2">Join now</a>
     </p>
+    {/if}
   </div>
   <img src="~/assets/onboarding/rave.webp" alt="" class="w-full rounded-2">
 </div>

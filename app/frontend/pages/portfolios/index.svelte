@@ -1,7 +1,7 @@
 <div class="bg-white rounded-2 container">
 
-  <div class="p-4 pattern flex">
-    <h1>My Portfolio</h1>
+  <div class="p-4 pattern flex items-center">
+    <h2>My Portfolio</h2>
     <a href="/deposits/new" class="btn ml-auto">Deposit</a>
   </div>
 
@@ -12,16 +12,16 @@
   </div>
   <div class="box">
     <h3>EUR 0.00</h3>
-    <p>Invested</p>
+    <p>Open Orders</p>
   </div>
-  <div class="box">
+  <!-- <div class="box">
     <h3>EUR 0.00</h3>
     <p>Profit/Loss</p>
   </div>
   <div class="box">
     <h3>EUR 0.00</h3>
     <p>Portfolio Value</p>
-  </div>
+  </div> -->
 </div>
 
 <div class="p-4 border-t">
@@ -41,6 +41,7 @@
     text-align: center;
   }
   h3 {
-    font-size: 1.3rem;
+
+    /* font-size: 1.3rem; */
   }
 </style>
