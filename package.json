@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@iconify/json": "^2.2.219",
+    "@iconify/json": "^2.2.220",
     "@sveltejs/vite-plugin-svelte": "^3.1.1",
     "@unocss/extractor-svelte": "^0.61.0",
     "@unocss/svelte-scoped": "^0.61.0",

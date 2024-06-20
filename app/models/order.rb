@@ -10,10 +10,6 @@ class Order < ApplicationRecord
   validates :want_amount, numericality: { greater_than: 0, greater_than_or_equal_to: 0.00000001 }
   validates :have_amount, numericality: { greater_than: 0, greater_than_or_equal_to: 0.00000001 }
 
-  def funded?
-    user.balances[have_symbol] >= have_amount
-  end
-
   def set_price
     self.price = want_amount / have_amount
   end

@@ -72,7 +72,7 @@ gem "httparty", "~> 0.21.0"
 gem "sentry-ruby"
 gem "sentry-rails"
 
-gem "foreman", "~> 0.88.1"
+gem "overmind"
 
 gem "rack-host-redirect", "~> 1.3"
 
