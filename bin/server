@@ -2,5 +2,5 @@
 
 bundle exec rake db:migrate db:seed
 
-bundle exec overmind s
+bundle exec foreman s
 

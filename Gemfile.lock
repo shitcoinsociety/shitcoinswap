@@ -108,6 +108,7 @@ GEM
     faraday-net_http (3.1.0)
       net-http
     ffi (1.17.0-x86_64-linux-gnu)
+    foreman (0.88.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashie (5.0.0)
@@ -197,7 +198,6 @@ GEM
     omniauth-twitter (1.4.0)
       omniauth-oauth (~> 1.1)
       rack
-    overmind (2.5.1)
     pg (1.5.6)
     psych (5.1.2)
       stringio
@@ -314,6 +314,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  foreman
   httparty (~> 0.21.0)
   image_processing (~> 1.2)
   inertia_rails
@@ -323,7 +324,6 @@ DEPENDENCIES
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   omniauth-twitter
-  overmind
   pg
   puma (>= 5.0)
   rack-attack (~> 6.7)

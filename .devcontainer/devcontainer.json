@@ -7,7 +7,7 @@
 	  "./feature-inotifywait": {}
 	},
 	"onCreateCommand": "bundle install --without production testing && npm install",
-	"postStartCommand": "overmind s -f Procfile.dev",
+	"postStartCommand": "foreman s -f Procfile.dev",
 	"forwardPorts": [5000],
 	"customizations": {
 		"vscode": {
