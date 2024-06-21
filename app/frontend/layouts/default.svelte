@@ -105,7 +105,7 @@
     </header>
     <div class="p-4 md:pl-0">
       <slot />
-      <div class="text-center flex gap-3 justify-end container mt-2">
+      <div class="text-center text-white flex gap-3 justify-end container mt-2">
         <a href="/privacy" class="mb-2">Privacy Policy</a>
         <a href="/impressum" class="">Impressum</a>
       </div>

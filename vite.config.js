@@ -9,9 +9,10 @@ import { imagetools } from 'vite-imagetools'
 
 export default defineConfig({
   build: {
-    cssCodeSplit: false
+    cssCodeSplit: false,
   },
   plugins: [
+ 
     Unocss({
       extractors: [
         extractorSvelte(),
@@ -27,7 +28,7 @@ export default defineConfig({
       ]
     }),
     imagetools({}),
-    RubyPlugin(),
+    RubyPlugin({}),
     svelte({
       preprocess: [
         importAssets()
@@ -35,3 +36,4 @@ export default defineConfig({
     }),
   ]
 })
+

@@ -6,6 +6,7 @@
  
     <script type="text/javascript">
       window.RAILS_ENV = '<%= Rails.env %>'
+      window.VERSION = '<%= ENV['RAILWAY_GIT_COMMIT_SHA'] %>'
     </script>
 
     <%= csrf_meta_tags %>

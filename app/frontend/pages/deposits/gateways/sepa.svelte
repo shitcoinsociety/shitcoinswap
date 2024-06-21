@@ -126,3 +126,46 @@ ${encode(user.id)}
   </p>
 </div>
 </div>
+
+<style>
+
+
+.important {
+    background-color: #ffeb99;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+  
+  }
+  
+  .qr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #333;
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+  }
+  
+  .verticaltext {
+    background: white;
+    transform: translateY(-50%) rotate(-90deg);
+    position: absolute;
+    top: 50%;
+    right: -3.5em;
+    padding: 7px;
+    line-height: 0.5em;
+  
+  }
+  
+  .notice {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+</style>
