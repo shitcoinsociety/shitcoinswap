@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   def update
     user = User.find(params[:id])
     raise ActiveRecord::RecordNotFound if current_user != user
-    user.update(update_params)
+    user.update!(update_params)
     flash[:success] = "Your profile has been updated."
     redirect_to user
   end

@@ -1,3 +1,15 @@
+<script>
+  export let current_user
+
+  function formatCurrency(amount) {
+    return (amount || 0).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+  }
+
+  $: totalValue = 
+    current_user.available_balances.eur
+    + current_user.funds_in_orders.eur || 0
+</script>
+
 <div class="bg-white rounded-2 container">
 
   <div class="p-4 pattern flex items-center">
@@ -7,11 +19,11 @@
 
 <div class="value">
   <div class="box">
-    <h3>EUR 0.00</h3>
+    <h3>EUR {formatCurrency(current_user.available_balances.eur)}</h3>
     <p>Available</p>
   </div>
   <div class="box">
-    <h3>EUR 0.00</h3>
+    <h3>EUR {formatCurrency(current_user.funds_in_orders.eur)}</h3>
     <p>Open Orders</p>
   </div>
   <div class="box">
@@ -19,7 +31,7 @@
     <p>Investments</p>
   </div>
   <div class="box">
-    <h3>EUR 0.00</h3>
+    <h3>EUR {formatCurrency(totalValue)}</h3>
     <p>Total Value</p>
   </div>
 </div>

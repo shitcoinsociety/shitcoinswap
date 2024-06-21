@@ -10,7 +10,13 @@ import { createInertiaApp, router } from 'inertiax-svelte'
 import resolve from '../lib/resolve'
 import { Notyf } from 'notyf';
 
-window.notyf = new Notyf()
+window.notyf = new Notyf({
+  position: {
+    x: 'center',
+    y: 'bottom'
+  },
+  duration: 3500
+})
 
 createInertiaApp({ 
   resolve,

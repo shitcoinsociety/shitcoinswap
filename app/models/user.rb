@@ -4,11 +4,18 @@ class User < ApplicationRecord
     methods: [:profile_image_url]
   }
 
+  PRIVATE_JSON_OPTIONS = {
+    only: JSON_OPTIONS[:only] + ['email'],
+    methods: JSON_OPTIONS[:methods] + ['available_balances', 'funds_in_orders']
+  }
+
   has_secure_password
 
   has_many :posts
   has_many :identities
   has_many :user_mentions
+  has_many :deposits
+  has_many :orders
 
   has_one_attached :profile_image
 
@@ -44,15 +51,19 @@ class User < ApplicationRecord
   end
 
   def balances
-    return Hash.new(0)
+    { eur: 0 }.merge(deposits.group(:symbol).sum(:amount)).transform_keys(&:to_sym)
   end
 
-  def locked_funds
-    orders.group(:have_symbol).sum(:have_amount)
+  def funds_in_orders
+    orders.group(:have_symbol).sum(:have_amount).transform_keys(&:to_sym)
   end
 
-  def available_balace(symbol)
+  def available_balances
+    balances.merge(funds_in_orders) { |_, v1, v2| v1 - v2 }
+  end
+
+  def available_balance(symbol)
     # balance minus whatever is locked in orders
-    balances[symbol] - locked_funds[symbol]
+    available_balances[symbol]
   end
 end

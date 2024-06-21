@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
       action: action_name,
       errors: session.delete(:errors),
       flash: flash.to_h,
-      current_user: current_user.as_json(User::JSON_OPTIONS)
+      current_user: current_user.as_json(User::PRIVATE_JSON_OPTIONS)
     }
   end
 

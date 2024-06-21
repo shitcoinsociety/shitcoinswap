@@ -32,7 +32,7 @@ class SessionsController < ApplicationController
       flash[:error] = "This account is already connected to another user."
     else
       session[:user_id] = identity.user.id
-      flash[:notice] = "You have been logged in."
+      flash[:success] = "You have been logged in."
     end
     render layout: false
   end
