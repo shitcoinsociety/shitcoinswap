@@ -9,8 +9,7 @@ import { imagetools } from 'vite-imagetools'
 
 export default defineConfig({
   build: {
-    cssCodeSplit: false,
-    ssrEmitAssets: true
+    cssCodeSplit: false
   },
   plugins: [
     Unocss({

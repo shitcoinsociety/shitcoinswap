@@ -14,14 +14,14 @@
     <h3>EUR 0.00</h3>
     <p>Open Orders</p>
   </div>
-  <!-- <div class="box">
+  <div class="box">
     <h3>EUR 0.00</h3>
-    <p>Profit/Loss</p>
+    <p>Investments</p>
   </div>
   <div class="box">
     <h3>EUR 0.00</h3>
-    <p>Portfolio Value</p>
-  </div> -->
+    <p>Total Value</p>
+  </div>
 </div>
 
 <div class="p-4 border-t">
@@ -41,7 +41,7 @@
     text-align: center;
   }
   h3 {
-
+    font-weight: bold;
     /* font-size: 1.3rem; */
   }
 </style>
