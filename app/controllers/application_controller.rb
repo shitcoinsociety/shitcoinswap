@@ -60,6 +60,7 @@ class ApplicationController < ActionController::Base
     return unless request.referer
     return unless params[:return_to_referer]
     cookies[:redirect_when_logged_in] = request.referer
+    redirect_to url_for(params.permit!.except(:return_to_referer))
   end
 
 

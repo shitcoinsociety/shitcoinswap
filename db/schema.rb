@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -70,7 +73,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
     t.string "want_symbol"
     t.decimal "want_amount"
     t.integer "user_id"
-    t.decimal "price"
+    t.decimal "price", comment: "want_amount / have_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["have_amount"], name: "index_orders_on_have_amount"
@@ -85,6 +88,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
     t.string "symbol"
     t.string "stage"
     t.string "repository_url"
+    t.string "explorer_url"
     t.integer "followers_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -96,8 +100,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.datetime "email_verified_at"
-    t.datetime "last_login_at"
+    t.datetime "email_verified_at", precision: nil
+    t.datetime "last_login_at", precision: nil
     t.string "last_login_ip"
     t.string "last_login_user_agent"
     t.datetime "created_at", null: false

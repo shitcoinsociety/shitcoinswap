@@ -10,7 +10,8 @@ class CreateProjects < ActiveRecord::Migration[7.1]
       t.integer :followers_count, default: 0
 
       t.timestamps
+
+      t.index :symbol
     end
-    add_index :projects, :symbol
   end
 end
