@@ -17,12 +17,14 @@
     </div>
   </div>
   <div class="p-4">
+    Repository: 
+    <a href={project.repository_url} target="_blank" class="text-blue hover:underline">{project.repository_url}</a><br>
     Phase:
     <span class="badge">
        {project.stage}
     </span>
     {#if current_user}
-    We're still collecting information about {project.name}.
+    <br><br>We're still preparing information about this project. You'll be notified when sales go live.
     <!-- <div class="btn disabled">Buy</div> -->
     {:else}
     <p>Create an account to invest in {project.name}</p>
