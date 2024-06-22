@@ -5,6 +5,8 @@ class CreateProjects < ActiveRecord::Migration[7.1]
       t.string :symbol
       t.string :stage
       t.string :repository_url
+      t.string :explorer_url
+
       t.integer :followers_count, default: 0
 
       t.timestamps

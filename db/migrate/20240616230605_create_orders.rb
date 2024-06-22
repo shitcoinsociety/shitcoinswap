@@ -7,8 +7,8 @@ class CreateOrders < ActiveRecord::Migration[7.1]
       t.string :want_symbol
       t.decimal :want_amount
       t.integer :user_id
-      
-      t.decimal :price, comment: "price of want_symbol per have_symbol"
+
+      t.decimal :price, comment: "want_amount / have_amount"
 
       t.timestamps
 

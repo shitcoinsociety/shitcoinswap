@@ -55,7 +55,7 @@
           </p>
         </a>
       {:else}
-      <a href="/session/new" class="login">
+      <a href="/session/new?return_to_referer=true" class="login">
         <div class="profile_image">
           <div class="i-pajamas:profile w-2em h-2em"></div>
         </div>
@@ -76,16 +76,13 @@
         My Portfolio
       </a>
       {#if current_user}
-      
         <div class="flex-1"></div>
-      <!-- <a href="/projects">Explore</a> -->
+        <!-- <a href="/projects">Explore</a> -->
         <button id="logout" class="text-left w-full mb-2" on:click={() => router.delete('/session')}>Log out</button>
         <a class="btn" id="new_deposit" href="/deposits/new">Deposit funds</a>
-      
       {:else}
-        
         <div class="flex-1"></div>
-        <a href="/users/new" class="btn primary">Create account</a>
+        <a href="/users/new?return_to_referer=1" class="btn primary">Create account</a>
         <!-- <div class="flex-1"></div> -->
       {/if}
     </nav>
@@ -114,7 +111,7 @@
       {#if current_user}
         <a href="/deposits/new" class="btn primary">Deposit funds</a>
       {:else}
-        <a href="/users/new" class="btn primary">Create account</a>
+        <a href="/users/new?return_to_referer=true" class="btn primary">Create account</a>
       {/if}
     </footer>
   </main>

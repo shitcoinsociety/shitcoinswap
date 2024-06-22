@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   use_inertia_instance_props
 
+  before_action :store_return_to_url
   before_action :redirect_when_logged_in
   before_action :set_current_url_options
   before_action :set_default_meta
@@ -52,6 +53,13 @@ class ApplicationController < ActionController::Base
     if current_user && cookies[:redirect_when_logged_in]
       redirect_to cookies.delete(:redirect_when_logged_in)
     end
+  end
+
+  def store_return_to_url
+    return unless request.get?
+    return unless request.referer
+    return unless params[:return_to_referer]
+    cookies[:redirect_when_logged_in] = request.referer
   end
 
 

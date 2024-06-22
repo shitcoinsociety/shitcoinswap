@@ -4,7 +4,8 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find_by(symbol: params[:symbol]) || Project.find(params[:id])
+    @project = Project.find_by(symbol: params[:symbol].try(:downcase)) || Project.find(params[:id])
+    @title = @project.name
     @sell_orders = @project.sell_orders.order('price asc')
     @buy_orders = @project.buy_orders.order('price desc')
   end
