@@ -59,7 +59,7 @@ class User < ApplicationRecord
   end
 
   def available_balances
-    balances.merge(funds_in_orders) { |_, v1, v2| v1 - v2 }
+    balances.merge(funds_in_orders) { |_, v1, v2| v1 - v2 }.with_indifferent_access
   end
 
   def available_balance(symbol)

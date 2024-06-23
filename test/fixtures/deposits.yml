@@ -1,17 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  symbol: MyString
-  user_id: 1
-  amount: 9.99
-  gateway: MyString
-  gateway_id: MyString
-  confirmations: 1
+joes_euros:
+  symbol: eur
+  amount: 250.00
+  user: joe
 
-two:
-  symbol: MyString
-  user_id: 1
-  amount: 9.99
-  gateway: MyString
-  gateway_id: MyString
-  confirmations: 1
+sarahs_mnt:
+  symbol: mnt
+  amount: 1000
+  user: sarah

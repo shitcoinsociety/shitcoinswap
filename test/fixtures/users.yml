@@ -3,3 +3,9 @@ joe:
   name: Joe
   nickname: joe
   bio: I'm Joe
+
+sarah:
+  email: sarah@shitcoinswap.com
+  name: Sarah
+  nickname: sarah
+  bio: I'm Sarah
