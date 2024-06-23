@@ -1,15 +1,2 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  have_symbol: MyString
-  have_amount: 9.99
-  want_symbol: MyString
-  want_amount: 9.99
-  user_id: 1
-
-two:
-  have_symbol: MyString
-  have_amount: 9.99
-  want_symbol: MyString
-  want_amount: 9.99
-  user_id: 1

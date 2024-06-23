@@ -11,9 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -70,17 +67,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
   create_table "orders", force: :cascade do |t|
     t.string "have_symbol"
     t.decimal "have_amount"
+    t.decimal "remaining_have_amount"
     t.string "want_symbol"
     t.decimal "want_amount"
+    t.decimal "remaining_want_amount"
     t.integer "user_id"
-    t.decimal "price", comment: "want_amount / have_amount"
+    t.boolean "completed", default: false
+    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["have_amount"], name: "index_orders_on_have_amount"
-    t.index ["have_symbol"], name: "index_orders_on_have_symbol"
+    t.index ["have_symbol", "want_symbol"], name: "index_orders_on_have_symbol_and_want_symbol"
+    t.index ["price"], name: "index_orders_on_price"
     t.index ["user_id"], name: "index_orders_on_user_id"
     t.index ["want_amount"], name: "index_orders_on_want_amount"
-    t.index ["want_symbol"], name: "index_orders_on_want_symbol"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -100,8 +100,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.datetime "email_verified_at", precision: nil
-    t.datetime "last_login_at", precision: nil
+    t.datetime "email_verified_at"
+    t.datetime "last_login_at"
     t.string "last_login_ip"
     t.string "last_login_user_agent"
     t.datetime "created_at", null: false
