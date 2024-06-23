@@ -55,7 +55,7 @@ class User < ApplicationRecord
   end
 
   def funds_in_orders
-    orders.group(:have_symbol).sum(:have_amount).transform_keys(&:to_sym)
+    orders.group(:sell_symbol).sum(:sell_amount).transform_keys(&:to_sym)
   end
 
   def available_balances

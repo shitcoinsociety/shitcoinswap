@@ -1,14 +1,14 @@
 class OrdersController < ApplicationController
   def new
     @want = Project.find_by_symbol(params[:symbol])
-    
+
   end
 
   def create
     @order = current_user.orders.create(
-      want_symbol: params[:symbol],
-      want_amount: params[:amount],
-      have_symbol: params[:have_symbol],
-      have_amount: params[:have_amount])
+      buy_symbol: params[:symbol],
+      buy_amount: params[:amount],
+      sell_symbol: params[:sell_symbol],
+      sell_amount: params[:sell_amount])
   end
 end

@@ -3,8 +3,8 @@ class Project < ApplicationRecord
   has_one_attached :whitepaper
   has_one_attached :logo
 
-  has_many :sell_orders, class_name: "Order", foreign_key: "have_symbol", primary_key: "symbol"
-  has_many :buy_orders, class_name: "Order", foreign_key: "want_symbol", primary_key: "symbol"
+  has_many :sell_orders, class_name: "Order", foreign_key: "sell_symbol", primary_key: "symbol"
+  has_many :buy_orders, class_name: "Order", foreign_key: "buy_symbol", primary_key: "symbol"
 
   before_validation :downcase_symbol
 

@@ -65,22 +65,22 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "have_symbol"
-    t.decimal "have_amount"
-    t.decimal "remaining_have_amount"
-    t.string "want_symbol"
-    t.decimal "want_amount"
-    t.decimal "remaining_want_amount"
+    t.string "sell_symbol"
+    t.decimal "sell_amount"
+    t.decimal "remaining_sell_amount"
+    t.string "buy_symbol"
+    t.decimal "buy_amount"
+    t.decimal "remaining_buy_amount"
     t.integer "user_id"
     t.boolean "completed", default: false
     t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["have_amount"], name: "index_orders_on_have_amount"
-    t.index ["have_symbol", "want_symbol"], name: "index_orders_on_have_symbol_and_want_symbol"
+    t.index ["buy_amount"], name: "index_orders_on_buy_amount"
     t.index ["price"], name: "index_orders_on_price"
+    t.index ["sell_amount"], name: "index_orders_on_sell_amount"
+    t.index ["sell_symbol", "buy_symbol"], name: "index_orders_on_sell_symbol_and_buy_symbol"
     t.index ["user_id"], name: "index_orders_on_user_id"
-    t.index ["want_amount"], name: "index_orders_on_want_amount"
   end
 
   create_table "projects", force: :cascade do |t|
