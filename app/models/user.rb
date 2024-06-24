@@ -17,6 +17,9 @@ class User < ApplicationRecord
   has_many :deposits
   has_many :orders
 
+  has_many :buy_trades, class_name: "Trade", foreign_key: "buying_user_id"
+  has_many :sell_trades, class_name: "Trade", foreign_key: "selling_user_id"
+
   has_one_attached :profile_image
 
   validates :password, length: { minimum: 8 }, if: -> { new_record? || !password.nil? }
@@ -50,12 +53,23 @@ class User < ApplicationRecord
     puts 'delivered'
   end
 
+  # This method calculates the current balances for the user
+  # based on all historical data. This is slow.
   def balances
-    { eur: 0 }.merge(deposits.group(:symbol).sum(:amount)).transform_keys(&:to_sym)
+    # Deposits - Withdrawals + Buy Trades - Sell Trades
+    # TODO: Cache this
+    Hash.new(0)
+      .merge({eur: 0})
+      .merge(deposits.group(:symbol).sum(:amount))
+      .merge(buy_trades.group(:buy_symbol).sum(:buy_amount)) {|key, v1, v2| v1 + v2} # add this
+      .merge(buy_trades.group(:sell_symbol).sum(:sell_amount)) {|key, v1, v2| v1 - v2} # add these
+      .merge(sell_trades.group(:buy_symbol).sum(:buy_amount)) {|key, v1, v2| v1 - v2} # subtract this
+      .merge(sell_trades.group(:sell_symbol).sum(:sell_amount)) {|key, v1, v2| v1 + v2} # subtract these
+      .with_indifferent_access
   end
 
   def funds_in_orders
-    orders.group(:sell_symbol).sum(:sell_amount).transform_keys(&:to_sym)
+    orders.open.group(:sell_symbol).sum(:remaining_sell_amount).with_indifferent_access
   end
 
   def available_balances
@@ -63,7 +77,7 @@ class User < ApplicationRecord
   end
 
   def available_balance(symbol)
-    # balance minus whatever is locked in orders
+
     available_balances[symbol]
   end
 end

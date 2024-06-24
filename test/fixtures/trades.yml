@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  buying_user_id: 1
+  selling_user_id: 1
+  buy_symbol: MyString
+  sell_symbol: MyString
+  buy_amount: 9.99
+  sell_amount: 9.99
+  price: 9.99
+  buy_order_id: 1
+  sell_order_id: 1
+
+two:
+  buying_user_id: 1
+  selling_user_id: 1
+  buy_symbol: MyString
+  sell_symbol: MyString
+  buy_amount: 9.99
+  sell_amount: 9.99
+  price: 9.99
+  buy_order_id: 1
+  sell_order_id: 1

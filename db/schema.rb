@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_24_002447) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -93,6 +93,23 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_20_023053) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["symbol"], name: "index_projects_on_symbol"
+  end
+
+  create_table "trades", force: :cascade do |t|
+    t.integer "buying_user_id"
+    t.integer "selling_user_id"
+    t.string "buy_symbol"
+    t.string "sell_symbol"
+    t.decimal "buy_amount"
+    t.decimal "sell_amount"
+    t.decimal "price"
+    t.integer "buy_order_id"
+    t.integer "sell_order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buy_symbol", "sell_symbol"], name: "index_trades_on_buy_symbol_and_sell_symbol"
+    t.index ["buying_user_id"], name: "index_trades_on_buying_user_id"
+    t.index ["selling_user_id"], name: "index_trades_on_selling_user_id"
   end
 
   create_table "users", force: :cascade do |t|

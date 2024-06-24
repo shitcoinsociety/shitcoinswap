@@ -22,7 +22,14 @@ class OrderTest < ActiveSupport::TestCase
     joe = users(:joe)
     sarah = users(:sarah)
 
+    joe_initial_eur = joe.available_balance(:eur)
+    joe_initial_mnt = joe.available_balance(:mnt)
+    sarah_initial_mnt = sarah.available_balance(:mnt)
+    sarah_initial_eur = sarah.available_balance(:eur)
+
     joes_order = joe.orders.create!(sell_amount: 100, buy_amount: 50, sell_symbol: 'eur', buy_symbol: 'mnt')
+
+    # These orders make it so that joe can buy 50 MNT for a total of 80 EUR
     sarahs_order1 = sarah.orders.create!(sell_amount: 20, buy_amount: 40, sell_symbol: 'mnt', buy_symbol: 'eur')
     sarahs_order2 = sarah.orders.create!(sell_amount: 20, buy_amount: 40, sell_symbol: 'mnt', buy_symbol: 'eur')
     sarahs_order3 = sarah.orders.create!(sell_amount: 20, buy_amount: 20, sell_symbol: 'mnt', buy_symbol: 'eur')
@@ -37,13 +44,25 @@ class OrderTest < ActiveSupport::TestCase
     assert joes_order.completed?
     assert sarahs_order1.completed?
     assert sarahs_order3.completed?
+
     assert_equal 10, sarahs_order2.remaining_sell_amount
     assert_equal 20, sarahs_order2.remaining_buy_amount
+
+    assert_equal joe_initial_eur - 80, joe.available_balance(:eur)
+    assert_equal joe_initial_mnt + 50, joe.available_balance(:mnt)
+    assert_equal sarah_initial_mnt - 60, sarah.available_balance(:mnt) # 10 MNT are left locked up in the order
+    assert_equal sarah_initial_eur + 80, sarah.available_balance(:eur)
+
   end
 
-  test "no IEEE 754 floating point rounding errors (0.3 - 0.1)" do
+  test "no IEEE 754 precision errors (eg. 0.3 - 0.1)" do
     joe = users(:joe)
     sarah = users(:sarah)
+
+    joe_initial_eur = joe.available_balance(:eur)
+    joe_initial_mnt = joe.available_balance(:mnt)
+    sarah_initial_mnt = sarah.available_balance(:mnt)
+    sarah_initial_eur = sarah.available_balance(:eur)
 
     joes_order = joe.orders.create!(sell_amount: 0.3, buy_amount: 0.1, sell_symbol: 'eur', buy_symbol: 'mnt')
     sarahs_order = sarah.orders.create!(sell_amount: 0.07, buy_amount: 0.1, sell_symbol: 'mnt', buy_symbol: 'eur')
@@ -57,6 +76,10 @@ class OrderTest < ActiveSupport::TestCase
     assert_equal 0.2, joes_order.remaining_sell_amount
     assert_equal 0, sarahs_order.remaining_buy_amount
     assert_equal 0, sarahs_order.remaining_sell_amount
+    assert_equal joe_initial_eur - 0.3, joe.available_balance(:eur)
+    assert_equal joe_initial_mnt + 0.07, joe.available_balance(:mnt)
+    assert_equal sarah_initial_eur + 0.1, sarah.available_balance(:eur)
+    assert_equal sarah_initial_mnt - 0.07, sarah.available_balance(:mnt)
     assert sarahs_order.completed?
   end
 

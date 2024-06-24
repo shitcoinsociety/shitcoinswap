@@ -60,6 +60,17 @@ class Order < ApplicationRecord
     self.remaining_sell_amount -= price * amount
     self.completed = self.remaining_buy_amount <= 0
 
+    Trade.create!(
+      buying_user: self.user,
+      selling_user: other.user,
+      buy_symbol: self.buy_symbol,
+      sell_symbol: self.sell_symbol,
+      buy_amount: amount,
+      sell_amount: price * amount,
+      price: price,
+      buy_order: other,
+      sell_order: self)
+
     other.save!
     self.save!
   end
