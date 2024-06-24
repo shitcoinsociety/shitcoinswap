@@ -94,4 +94,12 @@ class OrderTest < ActiveSupport::TestCase
     assert_not_includes sarahs_order.matches, joes_order
   end
 
+  test "unsupported pair will raise" do
+    user = users(:joe)
+    eur_balance = user.available_balance(:eur)
+    error = assert_raises ActiveRecord::RecordInvalid do
+      Order.create!(user: user, sell_amount: eur_balance, buy_amount: 50, sell_symbol: 'eur', buy_symbol: 'eur')
+    end
+    assert_equal "unsupported trading pair", error.record.errors[:base].first
+  end
 end

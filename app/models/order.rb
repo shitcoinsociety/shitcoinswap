@@ -1,4 +1,6 @@
 class Order < ApplicationRecord
+  VALID_PAIRS = [:eur, :mnt]
+
   belongs_to :user
   belongs_to :have_project, class_name: "Project", foreign_key: "sell_symbol", primary_key: "symbol", optional: true
   belongs_to :want_project, class_name: "Project", foreign_key: "buy_symbol", primary_key: "symbol", optional: true
@@ -10,6 +12,7 @@ class Order < ApplicationRecord
   validates :sell_amount, numericality: { greater_than: 0 }
   validates :remaining_sell_amount, :remaining_buy_amount, numericality: { greater_than_or_equal_to: 0 }
   validate :validate_sufficient_funds, on: :create
+  validate :validate_supported_trading_pair
 
   before_validation :set_price, on: :create
   before_validation :set_amounts, on: :create
@@ -36,6 +39,12 @@ class Order < ApplicationRecord
   def validate_sufficient_funds
     return if user.available_balance(sell_symbol) >= sell_amount
     errors.add(:sell_amount, "insufficient funds")
+  end
+
+  def validate_supported_trading_pair
+    return if VALID_PAIRS.include? [buy_symbol.to_sym, sell_symbol.to_sym]
+    return if VALID_PAIRS.include? [sell_symbol.to_sym, buy_symbol.to_sym]
+    errors.add(:base, "unsupported trading pair")
   end
 
   def process!

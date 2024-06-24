@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_06_24_002447) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -73,7 +76,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_002447) do
     t.decimal "remaining_buy_amount"
     t.integer "user_id"
     t.boolean "completed", default: false
-    t.decimal "price"
+    t.decimal "price", comment: "buy_amount / sell_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["buy_amount"], name: "index_orders_on_buy_amount"
@@ -108,7 +111,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_002447) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["buy_symbol", "sell_symbol"], name: "index_trades_on_buy_symbol_and_sell_symbol"
+    t.index ["buying_user_id", "buy_symbol"], name: "index_trades_on_buying_user_id_and_buy_symbol"
     t.index ["buying_user_id"], name: "index_trades_on_buying_user_id"
+    t.index ["selling_user_id", "sell_symbol"], name: "index_trades_on_selling_user_id_and_sell_symbol"
     t.index ["selling_user_id"], name: "index_trades_on_selling_user_id"
   end
 
@@ -117,8 +122,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_002447) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.datetime "email_verified_at"
-    t.datetime "last_login_at"
+    t.datetime "email_verified_at", precision: nil
+    t.datetime "last_login_at", precision: nil
     t.string "last_login_ip"
     t.string "last_login_user_agent"
     t.datetime "created_at", null: false
