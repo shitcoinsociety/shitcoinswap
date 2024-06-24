@@ -54,10 +54,10 @@ class User < ApplicationRecord
   end
 
   # This method calculates the current balances for the user
-  # based on all historical data. This is slow.
+  # based on all historical data.
+  # Deposits - Withdrawals + Buy Trades - Sell Trades
+  # TODO: This is slow. Cache this
   def balances
-    # Deposits - Withdrawals + Buy Trades - Sell Trades
-    # TODO: Cache this
     Hash.new(0)
       .merge({eur: 0})
       .merge(deposits.group(:symbol).sum(:amount))

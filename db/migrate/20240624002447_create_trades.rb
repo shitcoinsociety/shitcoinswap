@@ -15,9 +15,13 @@ class CreateTrades < ActiveRecord::Migration[7.1]
 
       t.index :buying_user_id
       t.index :selling_user_id
+      t.index :buy_symbol
+      t.index :sell_symbol
+
       t.index [:buying_user_id, :buy_symbol]
       t.index [:selling_user_id, :sell_symbol]
-      t.index [:buy_symbol, :sell_symbol]
+      t.index [:buying_user_id, :sell_symbol]
+      t.index [:selling_user_id, :buy_symbol]
     end
   end
 end
