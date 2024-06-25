@@ -104,7 +104,7 @@
       <slot />
       <div class="text-center text-white flex gap-3 justify-end container mt-2">
         <a href="/privacy" class="mb-2">Privacy Policy</a>
-        <a href="/impressum" class="">Impressum</a>
+        <a href="/about" class="">About</a>
       </div>
     </div>
     <footer class="md:hidden">

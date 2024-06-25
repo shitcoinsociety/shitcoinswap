@@ -15,11 +15,11 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback" => "sessions#create"
 
   inertia "/privacy" => "static/privacy"
-  inertia "/impressum" => "static/impressum"
+  inertia "/about" => "static/about"
 
   get "/@:nickname" => "users#show"
   get "/$:symbol" => "projects#show"
-  
+
   # Defines the root path route ("/")
   root "projects#index"
 end

@@ -1,8 +1,17 @@
 
+<div class="container bg-white rounded mb-4">
+  <h2 class="pattern md:px-8 p-4 rounded">
+    About
+  </h2>
+  <p class="md:p-8 p-4">
+    Shitcoin Swap is an open source crypto-currency exchange created by 
+    <a href="https://github.com/buhrmi">buhrmi</a>.
+  </p>
+</div>
 <div class="container bg-white rounded">
-  <h1 class="pattern md:px-8 p-4 rounded">
-    Impressum
-  </h1>
+  <h2 class="pattern md:px-8 p-4 rounded">
+    Legal Information / Impressum
+  </h2>
   <div class="p-4 md:p-8">
 <p>
   Authorized representative and responsible within the meaning of § 5 TMG is<br>
