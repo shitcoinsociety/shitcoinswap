@@ -10,7 +10,7 @@ InertiaRails.configure do |config|
   config.default_render = true
 
   # ssr specific options
-  config.ssr_enabled = true
+  config.ssr_enabled = Rails.env != 'test'
 
   config.ssr_url = 'http://localhost:13714'
 end

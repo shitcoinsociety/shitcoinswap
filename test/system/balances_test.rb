@@ -9,6 +9,10 @@ class BalancesTest < ApplicationSystemTestCase
 
     click_on 'login'
 
-    assert_text 'EUR 250.0 available'
+    assert_text "EUR 250.00\nAvailable"
+
+    users(:joe).deposits.create!(symbol: 'eur', amount: 100)
+
+    assert_text "EUR 350.00\nAvailable"
   end
 end

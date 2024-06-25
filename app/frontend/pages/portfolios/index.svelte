@@ -6,7 +6,8 @@
   const balances = getStore('balances')
 
   function formatCurrency(amount) {
-    return (amount || 0).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+    amount = parseFloat(amount) || 0
+    return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
   }
 console.log($balances)
   let totalValue = 0
@@ -31,7 +32,7 @@ console.log($balances)
 
 <div class="value text-0.9em md:text-1em">
   <div class="box">
-    <h3>EUR {$balances.eur}</h3>
+    <h3>EUR {formatCurrency($balances.eur)}</h3>
     <p>Available</p>
   </div>
   <div class="box">
