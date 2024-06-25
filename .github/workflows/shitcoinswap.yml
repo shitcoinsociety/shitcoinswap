@@ -1,0 +1,37 @@
+name: buhrmi/shitcoinswap/buhrmi/shitcoinswap
+on:
+  push:
+    branches:
+    - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: cimg/ruby:3.3.0-browsers
+      env:
+        RAILS_ENV: test
+    steps:
+    - uses: actions/checkout@v4.1.0
+    - name: restore_cache
+      uses: actions/cache@v3.3.2
+      with:
+        key: bundler-{{ checksum "Gemfile.lock" }}
+        path: vendor/bundle
+        restore-keys: |-
+          bundler-{{ checksum "Gemfile.lock" }}
+          npm-{{ checksum "package-lock.json" }}
+    - run: bundle install --path vendor/bundle
+    - run: npm install
+    - name: save_cache
+      uses: actions/cache@v3.3.2
+      with:
+        path: "~/.cache/npm"
+        key: npm-{{ checksum "package-lock.json" }}
+    - run: bundle exec rake db:setup
+    - run: bundle exec rake test:system test
+    - uses: actions/upload-artifact@v4.1.0
+      with:
+        path: test/reports
+    - uses: actions/upload-artifact@v4.1.0
+      with:
+        path: tmp/screenshots
