@@ -1,5 +1,7 @@
 class Order < ApplicationRecord
-  VALID_PAIRS = [:eur, :mnt]
+  VALID_PAIRS = [
+    [:eur, :mnt]
+  ]
 
   belongs_to :user
   belongs_to :have_project, class_name: "Project", foreign_key: "sell_symbol", primary_key: "symbol", optional: true
