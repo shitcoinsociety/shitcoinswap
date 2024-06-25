@@ -9,10 +9,6 @@ gem "sqlite3", "~> 1.4"
 
 gem "rack", "~> 2.2"
 
-# Use the Puma web server [https://github.com/puma/puma]
-# gem "puma", ">= 5.0"
-gem "falcon"
-
 gem "inertia_rails" #, github: "PedroAugustoRamalhoDuarte/inertia-rails", branch: "fix-data-sharing"
 gem "vite_rails", "~> 3.0"
 
@@ -55,11 +51,17 @@ group :production, :testing do
 
   # Use Redis adapter to run Action Cable in production
   gem "redis", ">= 4.0.1"
+
+  # Use Falcon web server in production
+  gem "falcon"
 end
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+
+  # Use Puma locally for dev and testing
+  gem "puma"
 end
 
 group :development do
