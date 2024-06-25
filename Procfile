@@ -1,2 +1,2 @@
-web: bundle exec puma -C config/puma.rb
+web: bundle exec falcon host
 ssr: node ./public/vite-ssr/ssr.js

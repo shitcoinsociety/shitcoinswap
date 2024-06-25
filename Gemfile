@@ -10,7 +10,8 @@ gem "sqlite3", "~> 1.4"
 gem "rack", "~> 2.2"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", ">= 5.0"
+# gem "puma", ">= 5.0"
+gem "falcon"
 
 gem "inertia_rails" #, github: "PedroAugustoRamalhoDuarte/inertia-rails", branch: "fix-data-sharing"
 gem "vite_rails", "~> 3.0"

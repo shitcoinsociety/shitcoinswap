@@ -1,3 +1,5 @@
+STDOUT.sync = true
+
 # Load the Rails application.
 require_relative "application"
 
