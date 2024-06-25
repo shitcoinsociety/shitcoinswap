@@ -81,7 +81,7 @@ export function perform(storeId, action, ...args) {
 }
 
 export function subscribe(subject, subscriptionId) {
-  if (typeof document == 'undefined') return store
+  if (typeof document == 'undefined') return
   if (!consumer) consumer = createConsumer()
 
   if (!subject && subscriptions[subscriptionId]) {
