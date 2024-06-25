@@ -1,7 +1,7 @@
-module CableStore
+module LiveStores
   extend ActiveSupport::Concern
 
-  class Cable
+  class Store
     attr_accessor :transmitter
 
     def initialize subject, store_id = nil
@@ -10,10 +10,10 @@ module CableStore
     end
 
     def transmit data
-      if @transmitter
-        @transmitter.transmit ({store_id: @store_id}).compact.merge(data)
+      if Current.transmitter
+        Current.transmitter.transmit ({store_id: @store_id}).compact.merge(data)
       else
-        CableStoreChannel.broadcast_to @subject, ({store_id: @store_id}).compact.merge(data)
+        LiveStoresChannel.broadcast_to @subject, ({store_id: @store_id}).compact.merge(data)
       end
     end
 
@@ -35,8 +35,8 @@ module CableStore
   end
 
   included do
-    def cable(store_id=nil)
-      Cable.new self, store_id
+    def livestore store_id = nil
+      Store.new self, store_id
     end
   end
 end

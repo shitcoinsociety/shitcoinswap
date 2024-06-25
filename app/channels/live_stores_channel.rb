@@ -1,14 +1,14 @@
-class CableStoreChannel < ApplicationCable::Channel
+class LiveStoresChannel < ApplicationCable::Channel
   public :transmit
 
   def subscribed
-    @sgid = params[:sgid]
+    @sgid = params[:subject]
     return reject unless subject
     stream_for subject
     if subject.respond_to? :subscribed
-      cable = subject.cable
-      cable.transmitter = self
-      subject.subscribed cable
+      Current.transmitter = self
+      subject.subscribed
+      Current.transmitter = nil
     end
   end
 
@@ -27,9 +27,9 @@ class CableStoreChannel < ApplicationCable::Channel
 
   def unsubscribed
     if subject.respond_to? :unsubscribed
-      cable = subject.cable
-      cable.transmitter = self
-      subject.unsubscribed cable
+      Current.transmitter = self
+      subject.unsubscribed stores
+      Current.transmitter = nil
     end
   end
 end

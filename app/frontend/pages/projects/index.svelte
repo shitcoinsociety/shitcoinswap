@@ -1,6 +1,15 @@
 <script>
+  import { getStore } from '~/lib/livestores'
+
   export let projects
   export let current_user
+
+  function formatCurrency(value, currency) {
+    value = value || 0
+    return `${parseFloat(value).toFixed(2)} ${currency}`
+  }
+
+  const balances = getStore('balances')
 </script>
 
 {#if current_user}
@@ -10,15 +19,16 @@
 <div class="container rounded-2 gap-2 bg-white p-4 flex flex-col md:flex-row md:items-center mb-2">
   <div class="flex-1">
     <h2>
-      0.00 EUR
+      <!-- {console.log($balances)} -->
+      {formatCurrency($balances?.eur, 'EUR')}
       <span class="gains text-green">
-        <div class="i-ph:trend-up-bold w-1em h-1em"></div>
-        0.0%
+        <!-- <div class="i-ph:trend-up-bold w-1em h-1em"></div>
+        0.0% -->
       </span>
     </h2>
-    Portfolio value
+    Available balance
   </div>
-  <a href="/portfolios" class="btn">Manage Portfolio</a>
+  <a href="/deposits/new" class="btn">Deposit Funds</a>
 </div>
 {/if}
 <div class="flex flex-col justify-center container pattern bg-white">

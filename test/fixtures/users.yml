@@ -3,6 +3,7 @@ joe:
   name: Joe
   nickname: joe
   bio: I'm Joe
+  password_digest: <%= BCrypt::Password.create("password", cost: 4) %>
 
 sarah:
   email: sarah@shitcoinswap.com

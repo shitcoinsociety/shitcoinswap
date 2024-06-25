@@ -102,4 +102,18 @@ class OrderTest < ActiveSupport::TestCase
     end
     assert_equal "unsupported trading pair", error.record.errors[:base].first
   end
+
+  test "cancelling an order restores user's balance" do
+    user = users(:joe)
+    initial_balance = user.available_balance(:eur)
+    order = Order.create!(user: user, sell_amount: 100, buy_amount: 50, sell_symbol: 'eur', buy_symbol: 'mnt')
+
+    assert_equal initial_balance - 100, user.available_balance(:eur)
+
+    order.cancel!
+
+    assert_equal initial_balance, user.reload.available_balance(:eur)
+    assert order.cancelled?
+  end
+
 end

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include LiveStores
+
   JSON_OPTIONS = {
     only: ['id', 'name', 'nickname', 'bio', 'created_at'],
     methods: [:profile_image_url]
@@ -6,7 +8,9 @@ class User < ApplicationRecord
 
   PRIVATE_JSON_OPTIONS = {
     only: JSON_OPTIONS[:only] + ['email'],
-    methods: JSON_OPTIONS[:methods] + ['available_balances', 'funds_in_orders']
+    methods: JSON_OPTIONS[:methods] + [
+      :available_balances, :funds_in_orders, :sgid
+    ]
   }
 
   has_secure_password
@@ -51,6 +55,18 @@ class User < ApplicationRecord
   def send_password_reset
     UserMailer.with(user: self).password_reset.deliver_now
     puts 'delivered'
+  end
+
+  def sgid
+    to_signed_global_id(expires_in: nil).to_s
+  end
+
+  def subscribed
+    broadcast_balances
+  end
+
+  def broadcast_balances
+    livestore('balances').update(available_balances)
   end
 
   # This method calculates the current balances for the user

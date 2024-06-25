@@ -1,13 +1,16 @@
 <script>
-  export let current_user
+  import { getStore } from '~/lib/livestores'
+  
+  let {current_user} = $props()
+
+  const balances = getStore('balances')
 
   function formatCurrency(amount) {
     return (amount || 0).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
   }
+console.log($balances)
+  let totalValue = 0
 
-  $: totalValue = 
-    current_user.available_balances.eur
-    + current_user.funds_in_orders.eur || 0
 </script>
 
 <div class="bg-white rounded-2 container">
@@ -28,7 +31,7 @@
 
 <div class="value text-0.9em md:text-1em">
   <div class="box">
-    <h3>EUR {formatCurrency(current_user.available_balances.eur)}</h3>
+    <h3>EUR {$balances.eur}</h3>
     <p>Available</p>
   </div>
   <div class="box">

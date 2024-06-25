@@ -9,19 +9,20 @@ class CreateOrders < ActiveRecord::Migration[7.1]
       t.decimal :buy_amount
       t.decimal :remaining_buy_amount
       t.integer :user_id
-      t.boolean :completed, default: false
+      t.boolean :completed, default: false, null: false
+      t.boolean :cancelled, default: false, null: false
 
       t.decimal :price, comment: "buy_amount / sell_amount"
 
       t.timestamps
 
       t.index :user_id
-      # t.index :sell_symbol
-      # t.index :buy_symbol
-      t.index :sell_amount
-      t.index :buy_amount
       t.index :price
       t.index [:sell_symbol, :buy_symbol]
+      t.index [:completed, :cancelled]
+      t.index [:user_id, :completed]
+      t.index [:user_id, :cancelled]
+      t.index :created_at
     end
   end
 end

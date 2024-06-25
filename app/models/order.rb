@@ -19,10 +19,14 @@ class Order < ApplicationRecord
   before_validation :set_price, on: :create
   before_validation :set_amounts, on: :create
 
-  scope :open, -> { where(completed: false) }
+  scope :open, -> { where(completed: false, cancelled: false) }
 
   def set_price
     self.price = rational_price
+  end
+
+  def cancel!
+    update! cancelled: true
   end
 
   def rational_price

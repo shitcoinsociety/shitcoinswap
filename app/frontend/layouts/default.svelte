@@ -1,12 +1,18 @@
 <script>
-  import { router } from 'inertiax-svelte'
+  import { router, page } from 'inertiax-svelte'
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
+  import { subscribe, getStore } from '~/lib/livestores'
 
   export let current_user
   export let controller
   export let title
   export let flash
+
+  $: {
+    subscribe(current_user?.sgid, 'current_user')
+    getStore('balances', current_user?.available_balances)
+  }
 
   onMount(() => {
   

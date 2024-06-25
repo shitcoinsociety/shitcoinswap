@@ -1,7 +1,7 @@
 import { createConsumer } from "@rails/actioncable"
 import { writable } from 'svelte/store'
 
-const consumer = createConsumer()
+let consumer
 
 const stores = {}
 const subscriptions = {}
@@ -80,29 +80,27 @@ export function perform(storeId, action, ...args) {
   return getStore(storeId).perform(action, ...args)
 }
 
-export function subscribe(subject, initial = null, store_id = subject) {
-  if (subscriptions[store_id] && !subject) {
-    consumer.subscriptions.remove(subscriptions[store_id])
-    subscriptions[store_id] = null
+export function subscribe(subject, subscriptionId) {
+  if (typeof document == 'undefined') return store
+  if (!consumer) consumer = createConsumer()
+
+  if (!subject && subscriptions[subscriptionId]) {
+    const subscription = subscriptions[subscriptionId]
+    delete subscriptions[subscriptionId]
+    consumer.subscriptions.remove(subscription)
+    return
   }
-  if (!subject) {
-    const store = getStore(store_id, null)
-    store.set(null)
-    return store
-  }
-  const defaultStore = getStore(store_id, initial)
-  const subscription = subscriptions[store_id] ||= consumer.subscriptions.create({ channel: "CableStoreChannel", subject }, {
+
+  if (!subject) return
+
+  const subscription = subscriptions[subscriptionId] ||= consumer.subscriptions.create({ channel: "LiveStoresChannel", subject }, {
     received: function(data) {
-      getStore(data.store_id || store_id).handle(data.action, data)
+      getStore(data.store_id).handle(data.action, data)
     }
   })
 
-  defaultStore.perform = function(action, ...args) {
-    return subscription.perform(action, {args})
-  }
-  defaultStore.unsubscribe = function() {
-    subscriptions[store_id] = null
+  return function unsubscribe() {
+    delete subscriptions[subscriptionId]
     consumer.subscriptions.remove(subscription)
   }
-  return defaultStore
 }
