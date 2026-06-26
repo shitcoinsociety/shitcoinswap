@@ -1,0 +1,17 @@
+{
+	"type": "module",
+	"dependencies": {
+		"@iconify/json": "^2.2.490",
+		"@sveltejs/vite-plugin-svelte": "^7.1.2",
+		"@unocss/preset-icons": "^66.7.2",
+		"@unocss/reset": "^66.7.2",
+		"inertiax-svelte": "^11.0.15",
+		"inertiax-vite": "^11.0.15",
+		"svelte": "^5.56.4",
+		"unocss": "^66.7.2"
+	},
+	"devDependencies": {
+		"vite": "^8.1.0",
+		"vite-plugin-ruby": "^5.2.2"
+	}
+}
