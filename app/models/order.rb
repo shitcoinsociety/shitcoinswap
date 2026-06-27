@@ -7,7 +7,7 @@ class Order < ApplicationRecord
 
   validates :sell_asset_id, :buy_asset_id, presence: true
 
-  validates :buy_amount, numericality: { greater_than: 0 }, allow_nil: true
+  validates :buy_amount, numericality: { greater_than_or_equal_to: 0 }, allow_nil: true
   validates :sell_amount, numericality: { greater_than: 0 }
   validates :remaining_sell_amount, numericality: { greater_than_or_equal_to: 0 }
   validates :funded_amount, numericality: { greater_than_or_equal_to: 0 }
@@ -16,7 +16,7 @@ class Order < ApplicationRecord
   scope :cancelled, -> { where.not(cancelled_at: nil) }
   scope :active, -> { where(completed: false, cancelled_at: nil) }
 
-  default_scope { order("price desc, sell_amount desc") }
+  default_scope { order("price desc, created_at asc") }
 
   after_create_commit :fund_and_process!
 
@@ -46,6 +46,10 @@ class Order < ApplicationRecord
     return if completed?
     fund!
     process!
+    # Market orders execute immediately against whatever's in the book.
+    # If nothing matched, there's no point leaving them open — they won't
+    # get a better price later, and a limit order expresses that intent.
+    cancel! if price.nil? && !completed?
   end
 
   def fund!
@@ -72,6 +76,16 @@ class Order < ApplicationRecord
     end
 
     result
+  end
+
+  def cancel!
+    return if cancelled_at.present?
+
+    with_lock do
+      self.cancelled_at = Time.current
+      self.funded_amount = 0
+      save!
+    end
   end
 
   def match!(other)

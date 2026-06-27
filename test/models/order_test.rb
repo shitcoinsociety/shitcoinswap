@@ -109,4 +109,80 @@ class OrderTest < ActiveSupport::TestCase
     assert_equal 200_000, order_a.sell_amount, "sell_amount still reflects the original intent"
     assert_not order_a.completed?, "Order should not be completed — no counterparty yet and sell_amount > funded_amount"
   end
+
+  test "cancelling an order releases funds and excludes it from active scope" do
+    order = Order.create!(
+      account: @usd_account,
+      sell_asset_id: "usd",
+      buy_asset_id: "btc",
+      sell_amount: 10_000,
+      buy_amount: 0.2
+    )
+
+    order.cancel!
+    order.reload
+
+    assert_not_nil order.cancelled_at, "Order should have cancelled_at set"
+    assert_equal 0, order.funded_amount, "Cancelled order should have zero funded_amount"
+    assert_not order.completed?, "Cancelled order should not be marked completed"
+
+    # Cancelled orders should not appear in active scope
+    assert_not_includes Order.active, order
+  end
+
+  test "market order without counterparty auto-cancels" do
+    # Market order: buy_amount of 0 means "any amount" (no price)
+    order = Order.create!(
+      account: @usd_account,
+      sell_asset_id: "usd",
+      buy_asset_id: "btc",
+      sell_amount: 10_000,
+      buy_amount: 0
+    )
+
+    order.reload
+
+    assert_not_nil order.cancelled_at,
+      "Market order with no counterparty should be auto-cancelled"
+    assert_equal 0, order.funded_amount,
+      "Cancelled market order should have zero funded_amount"
+    assert_not order.completed?
+  end
+
+  test "price-time priority: older order at same price is matched first" do
+    # Create two BTC sell orders at the same price (50k USD/BTC)
+    old_order = Order.create!(
+      account: @btc_account,
+      sell_asset_id: "btc",
+      buy_asset_id: "usd",
+      sell_amount: 1,
+      buy_amount: 50_000
+    )
+
+    newer_order = Order.create!(
+      account: @btc_account,
+      sell_asset_id: "btc",
+      buy_asset_id: "usd",
+      sell_amount: 1,
+      buy_amount: 50_000
+    )
+
+    # Now create a buy-side order that only needs 1 BTC worth
+    buy_order = Order.create!(
+      account: @usd_account,
+      sell_asset_id: "usd",
+      buy_asset_id: "btc",
+      sell_amount: 50_000,
+      buy_amount: 1
+    )
+
+    old_order.reload
+    newer_order.reload
+
+    # The older order should be fully filled, the newer one untouched
+    assert old_order.completed?, "Older order should be matched first and completed"
+    assert_not newer_order.completed?, "Newer order should remain unfilled"
+    assert_equal 1, newer_order.remaining_sell_amount,
+      "Newer order should still have its full sell amount"
+  end
 end
