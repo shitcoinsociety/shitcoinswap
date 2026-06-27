@@ -10,6 +10,7 @@
 
 <footer>
   <section>
+    <p>Copyright &copy; 2026 Shitcoin Society</p>
     <h3>Resources</h3>
     <ul>
       <li>
