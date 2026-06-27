@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+usd_account:
   user_id: 1
   asset_id: 1
-  balance: 9.99
+  balance: 100000.0
 
-two:
-  user_id: 1
-  asset_id: 1
-  balance: 9.99
+btc_account:
+  user_id: 2
+  asset_id: 2
+  balance: 10.0
