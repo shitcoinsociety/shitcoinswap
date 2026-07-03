@@ -1,6 +1,6 @@
 # Shitcoin Swap
 
-Shitcoin Swap is the official open-source trading and investment engine created by the [Shitcoin Society](https://www.shitcoinsociety.com).
+Shitcoin Swap is the official open-source trading and investment engine created created for and by the [Shitcoin Society](https://www.shitcoinsociety.com).
 
 ## Copyright
 
