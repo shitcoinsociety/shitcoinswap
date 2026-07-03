@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.7;
+  color: #1a1a2e;
+  background: #fafafa;
+  --padding: 1rem;
+  @media (min-width: 600px) {
+    --padding: 2rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  @media (min-width: 600px) {
+    /* border-left: 1px solid #cacaca; */
+    /* border-right: 1px solid #cacaca; */
+  }
+}
+
+.row-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  grid-template-areas: "nav"
+                       "header"
+                       "main"
+                       "footer";
+ 
+}
+
+.row-layout > .full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.row-layout > main {
+  grid-area: main;
+}
+.row-layout > header {
+  grid-area: header;
+}
+.row-layout > footer {
+  grid-area: footer;
+}
+.row-layout > nav {
+  grid-area: nav;
+}
+
+article, section {
+  display: grid;
+  grid-template-columns: var(--padding) auto var(--padding);
+  > * {
+    grid-column: 2;
+  }
+  > .full-width {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
+
+

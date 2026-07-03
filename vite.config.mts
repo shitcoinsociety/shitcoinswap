@@ -17,7 +17,7 @@ export default defineConfig({
     }),
     inertia({
       ssr: {
-        entry: 'entrypoints/inertia.js',
+        // entry: 'entrypoints/inertia.js',
       },
     }),
     svelte(),

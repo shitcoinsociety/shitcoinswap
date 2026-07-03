@@ -1,5 +1,6 @@
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
+import '~/assets/global.css'
 
 import { createInertiaApp } from "inertiax-svelte"
 
@@ -9,6 +10,7 @@ createInertiaApp({
   pages: {
     path: "../pages",
     extensions: [".svelte", ".md"],
+    lazy: true
   },
   layout: () => Default,
   defaults: {
