@@ -6,7 +6,10 @@ import { createInertiaApp } from "inertiax-svelte"
 import Default from "~/layouts/default.svelte"
 
 createInertiaApp({
-  pages: "../pages",
+  pages: {
+    path: "../pages",
+    extensions: [".svelte", ".md"],
+  },
   layout: () => Default,
   defaults: {
     form: {
