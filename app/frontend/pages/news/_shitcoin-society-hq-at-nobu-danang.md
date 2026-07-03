@@ -3,21 +3,21 @@ title: Shitcoin Society Initiates Development of Blockchain-Based Transfer Agent
 image: nobudanang
 ---
 
-**DA NANG, VIETNAM – July 3, 2026** – Shitcoin Society today announced the official launch of development on its open-source Real-World Asset (RWA) tokenization stack. Aimed at modernizing corporate governance, the startup has begun engineering a blockchain-native transfer agent infrastructure designed to track startup shares, automate vesting schedules, and manage equity instruments on public blockchains.
+**DA NANG, VIETNAM – July 3, 2026** – Shitcoin Society, an investment and financial advisory group specializing in digital assets and open-source trading technology, today announced the development of [Shitcoin Swap](https://github.com/shitcoinsociety/shitcoinswap), its open-source Real-World Asset (RWA) tokenization stack. Aimed at modernizing corporate governance, the startup has begun engineering a blockchain-native transfer agent infrastructure designed to track startup shares, automate vesting schedules, and manage equity instruments on public blockchains.
 
 To anchor its engineering and ecosystem efforts, Shitcoin Society has secured its future tokenization headquarters and development lab at Nobu Danang, aligning directly with Central Vietnam’s newly established legal sandbox framework for digital finance.
 
 ### **Coining a New Investment Philosophy: "Toilet Trading"**
 
-With this launch, Shitcoin Society is officially coining the financial term **"Toilet Trading."** Defined as the pragmatic allocation of capital into hyper-speculative, high-asymmetry assets with the explicit, clear-eyed acceptance that the money is effectively "flushed" from day one, the framework isolates the mathematical reality of the Power Law in venture finance: that a single breakthrough payoff can yield exponential, fund-returning future returns.
+With this announcement, Shitcoin Society is officially coining the financial term **"Toilet Trading."** Defined as the pragmatic allocation of capital into hyper-speculative, high-asymmetry assets with the explicit, clear-eyed acceptance that the money is effectively "flushed" from day one, the framework isolates the mathematical reality of the Power Law in venture finance: that a single breakthrough payoff can yield exponential, fund-returning future returns.
 
 Shitcoin Society asserts that "toilet trading" is the fundamental, unfiltered truth of early-stage venture capital, where the vast majority of seed investments go to zero. By building an open-source, on-chain transfer agent, the startup aims to provide a transparent, immutable plumbing system for this exact type of high-risk, high-reward capital formation, stripping away the traditional marketing veneer of venture investing to focus entirely on raw mathematical upside.
 
 ### **Unveiling the Shitcoin Swap Blueprint**
 
-The technical core of the project centers on the newly initiated [Shitcoin Swap](https://github.com/shitcoinsociety/shitcoinswap) engine. Conceived as a highly modular, open-source framework, Shitcoin Swap is being actively built to model complex corporate equity structures rather than standard, unbacked digital assets.
+The technical core of the project centers on the newly initiated Shitcoin Swap app. Conceived as a highly modular, open-source framework, Shitcoin Swap is being actively built to model complex corporate equity structures rather than standard, unbacked digital assets.
 
-Once fully engineered, the stack will allow founders to turn traditional, rigid spreadsheets and cap tables into programmable, verifiable on-chain assets. The software architecture is being written to natively support automated investor allocations, legal lock-up periods, and vesting schedules that seamlessly synchronize with off-chain legal registries, ensuring that even if an investment carries a "toilet trade" risk profile, its ownership architecture remains un-gameable and mathematically secure.
+Once fully engineered, the stack allows founders to turn traditional, rigid spreadsheets and cap tables into programmable, verifiable on-chain assets. The software architecture is being written to natively support automated investor allocations, legal lock-up periods, and vesting schedules that seamlessly synchronize with off-chain legal registries, ensuring that even if an investment carries a "toilet trade" risk profile, its ownership architecture remains un-gameable and mathematically secure.
 
 ### **Nobu Danang as a Strategic Development Lab**
 
@@ -41,7 +41,7 @@ While initial local pilots focus primarily on the transactional and payment laye
 
 ### **About Shitcoin Society**
 
-Shitcoin Society is an open-source tokenization startup currently developing the Shitcoin Swap engine. Pioneer of the "Toilet Trading" investment ethos, the project’s mission is to build the software infrastructure required to make private company cap tables programmable, transparent, and legally compliant on public blockchains. Operating out of its development lab in Da Nang, the project is focused on creating secure on-chain solutions for equity issuance, corporate voting rights, and automated vesting tracking.
+Shitcoin Society is an open-source tokenization startup currently developing the [Shitcoin Swap engine](https://github.com/shitcoinsociety/shitcoinswap). Pioneer of the "Toilet Trading" investment ethos, the project’s mission is to build the software infrastructure required to make private company cap tables programmable, transparent, and legally compliant on public blockchains. Operating out of its development lab in Da Nang, the project is focused on creating secure on-chain solutions for equity issuance, corporate voting rights, and automated vesting tracking.
 
 ### **About Nobu Danang**
 
