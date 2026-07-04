@@ -40,41 +40,79 @@
   </section>
 </header>
 
-<main>
-  <section class="container">
-    <h2 class="text-xl font-bold pt-10 mb-0">Latest News</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 py-8">
-    {#each articles as article}
-      <a href="/news/{article.slug}" class="card">
-        {#if article.img}
-          <figure class="card-img">
-            <img src={article.img} alt={article.title} />
-            <figcaption class="card-overlay">
-              <span class="badge badge-light">{article.category}</span>
-            </figcaption>
-          </figure>
-        {/if}
-        <div class="card-body">
-          <div class="card-meta">
-            <time datetime={article.date}>{article.date}</time>
-          </div>
-          <h2 class="card-title">{article.title}</h2>
-          {#if article.authors.length}
-            <div class="author-row">
-              <div class="flex">
-                {#each article.authors as author}
-                  <img class="avatar avatar-sm" src={author.avatar} alt={author.name} />
-                {/each}
-              </div>
-              <span class="author-names">
-                {#each article.authors as author, i}
-                  {#if i > 0}, {/if}{author.name}
-                {/each}
-              </span>
-            </div>
-          {/if}
+
+<section class="container">
+  <h2 class="text-xl font-bold pt-10 mb-0">Latest News</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 py-8">
+  {#each articles as article}
+    <a href="/news/{article.slug}" class="card">
+      {#if article.img}
+        <figure class="card-img">
+          <img src={article.img} alt={article.title} />
+          <figcaption class="card-overlay">
+            <span class="badge badge-light">{article.category}</span>
+          </figcaption>
+        </figure>
+      {/if}
+      <div class="card-body">
+        <div class="card-meta">
+          <time datetime={article.date}>{article.date}</time>
         </div>
-      </a>
-    {/each}
-  </section>
-</main>
+        <h2 class="card-title">{article.title}</h2>
+        {#if article.authors.length}
+          <div class="author-row">
+            <div class="flex">
+              {#each article.authors as author}
+                <img class="avatar avatar-sm" src={author.avatar} alt={author.name} />
+              {/each}
+            </div>
+            <span class="author-names">
+              {#each article.authors as author, i}
+                {#if i > 0}, {/if}{author.name}
+              {/each}
+            </span>
+          </div>
+        {/if}
+      </div>
+    </a>
+  {/each}
+  </div>
+</section>
+
+
+
+<style>
+  /* ===== Hero (Landing Page) ===== */
+.hero {
+  padding-block: 6rem;
+  background: #111;
+  color: #fff;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.75);
+  background: rgba(255,255,255,.1);
+  padding: .35rem .75rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+.hero-title {
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  margin-bottom: 1rem;
+}
+.hero-sub {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,.6);
+  margin-bottom: 1.75rem;
+}
+</style>
