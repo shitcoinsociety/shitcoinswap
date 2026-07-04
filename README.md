@@ -2,7 +2,7 @@
 
 # Shitcoin Swap
 
-Shitcoin Swap is an open-source RWA (Real-World-Asset) tokenization engine operated by the [Shitcoin Society](https://www.shitcoinsociety.com). For more information, please read the [announcement](https://www.shitcoinsociety.com/news/shitcoin-society-launches-at-nobu-danang).
+Shitcoin Swap is the open-source RWA (Real-World-Asset) tokenization engine operated by the [Shitcoin Society](https://www.shitcoinsociety.com).
 
 ## Copyright
 
