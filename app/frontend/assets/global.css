@@ -30,7 +30,7 @@ h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
 h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; }
 h4 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; }
 
-.container { max-width: 800px; margin: 0 auto; }
+.container { max-width: 800px; margin: 0 auto; padding-inline: var(--padding); }
 
 /* ===== App Shell ===== */
 #app {
@@ -93,7 +93,7 @@ menu   { display: flex; justify-content: space-between; align-items: center; gap
   backdrop-filter: blur(8px);
 }
 .hero-title {
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(2rem, 6vw, 3.4rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -.03em;

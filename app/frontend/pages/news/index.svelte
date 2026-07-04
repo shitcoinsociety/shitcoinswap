@@ -16,17 +16,17 @@
 </script>
 
 <svelte:head>
-  <title>Shitcoin Society — Blockchain-native Tokenization Services</title>
+  <title>Shitcoin Society — Open Source Tokenization Infrastructure</title>
   <meta name="description" content="Shitcoin Society builds open-source, blockchain-native transfer agent infrastructure for real-world asset tokenization. Based in Da Nang, Vietnam." />
 </svelte:head>
 
 <header class="hero">
   <section class="container">
-    <span class="hero-badge">🇻🇳 Da Nang, Vietnam</span>
-    <h1 class="hero-title">Open Source Transfer Agent Infrastructure</h1>
+    <span class="hero-badge">🇻🇳 Built in Da Nang, Vietnam</span>
+    <h1 class="hero-title">Open source infrastructure for a new generation of digital&nbsp;assets.</h1>
     <p class="hero-sub">
-      Open-source, blockchain-native transfer agent infrastructure
-      for startup shares, vesting schedules, and equity instruments — located in the middle of
+      Startup shares, vesting schedules, and equity instruments
+       — located in the middle of
       Central Vietnam's digital finance sandbox.
     </p>
     <div class="inline-flex gap-3 flex-wrap">

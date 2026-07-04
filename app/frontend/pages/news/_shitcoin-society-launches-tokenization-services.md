@@ -44,12 +44,6 @@ Vietnam's recently launched International Financial Center (IFC) operates on a d
 
 As an early-stage builder, my roadmap aims to directly address the IFC’s call for practical tokenization use cases that reduce reliance on traditional bank credit. Throughout our development cycle, our team intends to collaborate with local legal consultants and sandbox advisors to ensure our community funding mechanics, on-chain token issuance, cap-table tracking, and secondary liquidity code blocks are fully AML/KYC compliant from the ground up.
 
-### **Synergies with Early Sandbox Precedents**
-
-Our entry into Da Nang follows a string of progressive digital asset initiatives in the city, including *Basal Pay*—a sandboxed crypto-to-fiat payment rail—and municipal frameworks aligned with Tether’s regional asset tokenization models.
-
-While initial local pilots focus primarily on the transactional and payment layers, the Shitcoin Society is focused on building the underlying **ownership and equity registry layer**. By engineering structured RWA security tokens for private startup equity, our future stack will complement existing payment rails, giving founders a cohesive ecosystem to move from initial public-backed token formation to compliant secondary market liquidity.
-
 ---
 
 ### **About Shitcoin Society**
