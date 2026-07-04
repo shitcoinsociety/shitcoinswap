@@ -3,98 +3,106 @@
 
   const { default: NewsComponent, metadata } = await import(`~/pages/news/_${slug}.md`)
   const { default: img } = await import(`~/pages/news/_${metadata.image}.png`, {eager: true, import: 'default'})
+  const raw = await import(`~/pages/news/_${slug}.md?raw`)
+
+  const wordCount = raw.default
+    .replace(/^---[\s\S]*?---/m, '')
+    .replace(/[#*[\]()!>_`|-]/g, '')
+    .split(/\s+/)
+    .filter(Boolean)
+    .length
+
+  const readTime = Math.max(1, Math.ceil(wordCount / 200))
+
+  const authors = (metadata.authors || []).map(a => ({
+    ...a,
+    avatar: `${a.github}.png`
+  }))
+
+  let copied = $state(false)
+  async function copyLink() {
+    await navigator.clipboard.writeText(window.location.href)
+    copied = true
+    setTimeout(() => copied = false, 2000)
+  }
+
+  const shareImage = `https://shitcoinsociety.com${img}`
+  const shareUrl = `https://shitcoinsociety.com/news/${slug}`
 </script>
 
 <svelte:head>
-  <title>{metadata.title} — Shitcoin Society</title>
+  <title>{metadata.title}</title>
   <meta name="description" content={metadata.description} />
+
+  <meta property="og:title" content={metadata.title} />
+  <meta property="og:description" content={metadata.description} />
+  <meta property="og:image" content={shareImage} />
+  <meta property="og:url" content={shareUrl} />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Shitcoin Society" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={metadata.title} />
+  <meta name="twitter:description" content={metadata.description} />
+  <meta name="twitter:image" content={shareImage} />
 </svelte:head>
 
-<header class="full-width">
-  <figure class="pr-hero full-width">
+<header>
+  <figure class="post-hero">
     <img src={img} alt={metadata.title} />
-    <figcaption class="pr-hero-overlay">
-      <div class="pr-badge">Press Release</div>
-      <h1 class="pr-hero-title">{metadata.title}</h1>
+    <figcaption class="post-hero-overlay">
+      <div class="badge badge-dark">{metadata.category}</div>
+      <h1 class="post-title">{metadata.title}</h1>
     </figcaption>
   </figure>
 </header>
 
-<main>
-  <article>
-    <header>
-      <div class="pr-meta">
-        <time class="pr-date" datetime={metadata.date || ''}>
-          {metadata.date || ''}
-        </time>
+
+<article class="container">
+  <div class="post-meta">
+    <time class="post-date" datetime={metadata.date || ''}>
+      {metadata.date || ''}
+    </time>
+    <span class="post-divider">·</span>
+    <span class="post-readtime">{readTime} min read</span>
+    <button class="btn btn-copy" onclick={copyLink}>
+      {#if copied}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        Copied
+      {:else}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        Copy link
+      {/if}
+    </button>
+  </div>
+
+  {#if authors.length}
+    <div class="flex items-center gap-3 mb-4">
+      <div class="flex gap-1">
+        {#each authors as author}
+          <a href={author.github} target="_blank" rel="noopener noreferrer">
+            <img class="avatar avatar-md" src={author.avatar} alt={author.name} />
+          </a>
+        {/each}
       </div>
-    </header>
-    
-    <div class="pr-body">
-      <NewsComponent />
+      <span class="text-sm text-gray-400">
+        by
+        {#each authors as author, i}
+          {#if i > 0}, {/if}
+          <a class="post-author-link" href={author.github} target="_blank" rel="noopener noreferrer">
+            {author.name}
+          </a>
+        {/each}
+      </span>
     </div>
-  </article>
-</main>
-
-<style>
-  .pr-hero {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .pr-hero img {
-    width: 100%;
-    max-height: 60vh;
-    object-fit: cover;
-    display: block;
-  }
-
-  .pr-hero-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 0.5rem;
-    padding: var(--padding);
-    background: linear-gradient(
-      to bottom,
-      transparent 30%,
-      rgba(0, 0, 0, 0.7) 100%
-    );
-  }
-
-  .pr-hero-title {
-    font-size: clamp(1.4rem, 5vw, 2.6rem);
-    font-weight: 800;
-    line-height: 1.2;
-    color: #fff;
-    margin: 0;
-    text-wrap: balance;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  }
-
-  .pr-meta {
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .pr-badge {
-    display: inline-block;
-    background: #1a1a2e;
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    padding: 0.25rem 0.65rem;
-    border-radius: 4px;
-  }
-
-  .pr-date {
-    font-size: 0.85rem;
-    color: #888;
-    margin-left: 0.75rem;
-  }
-</style>
+  {/if}
+  
+  <div>
+    <NewsComponent />
+  </div>
+</article>

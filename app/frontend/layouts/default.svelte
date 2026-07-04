@@ -6,17 +6,14 @@
   <title>Shitcoin Society</title>
 </svelte:head>
 
-<div class="row-layout">
-
-  <nav>
-    <section>
-
-      <a href="/news">
+<nav>
+  <section class="container">
+    <menu>
+      <a href="/" class="brand">
         <span>Shitcoin Society</span>
       </a>
-      <nav>
-        <a
-        class="site-nav-link"
+      <a
+        class="btn btn-dark"
         href="https://github.com/shitcoinsociety"
         target="_blank"
         rel="noopener noreferrer"
@@ -26,31 +23,29 @@
         </svg>
         GitHub
       </a>
-      </nav>
-    </section>
-  </nav>
+    </menu>
+  </section>
+</nav>
 
-
+<main>
   {@render children()}
+</main>
 
-  <footer>
-    <section>
-      <div class="flex flex-col gap-4 md:flex-row justify-between w-full">
-        <div>
-          <p>&copy; 2026 Shitcoin Society</p>
-        </div>
-        <div>
-          <h4>Resources</h4>  
-          <ul>
-            <li>
-              <a href="https://bitcointalk.org/index.php?topic=5586736" target="_blank" rel="noopener noreferrer">Bitcointalk</a>
-            </li>
-            <li>
-              <a href="https://github.com/shitcoinsociety" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </li>
-          </ul>
-        </div>
+
+<footer>
+  <section class="container">
+    <div class="flex flex-col gap-4 md:flex-row justify-between w-full">
+      <div>
+        <p>&copy; 2026 Shitcoin Society</p>
       </div>
-    </section>
-  </footer>
-</div>
+      <div>
+        <h4>Resources</h4>  
+        <ul>
+          <li>
+            <a href="https://github.com/shitcoinsociety" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</footer>
