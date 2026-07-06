@@ -1,14 +1,14 @@
 ---
 title: Shitcoin Society to Launch Tokenization Services in Danang
 image: nobudanang
-date: July 4, 2026
+date: July 6, 2026
 category: Announcements
 authors:
   - name: Stefan Buhrmester
     github: https://github.com/buhrmi
 ---
 
-**DA NANG, VIETNAM – July 3, 2026** – Today, I am really excited to announe the formation of the Shitcoin Society and the development of our open-source Real-World Asset (RWA) tokenization engine, [Shitcoin Swap](https://github.com/shitcoinsociety/shitcoinswap).
+**DA NANG, VIETNAM – July 6, 2026** – Today, I am really excited to announe the formation of the Shitcoin Society and the development of our open-source Real-World Asset (RWA) tokenization engine, [Shitcoin Swap](https://github.com/shitcoinsociety/shitcoinswap).
 
 The Shitcoin Society is seeded with $500,000 of my own capital. This initial funding is being deployed to secure our future tokenization headquarters and development lab at Nobu Danang, aligning our engineering efforts directly with Central Vietnam’s newly established legal sandbox framework for digital finance.
 
