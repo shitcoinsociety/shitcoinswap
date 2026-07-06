@@ -1,5 +1,5 @@
 ---
-title: Shitcoin Society to Launch Tokenization Services at Nobu Danang
+title: Shitcoin Society to Launch Tokenization Services in Danang
 image: nobudanang
 date: July 4, 2026
 category: Announcements
