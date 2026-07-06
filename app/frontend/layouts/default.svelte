@@ -38,3 +38,9 @@
     </div>
   </section>
 </footer>
+
+<style>
+  :global(nav:has(+ main .hero)) {
+    display: none;
+  }
+</style>
