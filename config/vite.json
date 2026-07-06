@@ -2,7 +2,8 @@
   "all": {
     "sourceCodeDir": "app/frontend",
     "watchAdditionalPaths": [],
-    "ssrBuildEnabled": true
+    "ssrBuildEnabled": true,
+    "ssrEntrypoint": "app/frontend/entrypoints/inertia.js"
   },
   "development": {
     "autoBuild": true,

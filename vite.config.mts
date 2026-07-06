@@ -15,9 +15,11 @@ export default defineConfig({
         presetWind4()
       ],
     }),
+    // The inertia plugin is used to perform SSR in dev mode.
+    // It's a no-op in production.
     inertia({
       ssr: {
-        // entry: 'entrypoints/inertia.js',
+        entry: 'entrypoints/inertia.js'
       },
     }),
     svelte(),

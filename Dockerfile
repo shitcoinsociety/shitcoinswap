@@ -59,11 +59,15 @@ COPY . .
 RUN bundle exec bootsnap precompile -j 1 app/ lib/
 
 # Build the app
-RUN bin/bunx vite build && bin/bunx vite build --ssr
+RUN bin/bun run build
 
 
 # Final stage for app image
 FROM base
+
+# Download and extract the hivemind binary
+RUN curl -fsSL https://github.com/DarthSim/hivemind/releases/download/v1.1.0/hivemind-v1.1.0-linux-amd64.gz | gzip -d > /usr/local/bin/hivemind && \
+    chmod +x /usr/local/bin/hivemind
 
 # Run and own only the runtime files as a non-root user for security
 RUN groupadd --system --gid 1000 rails && \
@@ -74,12 +78,8 @@ USER 1000:1000
 COPY --chown=rails:rails --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
 COPY --chown=rails:rails --from=build /rails /rails
 
-# Download and extract the hivemind binary
-RUN curl -fsSL https://github.com/DarthSim/hivemind/releases/download/v1.1.0/hivemind-v1.1.0-linux-amd64.gz | gzip -d > /usr/local/bin/hivemind && \
-    chmod +x /usr/local/bin/hivemind
-
 # Entrypoint prepares the database.
 ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 EXPOSE 80
-CMD ["hivemind", "s"]
+CMD ["hivemind"]

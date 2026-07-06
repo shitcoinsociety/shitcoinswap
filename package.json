@@ -1,6 +1,6 @@
 {
 	"type": "module",
-	"dependencies": {
+	"devDependencies": {
 		"@iconify/json": "^2.2.494",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
 		"@unocss/preset-icons": "^66.7.4",
@@ -9,10 +9,11 @@
 		"inertiax-vite": "^11.0.16",
 		"mdsvex": "^0.12.7",
 		"svelte": "^5.56.4",
-		"unocss": "^66.7.4"
-	},
-	"devDependencies": {
+		"unocss": "^66.7.4",
 		"vite": "^8.1.3",
 		"vite-plugin-ruby": "^5.2.2"
+	},
+	"scripts": {
+		"build": "vite build && vite build --ssr"
 	}
 }
