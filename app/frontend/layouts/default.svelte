@@ -10,7 +10,7 @@
   <section class="container">
     <menu>
       <a href="/" class="brand">
-        <span>Shitcoin Society</span>
+        <img src={"/logo_black.svg"} class="h-8" alt="Shitcoin Society" />
       </a>
     </menu>
   </section>
