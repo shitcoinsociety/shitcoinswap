@@ -24,8 +24,8 @@
   <section class="container">
     <h1 class="hero-title">Infrastructure for a New&nbsp;Generation of Digital&nbsp;Assets.</h1>
     <p class="hero-sub">
-      Startup shares, vesting schedules, and equity instruments
-       — created in the middle of
+      On-Chain startup shares, vesting schedules, and equity instruments
+       — in the middle of
       Central Vietnam's digital finance sandbox.
     </p>
     <div class="inline-flex gap-3 flex-wrap">
@@ -83,13 +83,16 @@
 <style>
   /* ===== Hero (Landing Page) ===== */
 .hero {
-  padding-block: 12rem 4rem;
-  text-align: left;
+  text-align: right;
   color: white;
-  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.65)), url('./_nobudanang.png');
+  background: linear-gradient(rgba(0,0,0,0.25) 40%, rgba(21, 43, 70, 0.55)), url('./_index.png');
   background-size: cover;
   background-position: left center;
+  text-align: center;
+  padding-block: 8rem;
   @media (min-width: 640px) {
+    padding-block: 12rem 4rem;
+    text-align: right;
     background-position: center;
   }
 }
