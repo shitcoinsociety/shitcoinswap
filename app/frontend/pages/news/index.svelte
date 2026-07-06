@@ -83,7 +83,6 @@
 <style>
   /* ===== Hero (Landing Page) ===== */
 .hero {
-  text-align: right;
   color: white;
   background: linear-gradient(rgba(0,0,0,0.25) 40%, rgba(21, 43, 70, 0.55)), url('./_index.png');
   background-size: cover;
@@ -92,7 +91,7 @@
   padding-block: 8rem;
   @media (min-width: 640px) {
     padding-block: 12rem 4rem;
-    text-align: right;
+    text-align: left;
     background-position: center;
   }
 }
