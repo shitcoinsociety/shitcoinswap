@@ -8,13 +8,13 @@ authors:
     github: https://github.com/buhrmi
 ---
 
-**TLDR:** The Shitcoin Society is now officially launched, personally seeding it with $500,000 to establish our tokenization lab at Nobu Danang within Vietnam’s digital finance regulatory sandbox. Our first product is [Shitcoin Swap](https://github.com/shitcoinsociety/shitcoinswap), an open-source tokenization platform that transforms startup fundraising into a public crowdfunding ecosystem by tracking corporate share ownership directly as programmable on-chain tokens. Grounded in our "Toilet Trading" ethos—which strips away traditional VC marketing fluff to embrace the raw mathematical reality that most seed capital goes to zero—we are building an un-gameable plumbing system for high-asymmetry capital formation.
+**TLDR:** I have officially launched the Shitcoin Society, personally seeding it with $500,000 to establish our tokenization lab at Nobu Danang within Vietnam’s digital finance regulatory sandbox. Our first product is [Shitcoin Swap](https://github.com/shitcoinsociety/shitcoinswap), an open-source tokenization platform that transforms startup fundraising into a public crowdfunding ecosystem by tracking corporate share ownership directly as programmable on-chain tokens.
 
 ---
 
 **DA NANG, VIETNAM – July 3, 2026** – Today, I am officially announcing the formation of the Shitcoin Society and the development of our open-source Real-World Asset (RWA) tokenization engine, [Shitcoin Swap](https://github.com/shitcoinsociety/shitcoinswap).
 
-To kickstart this vision, I am personally seeding the project with **$500,000** of my own capital. This initial funding is being deployed to secure our future tokenization headquarters and development lab at Nobu Danang, aligning our engineering efforts directly with Central Vietnam’s newly established legal sandbox framework for digital finance.
+To kickstart this vision, I have personally seeded this project with $500,000 of my own capital. This initial funding is being deployed to secure our future tokenization headquarters and development lab at Nobu Danang, aligning our engineering efforts directly with Central Vietnam’s newly established legal sandbox framework for digital finance.
 
 Our mission is to modernize corporate governance by building blockchain-native transfer agent infrastructure. We are designing this platform to completely transform corporate fundraising into a decentralized, public-backed crowdfunding ecosystem—allowing early-stage companies to raise capital directly from their communities while tracking share ownership seamlessly as on-chain tokens.
 

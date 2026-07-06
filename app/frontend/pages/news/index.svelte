@@ -23,14 +23,14 @@
 <header class="hero">
   <section class="container">
     <span class="hero-badge">🇻🇳 Built in Da Nang, Vietnam</span>
-    <h1 class="hero-title">Open source infrastructure for a new generation of digital&nbsp;assets.</h1>
+    <h1 class="hero-title">Infrastructure for a New&nbsp;Generation of Digital&nbsp;Assets.</h1>
     <p class="hero-sub">
       Startup shares, vesting schedules, and equity instruments
        — located in the middle of
       Central Vietnam's digital finance sandbox.
     </p>
     <div class="inline-flex gap-3 flex-wrap">
-      <a href="/news/shitcoin-society-launches-at-nobu-danang" class="btn btn-primary">
+      <a href="/news/shitcoin-society-launches-tokenization-services" class="btn btn-primary">
         Read the announcement
       </a>
       <a href="https://github.com/shitcoinsociety" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">

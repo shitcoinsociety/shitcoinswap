@@ -5,4 +5,8 @@ if [ "${@: -2:1}" == "./bin/rails" ] && [ "${@: -1:1}" == "server" ]; then
   ./bin/rails db:prepare
 fi
 
+if [ "$*" == "hivemind s" ]; then
+  ./bin/rails db:prepare db:seed --trace
+fi
+
 exec "${@}"
