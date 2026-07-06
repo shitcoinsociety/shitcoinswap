@@ -15,5 +15,8 @@
 	},
 	"scripts": {
 		"build": "vite build && vite build --ssr"
+	},
+	"dependencies": {
+		"svelte-preprocess-import-assets": "^1.1.0"
 	}
 }

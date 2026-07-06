@@ -22,7 +22,6 @@
 
 <header class="hero">
   <section class="container">
-    <span class="hero-badge">🇻🇳 Built in Da Nang, Vietnam</span>
     <h1 class="hero-title">Infrastructure for a New&nbsp;Generation of Digital&nbsp;Assets.</h1>
     <p class="hero-sub">
       Startup shares, vesting schedules, and equity instruments
@@ -33,7 +32,7 @@
       <a href="/news/shitcoin-society-launches-tokenization-services" class="btn btn-primary">
         Read the announcement
       </a>
-      <a href="https://github.com/shitcoinsociety" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+      <a href="https://github.com/shitcoinsociety" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
         View Repositories
       </a>
     </div>
@@ -84,23 +83,15 @@
 <style>
   /* ===== Hero (Landing Page) ===== */
 .hero {
-  padding-block: 6rem;
-  background: #111;
-  color: #fff;
-  text-align: center;
-}
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  font-size: .75rem;
-  font-weight: 500;
-  color: rgba(255,255,255,.75);
-  background: rgba(255,255,255,.1);
-  padding: .35rem .75rem;
-  border-radius: 20px;
-  margin-bottom: 1.5rem;
-  backdrop-filter: blur(8px);
+  padding-block: 12rem 4rem;
+  text-align: left;
+  color: white;
+  background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.65)), url('./_nobudanang.png');
+  background-size: cover;
+  background-position: left center;
+  @media (min-width: 640px) {
+    background-position: center;
+  }
 }
 .hero-title {
   font-size: clamp(2rem, 6vw, 3.4rem);
@@ -112,7 +103,6 @@
 .hero-sub {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: rgba(255,255,255,.6);
   margin-bottom: 1.75rem;
 }
 </style>
