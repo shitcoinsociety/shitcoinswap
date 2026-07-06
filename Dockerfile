@@ -48,7 +48,7 @@ RUN bundle install && \
     bundle exec bootsnap precompile -j 1 --gemfile
 
 # Install node modules
-COPY --link package.json bun.lockb ./
+COPY --link package.json bun.lock ./
 RUN bin/bun install --frozen-lockfile
 
 # Copy application code
