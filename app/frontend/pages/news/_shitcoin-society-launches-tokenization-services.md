@@ -24,7 +24,7 @@ I assert that "toilet trading" is the fundamental, unfiltered truth of early-sta
 
 ### **Unveiling the Shitcoin Swap Blueprint**
 
-The technical core of our project centers on the newly initiated Shitcoin Swap app. Conceived as a highly modular, open-source framework, we are actively building Shitcoin Swap to function as a public equity-launchpad. It will allow companies to launch community-driven funding campaigns where global contributors receive fractionalized, programmable share tokens rather than standard, unbacked digital assets.
+The technical core of our project centers on the Shitcoin Swap platform. Conceived as a highly modular, open-source framework, we are actively building Shitcoin Swap to function as a public equity-launchpad. It will allow companies to launch community-driven funding campaigns where global contributors receive fractionalized, programmable share tokens rather than standard, unbacked digital assets.
 
 Once fully engineered, our stack will allow founders to bypass traditional venture capital gatekeepers, shifting the power of capital formation back to the public. The software architecture turns traditional, rigid spreadsheets and cap tables into programmable, verifiable on-chain assets. This setup natively supports automated investor allocations, legal lock-up periods, and vesting schedules that seamlessly synchronize with off-chain legal registries, ensuring that even if an investment carries a "toilet trade" risk profile, its fractionalized token ownership architecture remains un-gameable and mathematically secure.
 
