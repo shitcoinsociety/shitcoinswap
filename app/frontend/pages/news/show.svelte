@@ -26,8 +26,8 @@
     setTimeout(() => copied = false, 2000)
   }
 
-  const shareImage = `https://shitcoinsociety.com${img}`
-  const shareUrl = `https://shitcoinsociety.com/news/${slug}`
+  const shareImage = `https://www.shitcoinsociety.com${img}`
+  const shareUrl = `https://www.shitcoinsociety.com/news/${slug}`
 </script>
 
 <svelte:head>

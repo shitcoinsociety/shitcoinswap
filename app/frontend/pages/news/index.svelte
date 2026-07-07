@@ -16,8 +16,20 @@
 </script>
 
 <svelte:head>
-  <title>Shitcoin Society - Brokerage tools for a new generation of digital assets</title>
-  <meta name="description" content="Startup shares, vesting schedules, and equity instruments — created in the middle of Central Vietnam's digital finance sandbox." />
+  <title>Shitcoin Society - Infrastructure for a New Generation of Digital Assets</title>
+  <meta name="description" content="In the middle of Central Vietnam's digital finance sandbox, Shitcoin Society provides tokenization services for a new generation of startups." />
+
+  <meta property="og:title" content="Shitcoin Society - Infrastructure for a New Generation of Digital Assets" />
+  <meta property="og:description" content="In the middle of Central Vietnam's digital finance sandbox, Shitcoin Society provides tokenization services for a new generation of startups." />
+  <meta property="og:image" content="https://www.shitcoinsociety.com/preview.jpg" />
+  <meta property="og:url" content="https://www.shitcoinsociety.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Shitcoin Society" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shitcoin Society - Infrastructure for a New Generation of Digital Assets" />
+  <meta name="twitter:description" content="In the middle of Central Vietnam's digital finance sandbox, Shitcoin Society provides tokenization services for a new generation of startups." />
+  <meta name="twitter:image" content="https://www.shitcoinsociety.com/preview.jpg" />
 </svelte:head>
 
 <header class="hero">
