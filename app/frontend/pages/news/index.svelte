@@ -36,7 +36,6 @@
 
 <header class="hero">
   <section class="container">
-    <img src={"/logo_white.svg"} class="h-8 mb-36" alt="Shitcoin Society" />
     <h1 class="hero-title">Infrastructure for a New&nbsp;Generation of Digital&nbsp;Assets.</h1>
     <p class="hero-sub">
       On-Chain startup shares, vesting schedules, and equity instruments
@@ -45,7 +44,7 @@
     </p>
     <div class="inline-flex gap-3 flex-wrap">
       <a href="/assets/new" use:modal class="btn btn-primary">
-        List your stock
+        Tokenize your stock
       </a>
       <a href="/news/shitcoin-society-launches-tokenization-services" class="btn btn-dark">
         Read the announcement
@@ -101,10 +100,9 @@
   color: white;
   background: linear-gradient(rgba(0,0,0,0.25) 40%, rgba(21, 43, 70, 0.55)), url('./_index.png');
   background-size: cover;
-  padding-block: 2rem 8rem;
+  padding-block: 12rem 8rem;
   text-align: left;
   background-position: center;
-
 }
 .hero-title {
   font-size: clamp(2rem, 6vw, 3.4rem);

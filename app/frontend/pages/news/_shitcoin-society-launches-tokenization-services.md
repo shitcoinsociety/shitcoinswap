@@ -26,6 +26,8 @@ I assert that "toilet trading" is the fundamental, unfiltered truth of early-sta
 
 The technical core of our project centers on the Shitcoin Swap platform. Conceived as a highly modular, open-source framework, we are actively building Shitcoin Swap to function as a public equity-launchpad. It will allow companies to launch community-driven funding campaigns where global contributors receive fractionalized, programmable share tokens rather than standard, unbacked digital assets.
 
+**Current availability.** During this early development phase, tokenization services are offered as a manual, white-glove process reserved exclusively for Shitcoin Society members who have completed our KYC verification. Our team handles the full tokenization workflow — from cap table review and legal structuring to on-chain minting — on a case-by-case basis. An automated, self-serve tokenization pipeline will be introduced as the platform matures.
+
 Once fully engineered, our stack will allow founders to bypass traditional venture capital gatekeepers, shifting the power of capital formation back to the public. The software architecture turns traditional, rigid spreadsheets and cap tables into programmable, verifiable on-chain assets. This setup natively supports automated investor allocations, legal lock-up periods, and vesting schedules that seamlessly synchronize with off-chain legal registries, ensuring that even if an investment carries a "toilet trade" risk profile, its fractionalized token ownership architecture remains un-gameable and mathematically secure.
 
 ### **Nobu Danang as Our Strategic Development Lab**

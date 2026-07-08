@@ -4,17 +4,17 @@
 
 <main>
   <section>
-    <h2>New Listing Information</h2>
+    <h2>New Member Information</h2>
   </section>
   <section>
     <p>
-      Thank you for your interest in filing with the Shitcoin Society.
+      Thank you for your interest in tokenizing with the Shitcoin Society.
     </p>
     <p>
-      Stock listings are currently a manual process reserved for Shitcoin Society members that have completed our KYC process.
+      Tokenizations are currently a manual process reserved for Shitcoin Society members that have completed our KYC process.
     </p>
     <p>
-
+      Please check back later when our automated tokenization process is available.
     </p>
   </section>
 </main>
