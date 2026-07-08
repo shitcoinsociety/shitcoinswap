@@ -1,2 +1,2 @@
-web: bin/rails s
+web: bin/rails s -u itsi
 vite: bin/vite dev

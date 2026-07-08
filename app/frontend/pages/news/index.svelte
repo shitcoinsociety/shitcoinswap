@@ -1,4 +1,6 @@
 <script>
+  import { modal } from "inertiax-ui"
+
   const posts = import.meta.glob('./_*.md', { eager: true, import: 'metadata' })
   const images = import.meta.glob('./_*.png', { eager: true, import: 'default' })
 
@@ -42,11 +44,11 @@
       Central Vietnam's digital finance sandbox.
     </p>
     <div class="inline-flex gap-3 flex-wrap">
-      <a href="/news/shitcoin-society-launches-tokenization-services" class="btn btn-primary">
-        Read the announcement
+      <a href="/assets/new" use:modal class="btn btn-primary">
+        List your stock
       </a>
-      <a href="https://github.com/shitcoinsociety" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
-        View Repositories
+      <a href="/news/shitcoin-society-launches-tokenization-services" class="btn btn-dark">
+        Read the announcement
       </a>
     </div>
   </section>

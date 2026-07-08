@@ -7,6 +7,11 @@ import presetIcons from "@unocss/preset-icons"
 import { presetWind4 } from 'unocss'
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '~vendor': 'vendor',
+    }
+  },
   plugins: [
     RubyPlugin(),
     UnoCSS({
