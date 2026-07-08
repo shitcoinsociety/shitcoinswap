@@ -44,7 +44,7 @@
     </p>
     <div class="inline-flex gap-3 flex-wrap">
       <a href="/assets/new" use:modal class="btn btn-primary">
-        Tokenize your stock
+        Tokenize your Startup
       </a>
       <a href="/news/shitcoin-society-launches-tokenization-services" class="btn btn-dark">
         Read the announcement

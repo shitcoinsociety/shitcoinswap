@@ -4,7 +4,7 @@
 
 <main>
   <section>
-    <h2>New Member Information</h2>
+    <h2>New Startups</h2>
   </section>
   <section>
     <p>

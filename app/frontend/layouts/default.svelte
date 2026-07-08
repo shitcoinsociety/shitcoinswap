@@ -14,7 +14,7 @@
         <img src={"/logo_black.svg"} class="h-8" alt="Shitcoin Society" />
       </a>
       <a href="/assets/new" use:modal class="btn btn-dark">
-        Tokenize your stock
+        Tokenize your Startup
       </a>
     </menu>
   </section>
