@@ -11,10 +11,10 @@
       Thank you for your interest in tokenizing with the Shitcoin Society.
     </p>
     <p>
-      Tokenizations are currently a manual process reserved for Shitcoin Society members that have completed our KYC process.
+      We ask founders who want to list with us to join uns for a public founder interview video on our <a href="https://www.youtube.com/@shitcoinsociety">YouTube channel</a>.
     </p>
     <p>
-      Please check back later when our automated tokenization process is available.
+      Or check back later when our automated listing process is available.
     </p>
   </section>
 </main>
