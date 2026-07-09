@@ -24,7 +24,7 @@ export default defineConfig({
     // It's a no-op in production.
     inertia({
       ssr: {
-        entry: 'entrypoints/inertia.js'
+        // entry: 'entrypoints/inertia.js'
       },
     }),
     svelte(),
