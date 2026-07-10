@@ -8,13 +8,13 @@
   </section>
   <section>
     <p>
-      Thank you for your interest in listing your startup with the Shitcoin Society.
+      Thank you for your interest in joining the Shitcoin Society.
     </p>
     <p>
-      At this time, we ask all interested founders to join us for a public interview video on our <a href="https://www.youtube.com/@shitcoinsociety">YouTube channel</a>.
+      We are currently accepting new project proposals <a href="mailto:proposals@shitcoinsociety.com">via email</a>.
     </p>
     <p>
-      Or check back later when our automated listing process is available.
+      Please note that our process includes a public video interview, which will be conducted on our <a href="https://www.youtube.com/@shitcoinsociety">YouTube channel</a>. Follow and subscribe to not miss out on new project announcements.
     </p>
   </section>
 </main>
