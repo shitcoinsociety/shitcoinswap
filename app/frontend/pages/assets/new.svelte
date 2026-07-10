@@ -14,7 +14,7 @@
       We are currently accepting new project proposals <a href="mailto:proposals@shitcoinsociety.com">via email</a>.
     </p>
     <p>
-      Please note that our process includes a public video interview, which will be conducted on our <a href="https://www.youtube.com/@shitcoinsociety">YouTube channel</a>. Follow and subscribe to not miss out on new project announcements.
+      Our process includes a project pitch and interview, which will be conducted live on our <a href="https://www.youtube.com/@shitcoinsociety">YouTube channel</a>. Subscribe to not miss out.
     </p>
   </section>
 </main>
