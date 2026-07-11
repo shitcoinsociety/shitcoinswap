@@ -29,7 +29,7 @@
     <div class="flex flex-col items-center sm:items-start">
       <img src={"/logo_white.svg"} class="h-10" alt="Shitcoin Society" />
       <span>
-        Make something nobody asked for.
+        Making things nobody asked for.
       </span>
     </div>
   </section>
