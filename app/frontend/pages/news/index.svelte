@@ -38,7 +38,7 @@
   <section class="container">
     <h1 class="hero-title">Infrastructure for Digital&nbsp;Assets that<br>Nobody Asked for.</h1>
     <p class="hero-sub">
-      On-Chain startup shares, vesting schedules, and equity instruments
+      The platform for on-chain startup shares, vesting schedules, and equity instruments
        — in the middle of
       Central Vietnam's digital finance sandbox.
     </p>
