@@ -11,10 +11,8 @@
       Thank you for your interest in joining the Shitcoin Society.
     </p>
     <p>
-      We are currently accepting new project proposals <a href="mailto:proposals@shitcoinsociety.com">via email</a>.
-    </p>
-    <p>
-      However, please be advised that our process includes a project pitch and interview, which will be conducted live on our <a href="https://www.youtube.com/@shitcoinsociety">YouTube channel</a>. Subscribe to not miss out.
+      Our process for listing new startups includes a project pitch and video interview, which we will conduct live on our <a href="https://www.youtube.com/@shitcoinsociety">YouTube channel</a>.
+      If you're okay with that, feel free to send us your project proposal <a href="mailto:proposals@shitcoinsociety.com">via email</a>. We'll be in touch shortly after.
     </p>
   </section>
 </main>
