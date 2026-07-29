@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-  <title>Shitcoin Society - Infrastructure for Digital Assets that Nobody Asked for.</title>
+  <title>Shitcoin Society - A New Generation of Digital Assets that Nobody Asked for.</title>
   <meta name="description" content="In the middle of Central Vietnam's digital finance sandbox, Shitcoin Society provides tokenization services for a new generation of startups." />
 
   <meta property="og:title" content="Shitcoin Society - Infrastructure for Digital Assets that Nobody Asked for." />
@@ -36,9 +36,9 @@
 
 <header class="hero">
   <section class="container">
-    <h1 class="hero-title">Infrastructure for Digital&nbsp;Assets that<br>Nobody Asked for.</h1>
+    <h1 class="hero-title">A New Generation of Digital&nbsp;Assets that<br>Nobody Asked for.</h1>
     <p class="hero-sub">
-      The platform for on-chain startup shares, vesting schedules, and equity instruments
+      On-chain startup shares, options, and equity instruments
        — in the middle of
       Central Vietnam's digital finance sandbox.
     </p>
